@@ -159,6 +159,10 @@ header{
     margin-bottom: 20px;
 }
 
+#contato{
+    margin-top: 20px;
+}
+
 .texto-centralizado{
     text-align: center;
 }
@@ -174,6 +178,7 @@ header{
     border-radius: 5px;
     transition: 1s all;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .enviar:hover{
