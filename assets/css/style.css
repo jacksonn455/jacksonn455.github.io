@@ -25,7 +25,9 @@ header h1{
 }
 
 .titulo-nome{
+    font-size: 33px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .foto-perfil{
@@ -86,6 +88,15 @@ header h1{
     margin-left: 50px;
 }
 
+.texto-profissao{
+    color: white;
+}
+
+.texto-profissao:hover{
+    color:orange;
+    text-decoration: underline;
+}
+
 #botao-git{
     margin-top: 20px;
 }
@@ -96,10 +107,6 @@ header{
     background-position: top center;
     height: 100%;
     position: relative;
-}
-
-.video-trabalho{
-    margin-bottom: 130px;
 }
 
 .topcasafina-banner{
