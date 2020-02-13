@@ -4,18 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://github.com/jacksonn455/jacksonn455.github.io/blob/master/assets/img/perfil.png" />
     <title>Jackson F. Magnabosco</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link type="text/css" rel="stylesheet" href="assets/css/reset.css">
     <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="assets/css/style.css">
-    <link type="text/css" rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
 
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
 
                 <div class="navbar-header">
@@ -31,7 +32,7 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="collapse-navbar">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="#universidade">UNIVERSIDADE</a>
                         </li>
@@ -42,10 +43,16 @@
                             <a href="#id-competencia">STARTUPS</a>
                         </li>
                         <li>
-                            <a href="#video-trabalho">PROJETOS TRABALHADOS</a>
+                            <a href="#video-trabalho">IoT</a>
+                        </li>
+			            <li>
+                          <a href="#animacao">REALIDADE VIRTUAL</a>
                         </li>
                         <li>
-                            <a href="#contato">CONTATO</a>
+                            <a href="#aplicativo">APLICATIVOS</a>
+                          </li>
+                        <li>
+                            <a data-toggle="modal" data-target="#modal-contato" href="#">CONTATO</a>
                         </li>
                     </ul>
                 </div>
@@ -68,7 +75,7 @@
                             com o objetivo de se desenvolver como profissional na área de tecnologia da informação,
                             ajudando a empresa a maximizar
                             seus resultados através de estudo, dedicação, pesquisa e inovação. </p>
-                        <div class="container">
+
                             <div class="icon-social">
                                 <a href="https://github.com/jacksonn455" target="_blank">
                                     <img class="icon-image" border="0" alt="W3Schools" src="assets/img/Github-icon.png"
@@ -87,7 +94,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+
 
     </header>
 
@@ -186,8 +193,24 @@
                             <strong>20</strong> horas)
                             <strong>Alura</strong>.</p>
                         <br>
-                        <p><strong>Bootstrap:</strong> criação de uma single-page responsiva (carga horária
+			<p><strong>JavaScript avançado I:</strong> ES6, orientação a objetos e padrões de projetos (carga horária
+                            <strong>20</strong> horas)
+                            <strong>Alura</strong>.</p>
+                        <br>
+			<p><strong>jQuery parte 1:</strong> Domine a biblioteca mais popular do mercado (carga horária
                             <strong>12</strong> horas)
+                            <strong>Alura</strong>.</p>
+                        <br>
+			<p><strong>jQuery parte 2:</strong> Avance na biblioteca mais popular do mercado (carga horária
+                            <strong>12</strong> horas)
+                            <strong>Alura</strong>.</p>
+                        <br>
+                        <p><strong>Bootstrap 3:</strong> Criação de uma single-page responsiva (carga horária
+                            <strong>12</strong> horas)
+                            <strong>Alura</strong>.</p>
+                        <br>
+			 <p><strong>Bootstrap 4:</strong> Criando uma landing page responsiva (carga horária
+                            <strong>8</strong> horas)
                             <strong>Alura</strong>.</p>
                         <br>
                         <p><strong>Git e Github:</strong> Controle e compartilhe seu código (carga horária
@@ -295,6 +318,25 @@
                     </div>
                 </div>
             </div>
+		
+	  <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" data-toggle="collapse" data-target="#quarto-paragrafo"
+                            data-parent="#paineis-sobre">FORMAÇÃO COMPLEMENTAR</h3>
+                    </div>
+                    <div id="quarto-paragrafo" class="collapse">
+                        <div class="panel-body">
+                            <p><strong>2012-2016:</strong> Idioma e Literatura Estrangeira “Inglês". (Carga horária: <strong>250</strong> horas) <strong>Topway English School, Erechim e Passo Fundo</strong>.</p>
+                            <br>
+                            <p><strong>2010-2010:</strong> Técnico em Informática "Hardware, Software, Redes”. (Carga horária: <strong>192</strong> horas) <strong>SENAC Erechim</strong>.</p>
+                            <br>
+                            <p><strong>2009-2010:</strong> Auxiliar Administrativo (Carga horária: <strong>180</strong> horas) S <strong>SENAC Erechim</strong>.</p>
+                            <br>
+                            <p><strong>2005-2006:</strong> Informática do básico ao avançado "Word, Excel, Powerpoint, Windows, Linux, Datilografia, Internet”. (Carga horária: <strong>160</strong> horas)  <strong>Escola JB Informática</strong>.</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
     </section>
 
     <section class="competencia" id="id-competencia">
@@ -370,7 +412,7 @@
     </section>
 
     <section id="video-trabalho" class="container">
-        <h2>PROJETOS TRABALHADOS</h2>
+        <h2>PROJETOS IoT TRABALHADOS</h2>
         <h3>Armário Conectado</h3>
         <section class="embed-responsive embed-responsive-16by9">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/WX_j9xHu5Zo" frameborder="0"
@@ -390,41 +432,96 @@
         </section>
     </section>
 
-    <section id="contato">
-        <div class="container">
-            <div class="formulario-contato">
-            <h2>Contato</h2>
-            <p>Entre em contato comigo</p>
-
-            <form>
-				<div class="form-group">
-                <label for="contato-nome">Nome:</label>
-                <input id="contato-nome" class="form-control" type="text" placeholder="Seu nome" required>
+	<section id="animacao" class="projeto">
+        <div class="row container linha">
+            <div class="col-lg-6 escrita-animacao">
+                <h1>Realidade virtual</h1>
+                <h3>Este evento foi proporcionado para o curso de ciência da computação, visando a contribuir na melhoria da formação profissional 
+                e cidadã dos envolvidos, o objetivo do projeto foi modelar toda Universidade Uri Campus II Erechim em 3D
+                em menos de 24 horas corridas.</h3>
             </div>
-
-            <div class="form-group">
-                <label for="contato-email">E-mail:</label>
-                <div class="input-group">
-                    <div class="input-group-addon">@</div>
-                    <input id="contato-email" class="form-control" type="email" placeholder="Seu e-mail" required>
+            <div class="col-lg-6 video-animacao">
+                <div class="tools_expert">
+                    <div class="skill_main">
+                        <div class="skill_item_dois">
+                            <iframe width="560" height="400" src="https://www.youtube.com/embed/K63iCx8vL08" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            </div>
+                        </div>
                 </div>
             </div>
-
-            <div class="form-group">
-                <label for="contato-telefone">Telefone:</label>
-                <input id="contato-telefone" class="form-control" type="number" required placeholder="(xx) xxxxx-xxxx">
-            </div>
-
-            <div class="form-group">
-                <label for="contato-mensagem">Mensagem:</label>
-                <textarea cols="70" rows="10" id="contato-mensagem" class="form-control" required></textarea>
-            </div>
-
-            <button type="submit" class="enviar">Enviar</button>
-        </form>
-        </div>
         </div>
     </section>
+
+    <section id="aplicativo" class="container">
+        <h2>APLICATIVOS</h2>
+
+        <div id="carousel-aplicativo" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-aplicativo" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-aplicativo" data-slide-to="1"></li>
+                <li data-target="#carousel-aplicativo" data-slide-to="2"></li>
+                <li data-target="#carousel-aplicativo" data-slide-to="3"></li>
+                <li data-target="#carousel-aplicativo" data-slide-to="4"></li>
+                <li data-target="#carousel-aplicativo" data-slide-to="5"></li>
+                <li data-target="#carousel-aplicativo" data-slide-to="6"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <figure class="item active">
+                    <img src="assets/img/app/splash.jpg" alt="Imagem da Universidade campus 1">
+                </figure>
+                <figure class="item">
+                    <img src="assets/img/app/login.jpg" alt="Imagem da universidade campus 2">
+                </figure>
+                <figure class="item">
+                    <img src="assets/img/app/conta.jpg" alt="Imagem da universidade campus 2">
+                </figure>
+                <figure class="item">
+                    <img src="assets/img/app/aceita.jpg" alt="Imagem da universidade campus 2">
+                </figure>
+                <figure class="item">
+                    <img src="assets/img/app/menu.jpg" alt="Imagem da universidade campus 2">
+                </figure>
+                <figure class="item">
+                    <img src="assets/img/app/armario.jpg" alt="Imagem da universidade campus 2">
+                </figure>
+                <figure class="item">
+                    <img src="assets/img/app/qrcode2.jpg" alt="Imagem da universidade campus 2">
+                </figure>
+            </div>
+
+            <a class="left carousel-control" href="#carousel-aplicativo" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-aplicativo" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+	<div class="container">
+	<!-- Modal -->
+		<div class="modal fade" id="modal-contato" role="dialog">
+   			<div class="modal-dialog">
+     				<div class="modal-content">
+        				<div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal">&times;</button>
+					    <h4 class="modal-title">Contato</h4>
+					    </div>
+				            <div class="modal-body">
+          				        <p>Entre em contato: jacksonmagnabosco@hotmail.com</p>
+        			        </div>
+        			            <div class="modal-footer">
+         				            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                </div>
+                    </div>
+      
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="container">
