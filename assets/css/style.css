@@ -51,10 +51,18 @@ header h1{
     font-size: 18px;
 }
 
-.competencia{
+.projeto-competencia{
+    font-size: 18px;
+    color: white;
+    text-align: justify;
+    background: linear-gradient(#999999 30%, #d3d3d3);
+}
+
+.projeto{
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 10px;
+    padding-bottom: 30px;
     font-size: 18px;
     color: white;
     text-align: justify;
@@ -87,8 +95,8 @@ header h1{
 }
 
 .skill_item{
-    margin-top: 30px;
-    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .texto-profissao{
@@ -121,17 +129,19 @@ header{
     position: relative;
 }
 
-.topcasafina-banner{
-    color: #FFF;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 2.0em;
-    max-width: 90%;
-    border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-40%, -50%);
+.topCasaFina-banner {
+	color: #FFF;
+	background-color: rgba(0, 0, 0, .5);
+	padding: 20px;
+	width: 80%;
+	border-radius: 5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: .3s;
 }
+
 .img-startup{
     text-align: center;
     display: inline-block;
@@ -142,7 +152,7 @@ header{
 .figuras{
     border: 3px solid white;
     border-radius: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     padding-left: 50px;  
     padding-right: 50px;
 }
@@ -193,23 +203,12 @@ header{
     cursor: pointer;
 }
 
-.projeto{
-    margin-left: 0;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding-bottom: 30px;
-    font-size: 18px;
-    color: white;
-    text-align: justify;
-    background: linear-gradient(#999999 30%, #d3d3d3);
-}
-
 .linha{
     margin-left: 60px;
 }
 
 .skill_item_dois{
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: 0;
 }
 
@@ -221,11 +220,97 @@ header{
 
 #aplicativo{
     margin-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+#web{
+    margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .enviar:hover{
     background: darkorange;
     transform:  scale(1.1);
+}
+@media (max-width: 320px) {
+
+    .topCasaFina-banner {
+        color: #FFF;
+        background-color: rgba(0, 0, 0, .5);
+        padding: 20px;
+        width: 80%;
+        border-radius: 5px;
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s;
+	}
+
+    .img-startup{
+        margin-left: 40px;
+    }
+
+    .icon-image{
+        width: 0;
+        height: 0;
+
+    }
+
+    .titulo-nome{
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+	.topCasaFina-bannerWrapper {
+		position: relative;
+		height: 100%;
+    }
+    
+    .legenda-titulo{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 360px) {
+	.topCasaFina-banner {
+        color: #FFF;
+        background-color: rgba(0, 0, 0, .5);
+        padding: 20px;
+        width: 80%;
+        border-radius: 5px;
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s;
+	}
+
+    .img-startup{
+        margin-left: 70px;
+    }
+
+    .icon-image{
+        width: 0;
+        height: 0;
+
+    }
+
+    .titulo-nome{
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+	.topCasaFina-bannerWrapper {
+		position: relative;
+		height: 100%;
+    }
+    
+    .legenda-titulo{
+        font-size: 16px;
+    }
 }
 
 @media(min-width: 768px) {
@@ -233,17 +318,7 @@ header{
 		margin-top: 0;	
     }
     
-}
-
-@media(min-width: 992px) {
-	.perfil-banner {
-		left: 0;
-		transform: translate(0, -80%);
-		width: 50%;
+    .img-startup{
+        margin-left: auto;
     }
-    
-	.perfil-bannerWrapper {
-		position: relative;
-		height: 100%;
-	}
 }
