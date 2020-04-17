@@ -1,64 +1,119 @@
-.navbar{
+.navbar {
     font-family: 'Montserrat', sans-serif;
 }
 
-footer{
+footer {
     background: #333333;
     color: #FFF;
     padding: 20px;
     margin-top: 0;
+    text-align: center;
 }
 
-footer address:last-child{
-    margin-bottom: 0;
+.fa-instagram {
+    color: #d6249f;
 }
 
-#universidade{
+.fa-facebook {
+    color: #3B5998;
+}
+
+.fa-youtube-play {
+    color: #e52d27;
+}
+
+.fa-rss {
+    color: #FF6600;
+}
+
+.fa-vine {
+    color: #00a478;
+}
+
+.fa-flickr {
+    color: #ff0084;
+}
+
+.fa-twitch {
+    color: rgb(131, 58, 180);
+}
+
+.fa-linkedin {
+    color: #007bb6;
+}
+
+.fa {
+    opacity: 0.7;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+.fa:hover {
+    opacity: 1;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+#universidade {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-html, body{
+html,
+body {
     height: 100%;
 }
 
-header h1{
+.escondeVisualmente {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+/* Conteudo escrito antes <span class="escondeVisualmente">Conteudo escondido e utilizado para acessibilidade</span> */
+
+header h1 {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.titulo-nome{
+.titulo-nome {
     font-size: 33px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.foto-perfil{
+.foto-perfil {
     border-radius: 8px;
     width: 80%;
     opacity: 1;
     transition: 400ms;
     box-shadow: 3px 3px 3px #000000;
-
 }
 
-.foto-perfil:hover{
+.foto-perfil:hover {
     opacity: 0.5;
 }
 
-.legenda-titulo{
+.legenda-titulo {
     margin-top: 10px;
     font-size: 18px;
 }
 
-.projeto-competencia{
+.projeto-competencia {
     font-size: 18px;
     color: white;
     text-align: justify;
     background: linear-gradient(#999999 30%, #d3d3d3);
 }
 
-.projeto{
+.projeto {
     margin-left: 0;
     margin-top: 40px;
     margin-bottom: 10px;
@@ -69,59 +124,68 @@ header h1{
     background: linear-gradient(#999999 30%, #d3d3d3);
 }
 
-.competencia-footer{
+.competencia-footer {
     margin-top: 0;
     font-size: 18px;
 }
 
-.icon-social{
+.icon-social {
     margin-top: 20px;
     margin-left: 0;
 }
 
-.icon-image{
+.icon-image {
     width: 50px;
     height: 50px;
     opacity: 1;
     transition: 400ms;
 }
 
-.icon-image:hover{
+.icon-image:hover {
     opacity: 0.3;
 }
 
-.icon-social-footer{
+.icon-social-footer {
     margin-top: 0;
 }
 
-.skill_item{
+.skill_item {
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
-.texto-profissao{
+.texto-profissao {
     color: white;
 }
 
-.texto-aplicativo{
+.texto-aplicativo {
     color: black;
 }
 
-.texto-aplicativo:hover{
-    color:orange;
+.texto-aplicativo:hover {
+    color: orange;
     text-decoration: underline;
 }
 
-.texto-profissao:hover{
-    color:orange;
+.texto-realidade {
+    color: white;
+}
+
+.texto-realidade:hover {
+    color: orange;
     text-decoration: underline;
 }
 
-#botao-git{
+.texto-profissao:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+#botao-git {
     margin-top: 20px;
 }
 
-header{
+header {
     background-image: url(../img/wall1.jpg);
     background-size: cover;
     background-position: top center;
@@ -130,67 +194,69 @@ header{
 }
 
 .topCasaFina-banner {
-	color: #FFF;
-	background-color: rgba(0, 0, 0, .5);
-	padding: 20px;
-	width: 80%;
-	border-radius: 5px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	transition: .3s;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 20px;
+    width: 80%;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
 }
 
-.img-startup{
+.img-startup {
     text-align: center;
     display: inline-block;
     margin-top: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
-.figuras{
+.figuras {
     border: 3px solid white;
     border-radius: 10px;
     margin-bottom: 10px;
-    padding-left: 50px;  
+    padding-left: 50px;
     padding-right: 50px;
 }
 
-.figuras:hover{
+.figuras:hover {
     border-color: orange;
 }
 
-.figuras:hover h3{
+.figuras:hover h3 {
     font-size: 40px;
 }
 
-.figuras:hover p{
+.figuras:hover p {
     font-size: 30px;
 }
 
-.figuras a{
+.figuras a {
     color: white;
 }
 
-.figuras a:hover {  /* Efeito ao passar no link */
+.figuras a:hover {
+    /* Efeito ao passar no link */
     color: orange;
     text-decoration: underline;
 }
 
-.formulario-contato{
+.formulario-contato {
     margin-bottom: 30px;
 }
 
-#contato{
+#contato {
     margin-top: 20px;
 }
 
-.texto-centralizado{
+.texto-centralizado {
     text-align: center;
 }
 
-.enviar{
+.enviar {
     width: 30%;
     padding: 15px 0;
     background: orange;
@@ -203,37 +269,36 @@ header{
     cursor: pointer;
 }
 
-.linha{
+.linha {
     margin-left: 60px;
 }
 
-.skill_item_dois{
+.skill_item_dois {
     margin-top: 20px;
     margin-left: 0;
 }
 
-.escrita-animacao{
+.escrita-animacao {
     padding-top: 30px;
     padding-left: 200px;
 }
 
-
-#aplicativo{
+#aplicativo {
     margin-bottom: 20px;
     margin-bottom: 20px;
 }
 
-#web{
+#web {
     margin-bottom: 20px;
     margin-bottom: 20px;
 }
 
-.enviar:hover{
+.enviar:hover {
     background: darkorange;
-    transform:  scale(1.1);
+    transform: scale(1.1);
 }
-@media (max-width: 320px) {
 
+@media (max-width: 320px) {
     .topCasaFina-banner {
         color: #FFF;
         background-color: rgba(0, 0, 0, .5);
@@ -245,36 +310,30 @@ header{
         left: 50%;
         transform: translate(-50%, -50%);
         transition: .3s;
-	}
-
-    .img-startup{
+    }
+    .img-startup {
         margin-left: 40px;
     }
-
-    .icon-image{
+    .icon-image {
         width: 0;
         height: 0;
-
     }
-
-    .titulo-nome{
+    .titulo-nome {
         font-size: 20px;
         margin-top: 30px;
         margin-bottom: 20px;
     }
-
-	.topCasaFina-bannerWrapper {
-		position: relative;
-		height: 100%;
+    .topCasaFina-bannerWrapper {
+        position: relative;
+        height: 100%;
     }
-    
-    .legenda-titulo{
+    .legenda-titulo {
         font-size: 16px;
     }
 }
 
 @media (min-width: 360px) {
-	.topCasaFina-banner {
+    .topCasaFina-banner {
         color: #FFF;
         background-color: rgba(0, 0, 0, .5);
         padding: 20px;
@@ -285,40 +344,33 @@ header{
         left: 50%;
         transform: translate(-50%, -50%);
         transition: .3s;
-	}
-
-    .img-startup{
+    }
+    .img-startup {
         margin-left: 70px;
     }
-
-    .icon-image{
+    .icon-image {
         width: 0;
         height: 0;
-
     }
-
-    .titulo-nome{
+    .titulo-nome {
         font-size: 20px;
         margin-top: 30px;
         margin-bottom: 20px;
     }
-
-	.topCasaFina-bannerWrapper {
-		position: relative;
-		height: 100%;
+    .topCasaFina-bannerWrapper {
+        position: relative;
+        height: 100%;
     }
-    
-    .legenda-titulo{
+    .legenda-titulo {
         font-size: 16px;
     }
 }
 
 @media(min-width: 768px) {
-	#paineis-sobre {
-		margin-top: 0;	
+    #paineis-sobre {
+        margin-top: 0;
     }
-    
-    .img-startup{
+    .img-startup {
         margin-left: auto;
     }
 }
