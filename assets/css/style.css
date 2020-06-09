@@ -2,6 +2,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+nav {
+    position: sticky;
+    top: 0;
+  }
+
 footer {
     background: #333333;
     color: #FFF;
@@ -58,6 +63,10 @@ footer {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 html,
 body {
@@ -298,6 +307,10 @@ header {
     transform: scale(1.1);
 }
 
+.sticky {
+    position: sticky;
+    bottom: 50px;
+  }
 
 #animacao {
     margin-top: 20px;

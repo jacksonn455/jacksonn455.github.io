@@ -1,4 +1,4 @@
-
+$( document ).ready(function() {
 function typeWrite(elemento){
     const textoArray = elemento.innerHTML.split('');
     elemento.innerHTML = ' ';
@@ -15,3 +15,6 @@ const nomeTitulo = document.querySelector('#animacao');
 
 typeWrite(nomeTitulo)
 
+
+
+});
