@@ -5,7 +5,37 @@
 nav {
     position: sticky;
     top: 0;
-  }
+}
+
+.listaProf {
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 20px;
+    margin-left: 20px;
+    border-style: solid;
+    border-color: orange;
+    border-width: 0 0 0 1px;
+}
+
+.listaProfi {
+    position: relative;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.listaProfi::before {
+    counter-increment: item;
+    content: counter(item);
+    position: absolute;
+    left: -37px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px orange solid;
+    background: #d3d3d3;
+    color: orange;
+    text-align: center;
+}
 
 footer {
     background: #333333;
@@ -66,7 +96,7 @@ footer {
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 html,
 body {
@@ -310,30 +340,31 @@ header {
 .sticky {
     position: sticky;
     bottom: 50px;
-  }
+}
 
 #animacao {
     margin-top: 20px;
     margin-bottom: 20px;
     color: white;
-  }
-  
-  #animacao::after {
+}
+
+#animacao::after {
     content: '|';
     opacity: 1;
     margin-left: 5px;
     display: inline-block;
     animation: blink .7s infinite;
-  }
-  
-  @keyframes blink {
-    0%, 100% {
-      opacity: 1;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
     }
     50% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
+}
 
 @media (max-width: 320px) {
     .topCasaFina-banner {
