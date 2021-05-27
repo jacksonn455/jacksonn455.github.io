@@ -367,7 +367,15 @@ header {
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
+    .foto-perfil {
+        margin-top: 25px;
+        border-radius: 8px;
+        width: 80%;
+        opacity: 1;
+        transition: 400ms;
+        box-shadow: 3px 3px 3px #000000;
+    }
     .topCasaFina-banner {
         color: #FFF;
         background-color: rgba(0, 0, 0, .5);
@@ -397,11 +405,19 @@ header {
         height: 100%;
     }
     .legenda-titulo {
-        font-size: 16px;
+        font-size: 10px;
     }
 }
 
-@media (min-width: 360px) {
+@media (min-width: 400px) {
+    .foto-perfil {
+        margin-top: 25px;
+        border-radius: 8px;
+        width: 80%;
+        opacity: 1;
+        transition: 400ms;
+        box-shadow: 3px 3px 3px #000000;
+    }
     .topCasaFina-banner {
         color: #FFF;
         background-color: rgba(0, 0, 0, .5);
@@ -436,6 +452,14 @@ header {
 }
 
 @media(min-width: 768px) {
+    .foto-perfil {
+        margin-top: 25px;
+        border-radius: 8px;
+        width: 100%;
+        opacity: 1;
+        transition: 400ms;
+        box-shadow: 3px 3px 3px #000000;
+    }
     #paineis-sobre {
         margin-top: 0;
     }
