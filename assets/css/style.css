@@ -255,11 +255,11 @@ header {
 }
 
 .figuras {
-    border: 3px solid white;
+    border: 5px solid white;
     border-radius: 10px;
     margin-bottom: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 55px;
+    padding-right: 55px;
 }
 
 .figuras:hover {
@@ -267,11 +267,11 @@ header {
 }
 
 .figuras:hover h3 {
-    font-size: 40px;
+    font-size: 45px;
 }
 
 .figuras:hover p {
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .figuras a {
