@@ -103,6 +103,11 @@ body {
     height: 100%;
 }
 
+svg {
+    width: 15px;
+    height: 15px;
+  }
+
 .escondeVisualmente {
     border: 0;
     clip: rect(0 0 0 0);
