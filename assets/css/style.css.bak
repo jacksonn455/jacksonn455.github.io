@@ -148,7 +148,7 @@ header h1 {
 
 .legenda-titulo {
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .projeto-competencia {
@@ -410,7 +410,7 @@ header {
         height: 100%;
     }
     .legenda-titulo {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
@@ -452,7 +452,7 @@ header {
         height: 100%;
     }
     .legenda-titulo {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
