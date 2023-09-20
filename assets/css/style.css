@@ -133,6 +133,10 @@ header h1 {
     margin-bottom: 20px;
 }
 
+.skill_list{
+ font-size: 10px;
+}
+
 .foto-perfil {
     margin-top: 25px;
     border-radius: 8px;
@@ -254,13 +258,22 @@ header {
 .img-startup {
     text-align: center;
     display: inline-block;
-    margin-top: 70px;
+    margin-top: 100px;
     margin-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
+}
+
+.img-startup-weekend {
+    text-align: center;
+    display: inline-block;
+    margin-top: 100px;
+    margin-right: 20px;
+    margin-bottom: 80px;
+    width: 100%;
 }
 
 .figuras {
-    border: 5px solid white;
+    border: 8px solid white;
     border-radius: 10px;
     margin-bottom: 10px;
     padding-left: 60px;
