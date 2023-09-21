@@ -266,10 +266,11 @@ header {
 .img-startup-weekend {
     text-align: center;
     display: inline-block;
-    margin-top: 100px;
+    margin-top: 180px;
     margin-right: 20px;
     margin-bottom: 80px;
     width: 99%;
+    height: 150px;
 }
 
 .figuras {
