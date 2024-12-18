@@ -1,6 +1,30 @@
 .navbar {
     font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
 }
+
+.navbar-nav > li > a {
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.navbar-brand {
+    font-size: 16px;
+    padding: 10px 15px;
+    margin-right: 10px; 
+}
+
+.navbar-header,
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 
 nav {
     position: sticky;
