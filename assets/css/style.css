@@ -197,6 +197,65 @@ header h1 {
     background: linear-gradient(#999999 30%, #d3d3d3);
 }
 
+.curso {
+    margin-top: 40px;
+    padding-bottom: 30px;
+    color: black;
+    text-align: justify;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.curso img.course-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-align: center;
+    width: auto;
+    color: white;
+}
+
+/* Botão Udemy (roxo) */
+.btn-udemy {
+    background-color: #8A00E1; /* Cor de fundo roxa da Udemy */
+    color: white;
+    border: none;
+}
+
+.btn-udemy:hover {
+    background-color: #6A00B5; /* Tom mais escuro para hover */
+}
+
+/* Botão Hotmart (laranja) */
+.btn-hotmart {
+    background-color: #FF7F00; /* Cor de fundo laranja da Hotmart */
+    color: white;
+    border: none;
+}
+
+.btn-hotmart:hover {
+    background-color: #E67300; /* Tom mais escuro para hover */
+}
+
 .competencia-footer {
     margin-top: 0;
     font-size: 18px;
