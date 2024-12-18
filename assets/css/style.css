@@ -143,8 +143,9 @@ svg {
     width: 1px;
 }
 
-
-/* Conteudo escrito antes <span class="escondeVisualmente">Conteudo escondido e utilizado para acessibilidade</span> */
+.curso-div {
+    margin-top: 50px;
+}
 
 header h1 {
     margin-top: 0;
