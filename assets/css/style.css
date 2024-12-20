@@ -1,34 +1,60 @@
-.navbar {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+
+@media (max-width: 767px) {
+    .navbar-collapse {
+        display: none;
+    }
+
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+
+    .navbar-nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: block;
+        background-color: #333;
+    }
+
+    .navbar-nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav li a {
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .navbar-nav li a:hover {
+        background-color: #444;
+    }
+
+    .navbar-toggle {
+        display: block;
+        background-color: orange;
+        border: none;
+    }
+
+    .navbar-toggle .icon-bar {
+        background-color: white;
+    }
 }
 
-.navbar-nav > li > a {
-    padding: 10px 12px;
-    font-size: 14px;
-}
+@media (min-width: 768px) {
+    .navbar-collapse {
+        display: block !important;
+    }
 
-.navbar-brand {
-    font-size: 16px;
-    padding: 10px 15px;
-    margin-right: 10px; 
-}
+    .navbar-nav {
+        display: flex;
+    }
 
-.navbar-header,
-.navbar-nav {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-nav {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-
-nav {
-    position: sticky;
-    top: 0;
+    .navbar-toggle {
+        display: none;
+    }
 }
 
 .listaProf {
