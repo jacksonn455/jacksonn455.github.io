@@ -171,6 +171,26 @@ document.addEventListener("DOMContentLoaded", function () {
             // Contact
             email: "E-mail:",
             whatsapp: "Whatsapp:",
+            professionalExperience: "Professional Experience",
+
+            //iot
+            connectedWardrobe: "Connected Wardrobe",
+            smartMailbox: "Smart Mailbox",
+            autonomousWardrobe: "Autonomous Wardrobe",
+            breweryAutomation: "Brewery Automation",
+
+            //virtual reality
+             virtualRealityTitle: "Virtual Reality",
+            virtualRealityDescription: "This event was organized for the computer science course, aiming to contribute to the improvement of the professional and civic education of those involved. The project's objective was to model the entire Uri Campus II Erechim University in 3D in less than 24 hours.",
+
+            //course for sale
+            coursesForSale: "Courses for Sale",
+            webDevelopmentTitle: "Web Development",
+            webDevelopmentDescription: "Learn to build complete web applications from scratch, mastering HTML, CSS, JavaScript, and database management.",
+            interfaceDesignTitle: "Interface Design",
+            interfaceDesignDescription: "Master HCI: paradigms, accessibility, usability, prototyping, and user-centered design and experience.",
+            dataMiningTitle: "Data Mining with KDD, Python, R, and Google Colab",
+            dataMiningDescription: "Data Mining in Practice: KDD, Data Selection, and Preprocessing with Python, R, WEKA, and Google Colab.",
           },
         },
         pt: {
@@ -342,6 +362,26 @@ document.addEventListener("DOMContentLoaded", function () {
             // Contact
             email: "E-mail:",
             whatsapp: "Whatsapp:",
+            professionalExperience: "Experiência Profissional",
+
+            //iot
+            connectedWardrobe: "Conectado",
+            smartMailbox: "Caixa de Correio Inteligente",
+            autonomousWardrobe: "Autônomo",
+            breweryAutomation: "Automação para Cervejarias",
+
+            //virtual reality
+            virtualRealityTitle: "Realidade Virtual",
+            virtualRealityDescription: "Este evento foi organizado para o curso de ciência da computação, com o objetivo de contribuir para a melhoria da educação profissional e cívica dos envolvidos. O objetivo do projeto era modelar todo o Campus II da Universidade URI Erechim em 3D em menos de 24 horas.",
+
+            //course for sale
+            coursesForSale: "Cursos à Venda",
+            webDevelopmentTitle: "Desenvolvimento Web",
+            webDevelopmentDescription: "Aprenda a construir aplicações web completas do zero, dominando HTML, CSS, JavaScript e gerenciamento de banco de dados.",
+            interfaceDesignTitle: "Design de Interface",
+            interfaceDesignDescription: "Domine IHC: paradigmas, acessibilidade, usabilidade, prototipagem e design e experiência centrados no usuário.",
+            dataMiningTitle: "Mineração de Dados com KDD, Python, R e Google Colab",
+            dataMiningDescription: "Mineração de Dados na Prática: KDD, Seleção e Pré-processamento de Dados com Python, R, WEKA e Google Colab."
           },
         },
         es: {
@@ -515,6 +555,26 @@ document.addEventListener("DOMContentLoaded", function () {
             // Contact
             email: "Correo Electrónico:",
             whatsapp: "Whatsapp:",
+            professionalExperience: "Experiencia Profesional",
+
+            //iot
+            connectedWardrobe: "Armario Conectado",
+            smartMailbox: "Buzón Inteligente",
+            autonomousWardrobe: "Armario Autónomo",
+            breweryAutomation: "Automatización de Cervecería",
+
+            //virtual reality
+            virtualRealityTitle: "Realidad Virtual",
+            virtualRealityDescription: "Este evento fue organizado para el curso de ciencias de la computación, con el objetivo de contribuir a la mejora de la educación profesional y cívica de los involucrados. El objetivo del proyecto era modelar todo el Campus II de la Universidad URI Erechim en 3D en menos de 24 horas.",
+
+            //course for sale
+            coursesForSale: "Cursos en Venta",
+            webDevelopmentTitle: "Desarrollo Web",
+            webDevelopmentDescription: "Aprende a construir aplicaciones web completas desde cero, dominando HTML, CSS, JavaScript y gestión de bases de datos.",
+            interfaceDesignTitle: "Diseño de Interfaz",
+            interfaceDesignDescription: "Domina HCI: paradigmas, accesibilidad, usabilidad, prototipado y diseño y experiencia centrados en el usuario.",
+            dataMiningTitle: "Minería de Datos con KDD, Python, R y Google Colab",
+            dataMiningDescription: "Minería de Datos en la Práctica: KDD, Selección y Preprocesamiento de Datos con Python, R, WEKA y Google Colab.",
           },
         },
       },
