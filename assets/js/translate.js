@@ -191,6 +191,8 @@ document.addEventListener("DOMContentLoaded", function () {
             interfaceDesignDescription: "Master HCI: paradigms, accessibility, usability, prototyping, and user-centered design and experience.",
             dataMiningTitle: "Data Mining with KDD, Python, R, and Google Colab",
             dataMiningDescription: "Data Mining in Practice: KDD, Data Selection, and Preprocessing with Python, R, WEKA, and Google Colab.",
+            professionalEthicsTitle: "Professional Ethics and Legislation",
+            professionalEthicsDescription: "Rights, Duties, and Code of Ethics for IT and Technology Professionals | Updated Legislation.",    
           },
         },
         pt: {
@@ -381,7 +383,9 @@ document.addEventListener("DOMContentLoaded", function () {
             interfaceDesignTitle: "Design de Interface",
             interfaceDesignDescription: "Domine IHC: paradigmas, acessibilidade, usabilidade, prototipagem e design e experiência centrados no usuário.",
             dataMiningTitle: "Mineração de Dados com KDD, Python, R e Google Colab",
-            dataMiningDescription: "Mineração de Dados na Prática: KDD, Seleção e Pré-processamento de Dados com Python, R, WEKA e Google Colab."
+            dataMiningDescription: "Mineração de Dados na Prática: KDD, Seleção e Pré-processamento de Dados com Python, R, WEKA e Google Colab.",
+            professionalEthicsTitle: "Ética Profissional e Legislação",
+            professionalEthicsDescription: "Direitos, Deveres e Código de Ética para Profissionais de TI e Tecnologia | Legislação Atualizada."
           },
         },
         es: {
@@ -575,6 +579,8 @@ document.addEventListener("DOMContentLoaded", function () {
             interfaceDesignDescription: "Domina HCI: paradigmas, accesibilidad, usabilidad, prototipado y diseño y experiencia centrados en el usuario.",
             dataMiningTitle: "Minería de Datos con KDD, Python, R y Google Colab",
             dataMiningDescription: "Minería de Datos en la Práctica: KDD, Selección y Preprocesamiento de Datos con Python, R, WEKA y Google Colab.",
+            professionalEthicsTitle: "Ética Profesional y Legislación",
+            professionalEthicsDescription: "Derechos, Deberes y Código de Ética para Profesionales de TI y Tecnología | Legislación Actualizada.",    
           },
         },
       },
