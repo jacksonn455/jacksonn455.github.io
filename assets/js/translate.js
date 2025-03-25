@@ -193,6 +193,8 @@ document.addEventListener("DOMContentLoaded", function () {
             dataMiningDescription: "Data Mining in Practice: KDD, Data Selection, and Preprocessing with Python, R, WEKA, and Google Colab.",
             professionalEthicsTitle: "Professional Ethics and Legislation",
             professionalEthicsDescription: "Rights, Duties, and Code of Ethics for IT and Technology Professionals | Updated Legislation.",    
+            professionalIoTTitle: "Internet of Things: Fundamentals and Applications",
+            professionalIoTDescription: "Internet of Things (IoT) in Practice: Develop Projects with Sensors, Protocols, and Commercial Platforms"
           },
         },
         pt: {
@@ -385,7 +387,9 @@ document.addEventListener("DOMContentLoaded", function () {
             dataMiningTitle: "Mineração de Dados com KDD, Python, R e Google Colab",
             dataMiningDescription: "Mineração de Dados na Prática: KDD, Seleção e Pré-processamento de Dados com Python, R, WEKA e Google Colab.",
             professionalEthicsTitle: "Ética Profissional e Legislação",
-            professionalEthicsDescription: "Direitos, Deveres e Código de Ética para Profissionais de TI e Tecnologia | Legislação Atualizada."
+            professionalEthicsDescription: "Direitos, Deveres e Código de Ética para Profissionais de TI e Tecnologia | Legislação Atualizada.",
+            professionalIoTTitle: "Internet das Coisas: Fundamentos e Aplicações",
+            professionalIoTDescription: "Internet das Coisas (IoT) na Prática: Desenvolva Projetos com Sensores, Protocolos e Plataformas Comerciais"
           },
         },
         es: {
@@ -581,6 +585,9 @@ document.addEventListener("DOMContentLoaded", function () {
             dataMiningDescription: "Minería de Datos en la Práctica: KDD, Selección y Preprocesamiento de Datos con Python, R, WEKA y Google Colab.",
             professionalEthicsTitle: "Ética Profesional y Legislación",
             professionalEthicsDescription: "Derechos, Deberes y Código de Ética para Profesionales de TI y Tecnología | Legislación Actualizada.",    
+            professionalIoTTitle: "Internet de las Cosas: Fundamentos y Aplicaciones",
+            professionalIoTDescription: "Internet de las Cosas (IoT) en la Práctica: Desarrolle Proyectos con Sensores, Protocolos y Plataformas Comerciales",
+         
           },
         },
       },
