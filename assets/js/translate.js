@@ -194,7 +194,9 @@ document.addEventListener("DOMContentLoaded", function () {
             professionalEthicsTitle: "Professional Ethics and Legislation",
             professionalEthicsDescription: "Rights, Duties, and Code of Ethics for IT and Technology Professionals | Updated Legislation.",    
             professionalIoTTitle: "Internet of Things: Fundamentals and Applications",
-            professionalIoTDescription: "Internet of Things (IoT) in Practice: Develop Projects with Sensors, Protocols, and Commercial Platforms"
+            professionalIoTDescription: "Internet of Things (IoT) in Practice: Develop Projects with Sensors, Protocols, and Commercial Platforms",
+            programmingLogicDescription: "Learn flowcharts, pseudocode, variables, conditionals, and loops to solve programming problems and build logical thinking.",
+            programmingLogicTitle: "Programming Logic and Algorithms: Complete Guide",
           },
         },
         pt: {
@@ -389,7 +391,9 @@ document.addEventListener("DOMContentLoaded", function () {
             professionalEthicsTitle: "Ética Profissional e Legislação",
             professionalEthicsDescription: "Direitos, Deveres e Código de Ética para Profissionais de TI e Tecnologia | Legislação Atualizada.",
             professionalIoTTitle: "Internet das Coisas: Fundamentos e Aplicações",
-            professionalIoTDescription: "Internet das Coisas (IoT) na Prática: Desenvolva Projetos com Sensores, Protocolos e Plataformas Comerciais"
+            professionalIoTDescription: "Internet das Coisas (IoT) na Prática: Desenvolva Projetos com Sensores, Protocolos e Plataformas Comerciais",
+            programmingLogicDescription: "Aprenda fluxogramas, pseudocódigo, variáveis, condicionais e loops para resolver problemas de programação e desenvolver o raciocínio lógico.",
+            programmingLogicTitle: "Lógica de Programação e Algoritmos: Guia Completo",
           },
         },
         es: {
@@ -587,7 +591,8 @@ document.addEventListener("DOMContentLoaded", function () {
             professionalEthicsDescription: "Derechos, Deberes y Código de Ética para Profesionales de TI y Tecnología | Legislación Actualizada.",    
             professionalIoTTitle: "Internet de las Cosas: Fundamentos y Aplicaciones",
             professionalIoTDescription: "Internet de las Cosas (IoT) en la Práctica: Desarrolle Proyectos con Sensores, Protocolos y Plataformas Comerciales",
-         
+            programmingLogicDescription: "Aprenda fluxogramas, pseudocódigo, variáveis, condicionais e loops para resolver problemas de programação e desenvolver o raciocínio lógico.",
+            programmingLogicTitle: "Lógica de Programación y Algoritmos: Guía Completa",
           },
         },
       },

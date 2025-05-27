@@ -169,7 +169,19 @@ svg {
 }
 
 .curso-div {
-  margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.course-card {
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 500px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 header h1 {
@@ -250,9 +262,9 @@ header h1 {
 }
 
 .course-image {
-  margin-bottom: 20px;
-  width: 100%;
-  height: auto;
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
 }
 
 .btn {
