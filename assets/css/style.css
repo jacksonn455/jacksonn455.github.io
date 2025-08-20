@@ -1,13 +1,6 @@
 @media (max-width: 767px) {
   .navbar-collapse {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    padding: 10px;
-    z-index: 1000;
   }
 
   .navbar-collapse.collapse.in {
@@ -19,12 +12,12 @@
     padding: 0;
     margin: 0;
     display: block;
+    background-color: #333;
   }
 
   .navbar-nav li {
     width: 100%;
     text-align: center;
-    margin-bottom: 10px;
   }
 
   .navbar-nav li a {
@@ -42,14 +35,10 @@
     display: block;
     background-color: orange;
     border: none;
-    padding: 10px;
   }
 
   .navbar-toggle .icon-bar {
     background-color: white;
-    width: 25px;
-    height: 3px;
-    margin: 5px 0;
   }
 }
 
@@ -60,7 +49,6 @@
 
   .navbar-nav {
     display: flex;
-    justify-content: flex-end;
   }
 
   .navbar-toggle {
@@ -573,47 +561,18 @@ header {
   }
 }
 
-@media screen and (max-width: 375px) {
-  .topCasaFina-banner {
-    font-size: 5px;
-    line-height: 1;
-    text-align: center;
-  }
-
-  .titulo-nome {
-    font-size: 5px;
-    text-align: center;
-  }
-
-  .legenda-titulo {
-    font-size: 5px;
-    text-align: center;
-  }
-
+@media (max-width: 450px) {
   .foto-perfil {
-    width: 100%;
-    max-width: 150px;
-  }
-}
-
-
-@media (max-width: 400px) {
-  .foto-perfil {
-    margin-top: 25px;
-    border-radius: 8px;
-    width: 80%;
-    opacity: 1;
-    transition: 400ms;
-    box-shadow: 3px 3px 3px #000000;
+    display: none;
   }
   .topCasaFina-banner {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 10px;
     width: 80%;
     border-radius: 5px;
     position: absolute;
-    top: 54%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 0.3s;
@@ -639,7 +598,7 @@ header {
   }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 450px) {
   .foto-perfil {
     margin-top: 25px;
     border-radius: 8px;
