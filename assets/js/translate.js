@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         en: {
           translation: {
             // Menu
-            university: "UNIVERSITY",
+            education: "EDUCATION",
             certificates: "CERTIFICATES",
             workshops: "WORKSHOPS",
             experience: "EXPERIENCE",
@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
         pt: {
           translation: {
             // Menu
-            university: "UNIVERSIDADE",
+            education: "EDUCAÇÃO",
             certificates: "CERTIFICADOS",
             workshops: "CURSOS",
             experience: "EXPERIÊNCIA",
@@ -399,7 +399,7 @@ document.addEventListener("DOMContentLoaded", function () {
         es: {
           translation: {
             // Menu
-            university: "UNIVERSIDAD",
+            education: "EDUCACIÓN",
             certificates: "CERTIFICADOS",
             workshops: "TALLERES",
             experience: "EXPERIENCIA",

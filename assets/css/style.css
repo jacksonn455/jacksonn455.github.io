@@ -561,6 +561,30 @@ header {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .topCasaFina-banner {
+    font-size: 5px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .titulo-nome {
+    font-size: 5px;
+    text-align: center;
+  }
+
+  .legenda-titulo {
+    font-size: 5px;
+    text-align: center;
+  }
+
+  .foto-perfil {
+    width: 100%;
+    max-width: 150px;
+  }
+}
+
+
 @media (max-width: 400px) {
   .foto-perfil {
     margin-top: 25px;

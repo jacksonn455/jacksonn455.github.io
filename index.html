@@ -58,7 +58,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="collapse-navbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#universidade" data-i18n="university">UNIVERSITY</a></li>
+                        <li><a href="#education" data-i18n="education">EDUCATION</a></li>
                         <li><a href="#certificados" data-i18n="certificates">CERTIFICATES</a></li>
                         <li><a href="#mini-cursos" data-i18n="workshops">WORKSHOPS</a></li>
                         <li><a href="#id-competencia" data-i18n="experience">EXPERIENCE</a></li>
@@ -121,73 +121,44 @@
 
     </header>
     <main role="main">
-        <section id="universidade" class="container">
+        <section id="education" class="container">
             <h2 data-i18n="bachelorDegree">BACHELOR'S DEGREE</h2>
-
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <figure class="item active">
-                        <img src="assets/img/uri.jpg" alt="University Campus 1">
-                        <figcaption class="carousel-caption">
-                            <h3 data-i18n="uri">Integrated Regional University of Alto Uruguai and Missions, Erechim
-                                Campus II</h3>
-                            <h4 data-i18n="bachelor"><strong>2016-2021/01:</strong> Bachelor's in Computer Science</h4>
-                        </figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="assets/img/uri2.jpg" alt="University Campus 2">
-                        <figcaption class="carousel-caption">
-                            <h3 data-i18n="uri">Integrated Regional University of Alto Uruguai and Missions, Erechim
-                                Campus I</h3>
-                            <h4 data-i18n="bachelor"><strong>2016-2021/01:</strong> Bachelor's in Computer Science</h4>
-                        </figcaption>
-                    </figure>
+            <div class="panel-group" id="bachelor-panels">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" data-i18n="uri">
+                            Integrated Regional University of Alto Uruguai and Missions
+                        </h3>
+                    </div>
+                    <div id="bachelor-first" class="collapse in">
+                        <div class="panel-body">
+                            <p data-i18n="bachelor">
+                                <strong>2016-2021/01:</strong> Bachelor's in Computer Science
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                </a>
             </div>
 
             <h2 data-i18n="postgraduateStudies">POSTGRADUATE STUDIES</h2>
-
-            <div id="carousel-example-generic-pos" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic-pos" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic-pos" data-slide-to="1"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <figure class="item active">
-                        <img src="assets/img/met1.jpg" alt="Faculdade Metropolitana">
-                        <figcaption class="carousel-caption">
-                            <h3 data-i18n="collegeName">Faculdade Metropolitana</h3>
-                            <h4 data-i18n="softwareEngineering"><strong>2022-2023/01:</strong> Software Engineering</h4>
-                        </figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="assets/img/met2.jpg" alt="Faculdade Metropolitana">
-                        <figcaption class="carousel-caption">
-                            <h3 data-i18n="collegeName">Faculdade Metropolitana</h3>
-                            <h4 data-i18n="databaseAdmin"><strong>2023-2024/02:</strong> Database Administration</h4>
-                        </figcaption>
-                    </figure>
+            <div class="panel-group" id="postgrad-panels">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" data-i18n="collegeName">
+                            Metropolitan College
+                        </h3>
+                    </div>
+                    <div id="postgrad-first" class="collapse in">
+                        <div class="panel-body">
+                            <p data-i18n="softwareEngineering">
+                                <strong>2022-2023/01:</strong> Software Engineering
+                            </p>
+                            <p data-i18n="databaseAdmin">
+                                <strong>2023-2024/02:</strong> Database Administration
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
-                <a class="left carousel-control" href="#carousel-example-generic-pos" role="button" data-slide="prev">
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic-pos" role="button" data-slide="next">
-                </a>
             </div>
         </section>
 
