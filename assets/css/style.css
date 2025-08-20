@@ -1,6 +1,13 @@
 @media (max-width: 767px) {
   .navbar-collapse {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    z-index: 1000;
   }
 
   .navbar-collapse.collapse.in {
@@ -12,12 +19,12 @@
     padding: 0;
     margin: 0;
     display: block;
-    background-color: #333;
   }
 
   .navbar-nav li {
     width: 100%;
     text-align: center;
+    margin-bottom: 10px;
   }
 
   .navbar-nav li a {
@@ -35,10 +42,14 @@
     display: block;
     background-color: orange;
     border: none;
+    padding: 10px;
   }
 
   .navbar-toggle .icon-bar {
     background-color: white;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
   }
 }
 
@@ -49,6 +60,7 @@
 
   .navbar-nav {
     display: flex;
+    justify-content: flex-end;
   }
 
   .navbar-toggle {
