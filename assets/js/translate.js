@@ -1,8 +1,128 @@
-document.addEventListener("DOMContentLoaded", function () {
+// Função para detectar país e determinar idioma
+async function detectCountryAndLanguage() {
+  // Lista de APIs gratuitas para detecção de geolocalização
+  const geoAPIs = [
+    {
+      url: 'https://ipapi.co/json/',
+      countryField: 'country_code'
+    },
+    {
+      url: 'https://api.ipgeolocation.io/ipgeo?apiKey=free',
+      countryField: 'country_code2'
+    },
+    {
+      url: 'https://ipwhois.app/json/',
+      countryField: 'country_code'
+    }
+  ];
+
+  for (const api of geoAPIs) {
+    try {
+      // Criar timeout manual usando AbortController
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 segundos
+      
+      const response = await fetch(api.url, {
+        method: 'GET',
+        signal: controller.signal
+      });
+      
+      clearTimeout(timeoutId);
+      
+      if (!response.ok) continue;
+      
+      const data = await response.json();
+      const countryCode = data[api.countryField];
+      
+      if (countryCode) {
+        const detectedLanguage = getLanguageFromCountry(countryCode);
+        console.log(`País detectado: ${data.country || data.country_name || 'Desconhecido'} (${countryCode}), idioma: ${detectedLanguage}`);
+        return detectedLanguage;
+      }
+    } catch (error) {
+      console.log(`Falha na API ${api.url}:`, error);
+      continue; // Tenta próxima API
+    }
+  }
+  
+  // Fallback final para detecção de idioma do navegador
+  console.log('Todas as APIs de geolocalização falharam, usando detecção de idioma do navegador');
+  const browserLang = navigator.language || navigator.languages[0];
+  if (browserLang.startsWith('pt')) return 'pt';
+  if (browserLang.startsWith('es')) return 'es';
+  return 'en';
+}
+
+function getLanguageFromCountry(countryCode) {
+  // Mapear países para idiomas
+  const countryLanguageMap = {
+    // Países que falam português
+    'BR': 'pt', // Brasil
+    'PT': 'pt', // Portugal
+    'AO': 'pt', // Angola
+    'MZ': 'pt', // Moçambique
+    'CV': 'pt', // Cabo Verde
+    'GW': 'pt', // Guiné-Bissau
+    'ST': 'pt', // São Tomé e Príncipe
+    'TL': 'pt', // Timor-Leste
+    'MO': 'pt', // Macau
+    
+    // Países que falam espanhol
+    'ES': 'es', // Espanha
+    'AR': 'es', // Argentina
+    'MX': 'es', // México
+    'CO': 'es', // Colômbia
+    'PE': 'es', // Peru
+    'VE': 'es', // Venezuela
+    'CL': 'es', // Chile
+    'EC': 'es', // Equador
+    'GT': 'es', // Guatemala
+    'CU': 'es', // Cuba
+    'BO': 'es', // Bolívia
+    'DO': 'es', // República Dominicana
+    'HN': 'es', // Honduras
+    'PY': 'es', // Paraguai
+    'SV': 'es', // El Salvador
+    'NI': 'es', // Nicarágua
+    'CR': 'es', // Costa Rica
+    'PA': 'es', // Panamá
+    'UY': 'es', // Uruguai
+    'GQ': 'es', // Guiné Equatorial
+    'PR': 'es', // Porto Rico
+    
+    // Outros países falam inglês por padrão
+  };
+  
+  return countryLanguageMap[countryCode] || 'en';
+}
+
+document.addEventListener("DOMContentLoaded", async function () {
+  // Verificar se usuário já tem preferência salva
+  const savedLanguage = localStorage.getItem('userPreferredLanguage');
+  
+  let detectedLanguage;
+  if (savedLanguage) {
+    // Usar idioma salvo pelo usuário
+    detectedLanguage = savedLanguage;
+    console.log(`Usando idioma salvo pelo usuário: ${savedLanguage}`);
+  } else {
+    // Detectar idioma baseado no país do usuário
+    detectedLanguage = await detectCountryAndLanguage();
+  }
+  
   i18next
     .use(i18nextBrowserLanguageDetector)
     .init({
+      lng: detectedLanguage, // Usar idioma detectado por país ou salvo pelo usuário
       fallbackLng: "en",
+      detection: {
+        // Desabilitar detecção automática do navegador já que estamos usando detecção por país
+        order: ['querystring', 'cookie', 'localStorage'],
+        lookupQuerystring: 'lng',
+        lookupCookie: 'i18next',
+        lookupLocalStorage: 'i18nextLng',
+        caches: ['localStorage', 'cookie'],
+      },
       interpolation: {
         escapeValue: false,
       },
@@ -10,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
         en: {
           translation: {
             // Menu
+            portfolio: "PORTFOLIO",
             education: "EDUCATION",
             certificates: "CERTIFICATES",
             workshops: "WORKSHOPS",
@@ -68,97 +189,97 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Workshops
             webAccessibility:
-              "Web Accessibility: Introduction to Inclusive Designs.",
+              "Web Accessibility: Introduction to Inclusive Designs (Duration: 6 hours) Alura.",
             webAccessibilityPart1:
-              "Web Accessibility Part 1: Making Your Front-End Inclusive.",
+              "Web Accessibility Part 1: Making Your Front-End Inclusive (Duration: 6 hours) Alura.",
             webAccessibilityPart2:
-              "Web Accessibility Part 2: Accessible Components with a Bit of JavaScript.",
-            androidKotlin: "Android App Development with Kotlin.",
-            dartProgramming: "Dart Programming Language.",
-            flutterDevelopment: "Android and iOS App Development with Flutter.",
-            mysqlDatabase: "MySQL Database.",
+              "Web Accessibility Part 2: Accessible Components with a Bit of JavaScript (Duration: 4 hours) Alura.",
+            androidKotlin: "Android App Development with Kotlin (Duration: 12.5 hours) Udemy.",
+            dartProgramming: "Dart Programming Language (Duration: 2 hours) Udemy.",
+            flutterDevelopment: "Android and iOS App Development with Flutter (Duration: 33 hours) Udemy.",
+            mysqlDatabase: "MySQL Database (Duration: 3.5 hours) Udemy.",
             introductionToMySQL: "Introduction to MySQL Database.",
             amazonEC2: "Introduction to Amazon Elastic Compute Cloud (EC2).",
             awsComputeServices: "AWS Compute Services Overview.",
             awsApplicationServices: "AWS Application Services Overview.",
             dockerContainers: "Docker: Creating Containers Without Headaches.",
             kubernetesPods: "Kubernetes: Pods, Services, and ConfigMaps.",
-            delphiLazarus: "Learn Delphi and Lazarus from Scratch.",
+            delphiLazarus: "Learn Delphi and Lazarus from Scratch (Duration: 6.5 hours) Udemy.",
             webServicesIntegration:
-              "Integration of Solutions with Web Services.",
-            apiSpecifications: "API Specifications with Swagger and OpenAPI.",
+              "Integration of Solutions with Web Services (Duration: 1 hour) Udemy.",
+            apiSpecifications: "API Specifications with Swagger and OpenAPI (Duration: 3.5 hours) Udemy.",
             restApiDocumentation:
-              "Understanding and Documenting REST/RESTful APIs.",
-            webpackModules: "Webpack: Manipulating Modules in Your Web App.",
+              "Understanding and Documenting REST/RESTful APIs (Duration: 5 hours) Udemy.",
+            webpackModules: "Webpack: Manipulating Modules in Your Web App (Duration: 8 hours) Alura.",
             chromeDevTools:
-              "Chrome DevTools: Analyze, Inspect, and Debug Your Web Pages.",
-            httpUnderstanding: "HTTP: Understanding the Web Under the Hood.",
-            lgpdImpacts: "LGPD: Getting to Know and Understanding Its Impacts.",
-            webPerformance: "Web Performance I: Optimizing the Front-End.",
+              "Chrome DevTools: Analyze, Inspect, and Debug Your Web Pages (Duration: 9 hours) Alura.",
+            httpUnderstanding: "HTTP: Understanding the Web Under the Hood (Duration: 14 hours) Alura.",
+            lgpdImpacts: "LGPD: Getting to Know and Understanding Its Impacts (Duration: 10 hours) Alura.",
+            webPerformance: "Web Performance I: Optimizing the Front-End (Duration: 20 hours) Alura.",
             neuralNetworks:
-              "Introduction to Neural Networks: Deep Learning with PyTorch.",
-            htmlCssPart1: "HTML5 and CSS3 Part 1: The First Web Page.",
+              "Introduction to Neural Networks: Deep Learning with PyTorch (Duration: 6 hours) Alura.",
+            htmlCssPart1: "HTML5 and CSS3 Part 1: The First Web Page (Duration: 8 hours) Alura.",
             htmlCssPart2:
-              "HTML5 and CSS3 Part 2: Positioning, Lists, and Navigation.",
+              "HTML5 and CSS3 Part 2: Positioning, Lists, and Navigation (Duration: 8 hours) Alura.",
             htmlCssPart3:
-              "HTML5 and CSS3 Part 3: Working with Forms and Tables.",
-            htmlCssPart4: "HTML5 and CSS3 Part 4: Advancing in CSS.",
-            bootstrap3: "Bootstrap 3: Creating a Responsive Single-Page.",
-            bootstrap4: "Bootstrap 4: Creating a Responsive Landing Page.",
-            cssArchitecture: "CSS Architecture: Simplifying Problems.",
-            cssGrid: "CSS Grid: Simplifying Layouts.",
-            sassCompass: "Sass and Compass: Demystifying CSS.",
-            flexbox: "Flexbox: Position Elements on the Screen.",
+              "HTML5 and CSS3 Part 3: Working with Forms and Tables (Duration: 8 hours) Alura.",
+            htmlCssPart4: "HTML5 and CSS3 Part 4: Advancing in CSS (Duration: 8 hours) Alura.",
+            bootstrap3: "Bootstrap 3: Creating a Responsive Single-Page (Duration: 12 hours) Alura.",
+            bootstrap4: "Bootstrap 4: Creating a Responsive Landing Page (Duration: 8 hours) Alura.",
+            cssArchitecture: "CSS Architecture: Simplifying Problems (Duration: 8 hours) Alura.",
+            cssGrid: "CSS Grid: Simplifying Layouts (Duration: 8 hours) Alura.",
+            sassCompass: "Sass and Compass: Demystifying CSS (Duration: 8 hours) Alura.",
+            flexbox: "Flexbox: Position Elements on the Screen (Duration: 9 hours) Alura.",
             responsiveDesign:
-              "Responsive Web Design: Pages that Adapt from Mobile to Desktop.",
-            webDevelopment: "Web Development.",
-            gitGithub: "Git and Github: Control and Share Your Code.",
-            gitBasics: "Git Basics.",
-            javaProducts: "Java Products - Specifications vs. Proprietaries.",
-            javaSalesSystem: "Sales System with Java Web.",
-            javaPharmacySystem: "Pharmacy System with Java Web.",
-            javaFundamentals: "Java Programming Fundamentals.",
-            programmingParadigms: "Programming Paradigms.",
+              "Responsive Web Design: Pages that Adapt from Mobile to Desktop (Duration: 10 hours) Alura.",
+            webDevelopment: "Web Development (Duration: 12 hours) URI Campus Erechim.",
+            gitGithub: "Git and Github: Control and Share Your Code (Duration: 6 hours) Alura.",
+            gitBasics: "Git (Duration: 3.4 hours) Udemy.",
+            javaProducts: "Java Products - Specifications vs. Proprietaries (Duration: 1 hour) Udemy.",
+            javaSalesSystem: "Sales System with Java Web (Duration: 10.5 hours) Udemy.",
+            javaPharmacySystem: "Pharmacy System with Java Web (Duration: 8 hours) Udemy.",
+            javaFundamentals: "Java Programming Fundamentals (Duration: 12 hours) Udemy.",
+            programmingParadigms: "Programming Paradigms (Duration: 180 hours) Faculdade Metropolitana.",
             unitTestingJava:
-              "Unit Testing in Java: Master JUnit, Mockito, and TDD.",
-            nodeJsTesting: "Node.JS Testing (TDD) from the Ground Up.",
+              "Unit Testing in Java: Master JUnit, Mockito, and TDD (Duration: 8 hours) Udemy.",
+            nodeJsTesting: "Node.JS Testing (TDD) from the Ground Up (Duration: 15.5 hours) Udemy.",
             javascriptBasics:
-              "JavaScript: Programming in the language of the web.",
+              "JavaScript: Programming in the language of the web (Duration: 20 hours) Alura.",
             advancedJavascript1:
-              "Advanced JavaScript I: ES6, object-oriented programming, and design patterns.",
+              "Advanced JavaScript I: ES6, object-oriented programming, and design patterns (Duration: 12 hours) Alura.",
             advancedJavascript2:
-              "Advanced JavaScript II: ES6, object-oriented programming, and design patterns.",
-            nestjsApi: "NESTJS: Creating a REST API with TypeScript.",
+              "Advanced JavaScript II: ES6, object-oriented programming, and design patterns (Duration: 12 hours) Alura.",
+            nestjsApi: "NESTJS: Creating a REST API with TypeScript (Duration: 6 hours) Alura.",
             advancedJavascript3:
-              "Advanced JavaScript III: ES6, object-oriented programming, and design patterns.",
-            reactPart1: "React part 1: Reusable components for your web app.",
+              "Advanced JavaScript III: ES6, object-oriented programming, and design patterns (Duration: 12 hours) Alura.",
+            reactPart1: "React part 1: Reusable components for your web app (Duration: 6 hours) Alura.",
             reactPart2:
-              "React part 2: Validation, Routing, and API Integration.",
-            vuePart1: "Vue part 1: Building Single Page Applications.",
-            vuePart2: "Vue part 2: Building Single Page Applications.",
-            jqueryIntroduction: "jQuery: Introduction to jQuery.",
+              "React part 2: Validation, Routing, and API Integration (Duration: 8 hours) Alura.",
+            vuePart1: "Vue part 1: Building Single Page Applications (Duration: 16 hours) Alura.",
+            vuePart2: "Vue part 2: Building Single Page Applications (Duration: 16 hours) Alura.",
+            jqueryIntroduction: "jQuery: Introduction to jQuery (Duration: 1 hour) Udemy.",
             jqueryPart1:
-              "jQuery part 1: Master the most popular library in the market.",
+              "jQuery part 1: Master the most popular library in the market (Duration: 12 hours) Alura.",
             jqueryPart2:
-              "jQuery part 2: Advance with the most popular library in the market.",
-            nodeJsApis: "Node.js: Creating APIs.",
-            nodeJsMongoDb: "Node.js and MongoDB.",
-            angularIntroduction: "Angular 5: Introduction to JavaScript.",
-            phpBestPractices: "Best Practices in PHP.",
+              "jQuery part 2: Advance with the most popular library in the market (Duration: 12 hours) Alura.",
+            nodeJsApis: "Node.js: Creating APIs (Duration: 2 hours) Udemy.",
+            nodeJsMongoDb: "Node.js and MongoDB (Duration: 15.5 hours) Udemy.",
+            angularIntroduction: "Angular 5: Introduction to JavaScript (Duration: 4 hours) URI Campus Erechim.",
+            phpBestPractices: "Best Practices in PHP (Duration: 30 minutes) Professor Diego Mariano.",
             scrumMasterCertification:
-              "Scrum Master Certification: Preparatory Course.",
-            scrumAgility: "Scrum: Agility in Your Project.",
-            scrumPart1: "Scrum Part 1: Manage Your Project Agilely.",
+              "Scrum Master Certification: Preparatory Course (Duration: 11 hours) Udemy.",
+            scrumAgility: "Scrum: Agility in Your Project (Duration: 10 hours) Alura.",
+            scrumPart1: "Scrum Part 1: Manage Your Project Agilely (Duration: 5 hours) Alura.",
             scrumPart2:
-              "Scrum Part 2: The Agile Manifesto, Leadership, and Organization in Scrum.",
+              "Scrum Part 2: The Agile Manifesto, Leadership, and Organization in Scrum (Duration: 5 hours) Alura.",
 
             // Additional Education
-            englishLiterature: "Foreign Language and Literature 'English'.",
+            englishLiterature: "Foreign Language and Literature 'English' (Duration: 250 hours) Topway English School, Erechim and Passo Fundo.",
             computerTechnician:
-              "Computer Technician 'Hardware, Software, Networks'.",
-            administrativeAssistant: "Administrative Assistant.",
+              "Computer Technician 'Hardware, Software, Networks' (Duration: 192 hours) SENAC Erechim.",
+            administrativeAssistant: "Administrative Assistant (Duration: 180 hours) SENAC Erechim.",
             basicToAdvancedComputing:
-              "Basic to Advanced Computing 'Word, Excel, Powerpoint, Windows, Linux, Typing, Internet'.",
+              "Basic to Advanced Computing 'Word, Excel, Powerpoint, Windows, Linux, Typing, Internet' (Duration: 160 hours) Escola JB Informática.",
 
             // Professional Experience
             uriProfessor:
@@ -172,6 +293,88 @@ document.addEventListener("DOMContentLoaded", function () {
             email: "E-mail:",
             whatsapp: "Whatsapp:",
             professionalExperience: "Professional Experience",
+
+            // Articles
+            publishedArticles: "PUBLISHED ARTICLES",
+            digitalInnovationTitle: "Digital Innovation for Microbreweries: An Integrated Tool for Production Monitoring and Management",
+            publishedIn: "Published in",
+            brazilianJournalTech: "Brazilian Journal of Technology",
+            authors: "Authors:",
+            description: "Description:",
+            readFullArticle: "Read the Full Article",
+            articleDescription: "This article introduces a mobile application called <em>Velha Guarda</em>, designed to automate and optimize the beer production process for microbreweries. The solution integrates real-time monitoring using ESP8266 NodeMCU with temperature sensors, object-oriented methodology, and tools such as Flutter, Firebase, and Scrum-based project management. The goal is to improve safety, efficiency, productivity, and cost reduction in craft beer production of up to 100 liters.",
+
+            // Professional Experience Technical Terms
+            programmingLanguages: "Programming Languages:",
+            applicationServer: "Application server:",
+            testing: "Testing:",
+            messagingSystem: "Messaging System:",
+            databases: "Databases:",
+            sourceCodeManagement: "Source Code Management:",
+            cloud: "Cloud:",
+            agileMethods: "Agile methods:",
+            generalTooling: "General tooling:",
+            softwareEngineeringBestPractices: "Software Engineering Best Practices:",
+            aiEvaluationWork: "AI & Evaluation Work:",
+            collaborationTools: "Collaboration Tools:",
+            cloudDevOps: "Cloud & DevOps:",
+            event: "Event",
+
+            // Job Titles
+            seniorSoftwareEngineer: "Senior Software Engineer",
+            codingAgentExperience: "Senior Software Engineer (Coding Agent Experience)",
+            professorComputerScience: "Professor of Computer Science",
+
+            // Subjects/Courses
+            interfaceDesign: "Interface Design",
+            webDevelopment: "Web Development",
+            ethicsAndLegislation: "Ethics and Professional Legislation",
+            specialTopicsComputing1: "Special Topics in Computing I",
+            specialTopicsComputing2: "Special Topics in Computing II",
+            computationalThinking: "Computational Thinking",
+
+            // Workshop Categories
+            cloudCategory: "CLOUD",
+            applicationsCategory: "APPLICATIONS",
+            accessibilityCategory: "ACCESSIBILITY",
+            devopsCategory: "DEVOPS",
+            devToolsCategory: "DEV TOOLS",
+            htmlCssCategory: "HTML AND CSS",
+            additionalEducationCategory: "ADDITIONAL EDUCATION",
+            gitGithubCategory: "GIT AND GITHUB",
+            javaCategory: "JAVA",
+            testsCategory: "TESTS",
+            javascriptCategory: "JAVASCRIPT",
+            phpCategory: "PHP",
+            scrumCategory: "SCRUM",
+
+            // Common Terms
+            duration: "Duration:",
+            year: "Year:",
+            doi: "DOI:",
+            hours: "hours",
+            minutes: "minutes",
+
+            // Websites
+            architecture: "Architecture",
+            cuisine: "Cuisine",
+            journalism: "Journalism",
+            games: "Games",
+            agency: "Agency",
+
+            // Applications
+            smartLockers: "Smart Lockers",
+            virtualStore: "Virtual Store",
+            aestheticClinic: "Aesthetic Clinic",
+            systemsSection: "SYSTEMS",
+
+            // Database Category
+            databaseCategory: "DATABASE",
+
+            // Sections
+            startups: "STARTUPS",
+            websitesSection: "WEBSITES",
+            iotSection: "IoT",
 
             //iot
             connectedWardrobe: "Connected Wardrobe",
@@ -197,11 +400,14 @@ document.addEventListener("DOMContentLoaded", function () {
             professionalIoTDescription: "Internet of Things (IoT) in Practice: Develop Projects with Sensors, Protocols, and Commercial Platforms",
             programmingLogicDescription: "Learn flowcharts, pseudocode, variables, conditionals, and loops to solve programming problems and build logical thinking.",
             programmingLogicTitle: "Programming Logic and Algorithms: Complete Guide",
+            databaseAdministrationTitle: "Database Administration: SQL, MySQL, and DBA",
+            databaseAdministrationDescription: "Learn security, performance, backup, and recovery to work as a professional DBA and master DBMSs",
           },
         },
         pt: {
           translation: {
             // Menu
+            portfolio: "PORTFÓLIO",
             education: "EDUCAÇÃO",
             certificates: "CERTIFICADOS",
             workshops: "CURSOS",
@@ -260,16 +466,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Workshops
             webAccessibility:
-              "Acessibilidade Web: Introdução a Designs Inclusivos.",
+              "Acessibilidade Web: Introdução a Designs Inclusivos (Duração: 6 horas) Alura.",
             webAccessibilityPart1:
-              "Acessibilidade Web Parte 1: Tornando Seu Front-End Inclusivo.",
+              "Acessibilidade Web Parte 1: Tornando Seu Front-End Inclusivo (Duração: 6 horas) Alura.",
             webAccessibilityPart2:
-              "Acessibilidade Web Parte 2: Componentes Acessíveis com um Pouco de JavaScript.",
-            androidKotlin: "Desenvolvimento de Aplicativos Android com Kotlin.",
-            dartProgramming: "Linguagem de Programação Dart.",
-            flutterDevelopment:
-              "Desenvolvimento de Aplicativos Android e iOS com Flutter.",
-            mysqlDatabase: "Banco de Dados MySQL.",
+              "Acessibilidade Web Parte 2: Componentes Acessíveis com um Pouco de JavaScript (Duração: 4 horas) Alura.",
+            androidKotlin: "Desenvolvimento de Aplicativos Android com Kotlin (Duração: 12.5 horas) Udemy.",
+            dartProgramming: "Linguagem de Programação Dart (Duração: 2 horas) Udemy.",
+            flutterDevelopment: "Desenvolvimento de Aplicativos Android e iOS com Flutter (Duração: 33 horas) Udemy.",
+            mysqlDatabase: "Banco de Dados MySQL (Duração: 3.5 horas) Udemy.",
             introductionToMySQL: "Introdução ao Banco de Dados MySQL.",
             amazonEC2: "Introdução ao Amazon Elastic Compute Cloud (EC2).",
             awsComputeServices:
@@ -279,83 +484,83 @@ document.addEventListener("DOMContentLoaded", function () {
             dockerContainers:
               "Docker: Criando Contêineres sem Dores de Cabeça.",
             kubernetesPods: "Kubernetes: Pods, Serviços e ConfigMaps.",
-            delphiLazarus: "Aprenda Delphi e Lazarus do Zero.",
-            webServicesIntegration: "Integração de Soluções com Web Services.",
-            apiSpecifications: "Especificações de API com Swagger e OpenAPI.",
+            delphiLazarus: "Aprenda Delphi e Lazarus do Zero (Duração: 6.5 horas) Udemy.",
+            webServicesIntegration: "Integração de Soluções com Web Services (Duração: 1 hora) Udemy.",
+            apiSpecifications: "Especificações de API com Swagger e OpenAPI (Duração: 3.5 horas) Udemy.",
             restApiDocumentation:
-              "Entendendo e Documentando APIs REST/RESTful.",
+              "Entendendo e Documentando APIs REST/RESTful (Duração: 5 horas) Udemy.",
             webpackModules:
-              "Webpack: Manipulando Módulos em Sua Aplicação Web.",
+              "Webpack: Manipulando Módulos em Sua Aplicação Web (Duração: 8 horas) Alura.",
             chromeDevTools:
-              "Chrome DevTools: Analise, Inspecione e Depure Suas Páginas Web.",
-            httpUnderstanding: "HTTP: Entendendo a Web por Baixo dos Panos.",
-            lgpdImpacts: "LGPD: Conhecendo e Entendendo Seus Impactos.",
-            webPerformance: "Desempenho Web I: Otimizando o Front-End.",
+              "Chrome DevTools: Analise, Inspecione e Depure Suas Páginas Web (Duração: 9 horas) Alura.",
+            httpUnderstanding: "HTTP: Entendendo a Web por Baixo dos Panos (Duração: 14 horas) Alura.",
+            lgpdImpacts: "LGPD: Conhecendo e Entendendo Seus Impactos (Duração: 10 horas) Alura.",
+            webPerformance: "Desempenho Web I: Otimizando o Front-End (Duração: 20 horas) Alura.",
             neuralNetworks:
-              "Introdução às Redes Neurais: Deep Learning com PyTorch.",
-            htmlCssPart1: "HTML5 e CSS3 Parte 1: A Primeira Página Web.",
+              "Introdução às Redes Neurais: Deep Learning com PyTorch (Duração: 6 horas) Alura.",
+            htmlCssPart1: "HTML5 e CSS3 Parte 1: A Primeira Página Web (Duração: 8 horas) Alura.",
             htmlCssPart2:
-              "HTML5 e CSS3 Parte 2: Posicionamento, Listas e Navegação.",
+              "HTML5 e CSS3 Parte 2: Posicionamento, Listas e Navegação (Duração: 8 horas) Alura.",
             htmlCssPart3:
-              "HTML5 e CSS3 Parte 3: Trabalhando com Formulários e Tabelas.",
-            htmlCssPart4: "HTML5 e CSS3 Parte 4: Avançando no CSS.",
-            bootstrap3: "Bootstrap 3: Criando uma Página Única Responsiva.",
+              "HTML5 e CSS3 Parte 3: Trabalhando com Formulários e Tabelas (Duração: 8 horas) Alura.",
+            htmlCssPart4: "HTML5 e CSS3 Parte 4: Avançando no CSS (Duração: 8 horas) Alura.",
+            bootstrap3: "Bootstrap 3: Criando uma Página Única Responsiva (Duração: 12 horas) Alura.",
             bootstrap4:
-              "Bootstrap 4: Criando uma Página de Destino Responsiva.",
-            cssArchitecture: "Arquitetura CSS: Simplificando Problemas.",
-            cssGrid: "CSS Grid: Simplificando Layouts.",
-            sassCompass: "Sass e Compass: Desmistificando CSS.",
-            flexbox: "Flexbox: Posicionando Elementos na Tela.",
+              "Bootstrap 4: Criando uma Página de Destino Responsiva (Duração: 8 horas) Alura.",
+            cssArchitecture: "Arquitetura CSS: Simplificando Problemas (Duração: 8 horas) Alura.",
+            cssGrid: "CSS Grid: Simplificando Layouts (Duração: 8 horas) Alura.",
+            sassCompass: "Sass e Compass: Desmistificando o CSS (Duração: 8 horas) Alura.",
+            flexbox: "Flexbox: Posicionando Elementos na Tela (Duração: 9 horas) Alura.",
             responsiveDesign:
-              "Design Responsivo: Páginas que se Adaptam do Mobile ao Desktop.",
-            webDevelopment: "Desenvolvimento Web.",
-            gitGithub: "Git e Github: Controle e Compartilhe Seu Código.",
-            gitBasics: "Noções Básicas de Git.",
-            javaProducts: "Produtos Java - Especificações vs. Proprietários.",
-            javaSalesSystem: "Sistema de Vendas com Java Web.",
-            javaPharmacySystem: "Sistema de Farmácia com Java Web.",
-            javaFundamentals: "Fundamentos de Programação Java.",
-            programmingParadigms: "Paradigmas de Programação.",
+              "Design Responsivo: Páginas que se Adaptam de Móvel para Desktop (Duração: 10 horas) Alura.",
+            webDevelopment: "Desenvolvimento Web (Duração: 12 horas) URI Campus Erechim.",
+            gitGithub: "Git e Github: Controle e Compartilhe Seu Código (Duração: 6 horas) Alura.",
+            gitBasics: "Noções Básicas de Git (Duração: 3.4 horas) Udemy.",
+            javaProducts: "Produtos Java - Especificações vs. Proprietários (Duração: 1 hora) Udemy.",
+            javaSalesSystem: "Sistema de Vendas com Java Web (Duração: 10.5 horas) Udemy.",
+            javaPharmacySystem: "Sistema de Farmácia com Java Web (Duração: 8 horas) Udemy.",
+            javaFundamentals: "Fundamentos de Programação Java (Duração: 12 horas) Udemy.",
+            programmingParadigms: "Paradigmas de Programação (Duração: 180 horas) Faculdade Metropolitana.",
             unitTestingJava:
-              "Testes Unitários em Java: Domine JUnit, Mockito e TDD.",
-            nodeJsTesting: "Testes em Node.JS (TDD) do Zero.",
-            javascriptBasics: "JavaScript: Programando na Linguagem da Web.",
+              "Testes Unitários em Java: Domine JUnit, Mockito e TDD (Duração: 8 horas) Udemy.",
+            nodeJsTesting: "Testes em Node.JS (TDD) do Zero (Duração: 15.5 horas) Udemy.",
+            javascriptBasics: "JavaScript: Programando na Linguagem da Web (Duração: 20 horas) Alura.",
             advancedJavascript1:
-              "JavaScript Avançado I: ES6, Programação Orientada a Objetos e Padrões de Design.",
+              "JavaScript Avançado I: ES6, Programação Orientada a Objetos e Padrões de Design (Duração: 12 horas) Alura.",
             advancedJavascript2:
-              "JavaScript Avançado II: ES6, Programação Orientada a Objetos e Padrões de Design.",
-            nestjsApi: "NESTJS: Criando uma API REST com TypeScript.",
+              "JavaScript Avançado II: ES6, Programação Orientada a Objetos e Padrões de Design (Duração: 12 horas) Alura.",
+            nestjsApi: "NESTJS: Criando uma API REST com TypeScript (Duração: 6 horas) Alura.",
             advancedJavascript3:
-              "JavaScript Avançado III: ES6, Programação Orientada a Objetos e Padrões de Design.",
+              "JavaScript Avançado III: ES6, Programação Orientada a Objetos e Padrões de Design (Duração: 12 horas) Alura.",
             reactPart1:
-              "React Parte 1: Componentes Reutilizáveis para Sua Aplicação Web.",
+              "React Parte 1: Componentes Reutilizáveis para Sua Aplicação Web (Duração: 6 horas) Alura.",
             reactPart2:
-              "React Parte 2: Validação, Roteamento e Integração com API.",
-            vuePart1: "Vue Parte 1: Construindo Aplicações de Página Única.",
-            vuePart2: "Vue Parte 2: Construindo Aplicações de Página Única.",
-            jqueryIntroduction: "jQuery: Introdução ao jQuery.",
+              "React Parte 2: Validação, Roteamento e Integração com API (Duração: 8 horas) Alura.",
+            vuePart1: "Vue Parte 1: Construindo Aplicações de Página Única (Duração: 16 horas) Alura.",
+            vuePart2: "Vue Parte 2: Construindo Aplicações de Página Única (Duração: 16 horas) Alura.",
+            jqueryIntroduction: "jQuery: Introdução ao jQuery (Duração: 1 hora) Udemy.",
             jqueryPart1:
-              "jQuery Parte 1: Domine a Biblioteca Mais Popular do Mercado.",
+              "jQuery Parte 1: Domine a Biblioteca Mais Popular do Mercado (Duração: 12 horas) Alura.",
             jqueryPart2:
-              "jQuery Parte 2: Avançando com a Biblioteca Mais Popular do Mercado.",
-            nodeJsApis: "Node.js: Criando APIs.",
-            nodeJsMongoDb: "Node.js e MongoDB.",
-            angularIntroduction: "Angular 5: Introdução ao JavaScript.",
-            phpBestPractices: "Melhores Práticas em PHP.",
+              "jQuery Parte 2: Avançando com a Biblioteca Mais Popular do Mercado (Duração: 12 horas) Alura.",
+            nodeJsApis: "Node.js: Criando APIs (Duração: 2 horas) Udemy.",
+            nodeJsMongoDb: "Node.js e MongoDB (Duração: 15.5 horas) Udemy.",
+            angularIntroduction: "Angular 5: Introdução ao JavaScript (Duração: 4 horas) URI Campus Erechim.",
+            phpBestPractices: "Melhores Práticas em PHP (Duração: 30 minutos) Professor Diego Mariano.",
             scrumMasterCertification:
-              "Certificação Scrum Master: Curso Preparatório.",
-            scrumAgility: "Scrum: Agilidade em Seu Projeto.",
-            scrumPart1: "Scrum Parte 1: Gerencie Seu Projeto de Forma Ágil.",
+              "Certificação Scrum Master: Curso Preparatório (Duração: 11 horas) Udemy.",
+            scrumAgility: "Scrum: Agilidade em Seu Projeto (Duração: 10 horas) Alura.",
+            scrumPart1: "Scrum Parte 1: Gerencie Seu Projeto de Forma Ágil (Duração: 5 horas) Alura.",
             scrumPart2:
-              "Scrum Parte 2: O Manifesto Ágil, Liderança e Organização no Scrum.",
+              "Scrum Parte 2: O Manifesto Ágil, Liderança e Organização no Scrum (Duração: 5 horas) Alura.",
 
             // Additional Education
-            englishLiterature: "Língua e Literatura Estrangeira 'Inglês'.",
+            englishLiterature: "Língua e Literatura Estrangeira 'Inglês' (Duração: 250 horas) Topway English School, Erechim e Passo Fundo.",
             computerTechnician:
-              "Técnico em Informática 'Hardware, Software, Redes'.",
-            administrativeAssistant: "Assistente Administrativo.",
+              "Técnico em Informática 'Hardware, Software, Redes' (Duração: 192 horas) SENAC Erechim.",
+            administrativeAssistant: "Assistente Administrativo (Duração: 180 horas) SENAC Erechim.",
             basicToAdvancedComputing:
-              "Informática Básica a Avançada 'Word, Excel, Powerpoint, Windows, Linux, Digitação, Internet'.",
+              "Informática Básica a Avançada 'Word, Excel, Powerpoint, Windows, Linux, Digitação, Internet' (Duração: 160 horas) Escola JB Informática.",
 
             // Professional Experience
             uriProfessor:
@@ -369,6 +574,88 @@ document.addEventListener("DOMContentLoaded", function () {
             email: "E-mail:",
             whatsapp: "Whatsapp:",
             professionalExperience: "Experiência Profissional",
+
+            // Articles
+            publishedArticles: "ARTIGOS PUBLICADOS",
+            digitalInnovationTitle: "Inovação Digital para Microcervejarias: Uma Ferramenta Integrada para Monitoramento e Gestão da Produção",
+            publishedIn: "Publicado na",
+            brazilianJournalTech: "Brazilian Journal of Technology",
+            authors: "Autores:",
+            description: "Descrição:",
+            readFullArticle: "Leia o Artigo Completo",
+            articleDescription: "Este artigo apresenta uma aplicação móvel chamada <em>Velha Guarda</em>, projetada para automatizar e otimizar o processo de produção de cerveja para microcervejarias. A solução integra monitoramento em tempo real usando ESP8266 NodeMCU com sensores de temperatura, metodologia orientada a objetos e ferramentas como Flutter, Firebase e gerenciamento de projetos baseado no Scrum. O objetivo é melhorar a segurança, eficiência, produtividade e redução de custos na produção de cerveja artesanal de até 100 litros.",
+
+            // Professional Experience Technical Terms
+            programmingLanguages: "Linguagens de Programação:",
+            applicationServer: "Servidor de aplicação:",
+            testing: "Testes:",
+            messagingSystem: "Sistema de Mensagens:",
+            databases: "Bancos de Dados:",
+            sourceCodeManagement: "Gerenciamento de Código Fonte:",
+            cloud: "Nuvem:",
+            agileMethods: "Métodos Ágeis:",
+            generalTooling: "Ferramentas Gerais:",
+            softwareEngineeringBestPractices: "Melhores Práticas de Engenharia de Software:",
+            aiEvaluationWork: "Trabalho de IA e Avaliação:",
+            collaborationTools: "Ferramentas de Colaboração:",
+            cloudDevOps: "Nuvem & DevOps:",
+            event: "Evento",
+
+            // Job Titles
+            seniorSoftwareEngineer: "Engenheiro de Software Sênior",
+            codingAgentExperience: "Engenheiro de Software Sênior (Experiência de Agente de Codificação)",
+            professorComputerScience: "Professor de Ciência da Computação",
+
+            // Subjects/Courses
+            interfaceDesign: "Design de Interface",
+            webDevelopment: "Desenvolvimento Web",
+            ethicsAndLegislation: "Ética e Legislação Profissional",
+            specialTopicsComputing1: "Tópicos Especiais em Computação I",
+            specialTopicsComputing2: "Tópicos Especiais em Computação II",
+            computationalThinking: "Pensamento Computacional",
+
+            // Workshop Categories
+            cloudCategory: "NUVEM",
+            applicationsCategory: "APLICAÇÕES",
+            accessibilityCategory: "ACESSIBILIDADE",
+            devopsCategory: "DEVOPS",
+            devToolsCategory: "FERRAMENTAS DE DEV",
+            htmlCssCategory: "HTML E CSS",
+            additionalEducationCategory: "EDUCAÇÃO ADICIONAL",
+            gitGithubCategory: "GIT E GITHUB",
+            javaCategory: "JAVA",
+            testsCategory: "TESTES",
+            javascriptCategory: "JAVASCRIPT",
+            phpCategory: "PHP",
+            scrumCategory: "SCRUM",
+
+            // Database Category
+            databaseCategory: "BANCO DE DADOS",
+
+            // Sections
+            startups: "STARTUPS",
+            websitesSection: "SITES",
+            iotSection: "IoT",
+
+            // Websites
+            architecture: "Arquitetura",
+            cuisine: "Culinária",
+            journalism: "Jornalismo",
+            games: "Jogos",
+            agency: "Agência",
+
+            // Applications
+            smartLockers: "Armários Inteligentes",
+            virtualStore: "Loja Virtual",
+            aestheticClinic: "Clínica Estética",
+            systemsSection: "SISTEMAS",
+
+            // Common Terms
+            duration: "Duração:",
+            year: "Ano:",
+            doi: "DOI:",
+            hours: "horas",
+            minutes: "minutos",
 
             //iot
             connectedWardrobe: "Conectado",
@@ -394,11 +681,14 @@ document.addEventListener("DOMContentLoaded", function () {
             professionalIoTDescription: "Internet das Coisas (IoT) na Prática: Desenvolva Projetos com Sensores, Protocolos e Plataformas Comerciais",
             programmingLogicDescription: "Aprenda fluxogramas, pseudocódigo, variáveis, condicionais e loops para resolver problemas de programação e desenvolver o raciocínio lógico.",
             programmingLogicTitle: "Lógica de Programação e Algoritmos: Guia Completo",
+            databaseAdministrationTitle: "Administração de Banco de Dados: SQL, MySQL e DBA",
+            databaseAdministrationDescription: "Aprenda segurança, performance, backup e recovery para trabalhar como DBA profissional e dominar SGBDs",
           },
         },
         es: {
           translation: {
             // Menu
+            portfolio: "PORTAFOLIO",
             education: "EDUCACIÓN",
             certificates: "CERTIFICADOS",
             workshops: "TALLERES",
@@ -457,15 +747,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Workshops
             webAccessibility:
-              "Accesibilidad Web: Introducción a Diseños Inclusivos.",
+              "Accesibilidad Web: Introducción a Diseños Inclusivos (Duración: 6 horas) Alura.",
             webAccessibilityPart1:
-              "Accesibilidad Web Parte 1: Haciendo Tu Front-End Inclusivo.",
+              "Accesibilidad Web Parte 1: Haciendo Tu Front-End Inclusivo (Duración: 6 horas) Alura.",
             webAccessibilityPart2:
-              "Accesibilidad Web Parte 2: Componentes Accesibles con un Poco de JavaScript.",
-            androidKotlin: "Desarrollo de Aplicaciones Android con Kotlin.",
-            dartProgramming: "Lenguaje de Programación Dart.",
+              "Accesibilidad Web Parte 2: Componentes Accesibles con un Poco de JavaScript (Duración: 4 horas) Alura.",
+            androidKotlin: "Desarrollo de Aplicaciones Android con Kotlin (Duración: 12.5 horas) Udemy.",
+            dartProgramming: "Lenguaje de Programación Dart (Duración: 2 horas) Udemy.",
             flutterDevelopment:
-              "Desarrollo de Aplicaciones Android y iOS con Flutter.",
+              "Desarrollo de Aplicaciones Android y iOS con Flutter (Duración: 33 horas) Udemy.",
             mysqlDatabase: "Base de Datos MySQL.",
             introductionToMySQL: "Introducción a la Base de Datos MySQL.",
             amazonEC2: "Introducción a Amazon Elastic Compute Cloud (EC2).",
@@ -476,85 +766,85 @@ document.addEventListener("DOMContentLoaded", function () {
             dockerContainers:
               "Docker: Creando Contenedores sin Dolores de Cabeza.",
             kubernetesPods: "Kubernetes: Pods, Servicios y ConfigMaps.",
-            delphiLazarus: "Aprende Delphi y Lazarus desde Cero.",
+            delphiLazarus: "Aprende Delphi y Lazarus desde Cero (Duración: 6.5 horas) Udemy.",
             webServicesIntegration:
-              "Integración de Soluciones con Servicios Web.",
-            apiSpecifications: "Especificaciones de API con Swagger y OpenAPI.",
+              "Integración de Soluciones con Servicios Web (Duración: 1 hora) Udemy.",
+            apiSpecifications: "Especificaciones de API con Swagger y OpenAPI (Duración: 3.5 horas) Udemy.",
             restApiDocumentation:
-              "Comprensión y Documentación de APIs REST/RESTful.",
+              "Comprensión y Documentación de APIs REST/RESTful (Duración: 5 horas) Udemy.",
             webpackModules:
-              "Webpack: Manipulando Módulos en Tu Aplicación Web.",
+              "Webpack: Manipulando Módulos en Tu Aplicación Web (Duración: 8 horas) Alura.",
             chromeDevTools:
-              "Chrome DevTools: Analiza, Inspecciona y Depura Tus Páginas Web.",
-            httpUnderstanding: "HTTP: Entendiendo la Web Bajo el Capó.",
-            lgpdImpacts: "LGPD: Conociendo y Entendiendo Sus Impactos.",
-            webPerformance: "Rendimiento Web I: Optimizando el Front-End.",
+              "Chrome DevTools: Analiza, Inspecciona y Depura Tus Páginas Web (Duración: 9 horas) Alura.",
+            httpUnderstanding: "HTTP: Entendiendo la Web Bajo el Capó (Duración: 14 horas) Alura.",
+            lgpdImpacts: "LGPD: Conociendo y Entendiendo Sus Impactos (Duración: 10 horas) Alura.",
+            webPerformance: "Rendimiento Web I: Optimizando el Front-End (Duración: 20 horas) Alura.",
             neuralNetworks:
-              "Introducción a las Redes Neuronales: Deep Learning con PyTorch.",
-            htmlCssPart1: "HTML5 y CSS3 Parte 1: La Primera Página Web.",
+              "Introducción a las Redes Neuronales: Deep Learning con PyTorch (Duración: 6 horas) Alura.",
+            htmlCssPart1: "HTML5 y CSS3 Parte 1: La Primera Página Web (Duración: 8 horas) Alura.",
             htmlCssPart2:
-              "HTML5 y CSS3 Parte 2: Posicionamiento, Listas y Navegación.",
+              "HTML5 y CSS3 Parte 2: Posicionamiento, Listas y Navegación (Duración: 8 horas) Alura.",
             htmlCssPart3:
-              "HTML5 y CSS3 Parte 3: Trabajando con Formularios y Tablas.",
-            htmlCssPart4: "HTML5 y CSS3 Parte 4: Avanzando en CSS.",
-            bootstrap3: "Bootstrap 3: Creando una Página Única Responsiva.",
+              "HTML5 y CSS3 Parte 3: Trabajando con Formularios y Tablas (Duración: 8 horas) Alura.",
+            htmlCssPart4: "HTML5 y CSS3 Parte 4: Avanzando en CSS (Duración: 8 horas) Alura.",
+            bootstrap3: "Bootstrap 3: Creando una Página Única Responsiva (Duración: 12 horas) Alura.",
             bootstrap4:
-              "Bootstrap 4: Creando una Página de Destino Responsiva.",
-            cssArchitecture: "Arquitectura CSS: Simplificando Problemas.",
-            cssGrid: "CSS Grid: Simplificando Diseños.",
-            sassCompass: "Sass y Compass: Desmitificando CSS.",
-            flexbox: "Flexbox: Posicionando Elementos en la Pantalla.",
+              "Bootstrap 4: Creando una Página de Destino Responsiva (Duración: 8 horas) Alura.",
+            cssArchitecture: "Arquitectura CSS: Simplificando Problemas (Duración: 8 horas) Alura.",
+            cssGrid: "CSS Grid: Simplificando Diseños (Duración: 8 horas) Alura.",
+            sassCompass: "Sass y Compass: Desmitificando CSS (Duración: 8 horas) Alura.",
+            flexbox: "Flexbox: Posicionando Elementos en la Pantalla (Duración: 9 horas) Alura.",
             responsiveDesign:
-              "Diseño Responsivo: Páginas que se Adaptan de Móvil a Escritorio.",
-            webDevelopment: "Desarrollo Web.",
-            gitGithub: "Git y Github: Controla y Comparte Tu Código.",
-            gitBasics: "Conceptos Básicos de Git.",
-            javaProducts: "Productos Java - Especificaciones vs. Propietarios.",
-            javaSalesSystem: "Sistema de Ventas con Java Web.",
-            javaPharmacySystem: "Sistema de Farmacia con Java Web.",
-            javaFundamentals: "Fundamentos de Programación Java.",
-            programmingParadigms: "Paradigmas de Programación.",
+              "Diseño Responsivo: Páginas que se Adaptan de Móvil a Escritorio (Duración: 10 horas) Alura.",
+            webDevelopment: "Desarrollo Web (Duración: 12 horas) URI Campus Erechim.",
+            gitGithub: "Git y Github: Controla y Comparte Tu Código (Duración: 6 horas) Alura.",
+            gitBasics: "Conceptos Básicos de Git (Duración: 3.4 horas) Udemy.",
+            javaProducts: "Productos Java - Especificaciones vs. Propietarios (Duración: 1 hora) Udemy.",
+            javaSalesSystem: "Sistema de Ventas con Java Web (Duración: 10.5 horas) Udemy.",
+            javaPharmacySystem: "Sistema de Farmacia con Java Web (Duración: 8 horas) Udemy.",
+            javaFundamentals: "Fundamentos de Programación Java (Duración: 12 horas) Udemy.",
+            programmingParadigms: "Paradigmas de Programación (Duración: 180 horas) Faculdade Metropolitana.",
             unitTestingJava:
-              "Pruebas Unitarias en Java: Domina JUnit, Mockito y TDD.",
-            nodeJsTesting: "Pruebas en Node.JS (TDD) desde Cero.",
+              "Pruebas Unitarias en Java: Domina JUnit, Mockito y TDD (Duración: 8 horas) Udemy.",
+            nodeJsTesting: "Pruebas en Node.JS (TDD) desde Cero (Duración: 15.5 horas) Udemy.",
             javascriptBasics:
-              "JavaScript: Programando en el Lenguaje de la Web.",
+              "JavaScript: Programando en el Lenguaje de la Web (Duración: 20 horas) Alura.",
             advancedJavascript1:
-              "JavaScript Avanzado I: ES6, Programación Orientada a Objetos y Patrones de Diseño.",
+              "JavaScript Avanzado I: ES6, Programación Orientada a Objetos y Patrones de Diseño (Duración: 12 horas) Alura.",
             advancedJavascript2:
-              "JavaScript Avanzado II: ES6, Programación Orientada a Objetos y Patrones de Diseño.",
-            nestjsApi: "NESTJS: Creando una API REST con TypeScript.",
+              "JavaScript Avanzado II: ES6, Programación Orientada a Objetos y Patrones de Diseño (Duración: 12 horas) Alura.",
+            nestjsApi: "NESTJS: Creando una API REST con TypeScript (Duración: 6 horas) Alura.",
             advancedJavascript3:
-              "JavaScript Avanzado III: ES6, Programación Orientada a Objetos y Patrones de Diseño.",
+              "JavaScript Avanzado III: ES6, Programación Orientada a Objetos y Patrones de Diseño (Duración: 12 horas) Alura.",
             reactPart1:
-              "React Parte 1: Componentes Reutilizables para Tu Aplicación Web.",
+              "React Parte 1: Componentes Reutilizables para Tu Aplicación Web (Duración: 6 horas) Alura.",
             reactPart2:
-              "React Parte 2: Validación, Enrutamiento e Integración con API.",
-            vuePart1: "Vue Parte 1: Construyendo Aplicaciones de Página Única.",
-            vuePart2: "Vue Parte 2: Construyendo Aplicaciones de Página Única.",
-            jqueryIntroduction: "jQuery: Introducción a jQuery.",
+              "React Parte 2: Validación, Enrutamiento e Integración con API (Duración: 8 horas) Alura.",
+            vuePart1: "Vue Parte 1: Construyendo Aplicaciones de Página Única (Duración: 16 horas) Alura.",
+            vuePart2: "Vue Parte 2: Construyendo Aplicaciones de Página Única (Duración: 16 horas) Alura.",
+            jqueryIntroduction: "jQuery: Introducción a jQuery (Duración: 1 hora) Udemy.",
             jqueryPart1:
-              "jQuery Parte 1: Domina la Biblioteca Más Popular del Mercado.",
+              "jQuery Parte 1: Domina la Biblioteca Más Popular del Mercado (Duración: 12 horas) Alura.",
             jqueryPart2:
-              "jQuery Parte 2: Avanza con la Biblioteca Más Popular del Mercado.",
-            nodeJsApis: "Node.js: Creando APIs.",
-            nodeJsMongoDb: "Node.js y MongoDB.",
-            angularIntroduction: "Angular 5: Introducción a JavaScript.",
-            phpBestPractices: "Mejores Prácticas en PHP.",
+              "jQuery Parte 2: Avanza con la Biblioteca Más Popular del Mercado (Duración: 12 horas) Alura.",
+            nodeJsApis: "Node.js: Creando APIs (Duración: 2 horas) Udemy.",
+            nodeJsMongoDb: "Node.js y MongoDB (Duración: 15.5 horas) Udemy.",
+            angularIntroduction: "Angular 5: Introducción a JavaScript (Duración: 4 horas) URI Campus Erechim.",
+            phpBestPractices: "Mejores Prácticas en PHP (Duración: 30 minutos) Professor Diego Mariano.",
             scrumMasterCertification:
-              "Certificación Scrum Master: Curso de Preparación.",
-            scrumAgility: "Scrum: Agilidad en Tu Proyecto.",
-            scrumPart1: "Scrum Parte 1: Gestiona Tu Proyecto de Manera Ágil.",
+              "Certificación Scrum Master: Curso de Preparación (Duración: 11 horas) Udemy.",
+            scrumAgility: "Scrum: Agilidad en Tu Proyecto (Duración: 10 horas) Alura.",
+            scrumPart1: "Scrum Parte 1: Gestiona Tu Proyecto de Manera Ágil (Duración: 5 horas) Alura.",
             scrumPart2:
-              "Scrum Parte 2: El Manifiesto Ágil, Liderazgo y Organización en Scrum.",
+              "Scrum Parte 2: El Manifiesto Ágil, Liderazgo y Organización en Scrum (Duración: 5 horas) Alura.",
 
             // Additional Education
-            englishLiterature: "Lengua y Literatura Extranjera 'Inglés'.",
+            englishLiterature: "Lengua y Literatura Extranjera 'Inglés' (Duración: 250 horas) Topway English School, Erechim y Passo Fundo.",
             computerTechnician:
-              "Técnico en Informática 'Hardware, Software, Redes'.",
-            administrativeAssistant: "Asistente Administrativo.",
+              "Técnico en Informática 'Hardware, Software, Redes' (Duración: 192 horas) SENAC Erechim.",
+            administrativeAssistant: "Asistente Administrativo (Duración: 180 horas) SENAC Erechim.",
             basicToAdvancedComputing:
-              "Informática Básica a Avanzada 'Word, Excel, Powerpoint, Windows, Linux, Mecanografía, Internet'.",
+              "Informática Básica a Avanzada 'Word, Excel, Powerpoint, Windows, Linux, Mecanografía, Internet' (Duración: 160 horas) Escola JB Informática.",
 
             // Professional Experience
             uriProfessor:
@@ -568,6 +858,88 @@ document.addEventListener("DOMContentLoaded", function () {
             email: "Correo Electrónico:",
             whatsapp: "Whatsapp:",
             professionalExperience: "Experiencia Profesional",
+
+            // Articles
+            publishedArticles: "ARTÍCULOS PUBLICADOS",
+            digitalInnovationTitle: "Innovación Digital para Microcervecerías: Una Herramienta Integrada para Monitoreo y Gestión de la Producción",
+            publishedIn: "Publicado en",
+            brazilianJournalTech: "Brazilian Journal of Technology",
+            authors: "Autores:",
+            description: "Descripción:",
+            readFullArticle: "Lea el Artículo Completo",
+            articleDescription: "Este artículo presenta una aplicación móvil llamada <em>Velha Guarda</em>, diseñada para automatizar y optimizar el proceso de producción de cerveza para microcervecerías. La solución integra monitoreo en tiempo real usando ESP8266 NodeMCU con sensores de temperatura, metodología orientada a objetos y herramientas como Flutter, Firebase y gestión de proyectos basada en Scrum. El objetivo es mejorar la seguridad, eficiencia, productividad y reducción de costos en la producción de cerveza artesanal de hasta 100 litros.",
+
+            // Professional Experience Technical Terms
+            programmingLanguages: "Lenguajes de Programación:",
+            applicationServer: "Servidor de aplicaciones:",
+            testing: "Pruebas:",
+            messagingSystem: "Sistema de Mensajería:",
+            databases: "Bases de Datos:",
+            sourceCodeManagement: "Gestión de Código Fuente:",
+            cloud: "Nube:",
+            agileMethods: "Métodos Ágiles:",
+            generalTooling: "Herramientas Generales:",
+            softwareEngineeringBestPractices: "Mejores Prácticas de Ingeniería de Software:",
+            aiEvaluationWork: "Trabajo de IA y Evaluación:",
+            collaborationTools: "Herramientas de Colaboración:",
+            cloudDevOps: "Nube & DevOps:",
+            event: "Evento",
+
+            // Job Titles
+            seniorSoftwareEngineer: "Ingeniero de Software Sénior",
+            codingAgentExperience: "Ingeniero de Software Sénior (Experiencia de Agente de Codificación)",
+            professorComputerScience: "Profesor de Ciencias de la Computación",
+
+            // Subjects/Courses
+            interfaceDesign: "Diseño de Interfaz",
+            webDevelopment: "Desarrollo Web",
+            ethicsAndLegislation: "Ética y Legislación Profesional",
+            specialTopicsComputing1: "Temas Especiales en Computación I",
+            specialTopicsComputing2: "Temas Especiales en Computación II",
+            computationalThinking: "Pensamiento Computacional",
+
+            // Workshop Categories
+            cloudCategory: "NUBE",
+            applicationsCategory: "APLICACIONES",
+            accessibilityCategory: "ACCESIBILIDAD",
+            devopsCategory: "DEVOPS",
+            devToolsCategory: "HERRAMIENTAS DE DEV",
+            htmlCssCategory: "HTML Y CSS",
+            additionalEducationCategory: "EDUCACIÓN ADICIONAL",
+            gitGithubCategory: "GIT Y GITHUB",
+            javaCategory: "JAVA",
+            testsCategory: "PRUEBAS",
+            javascriptCategory: "JAVASCRIPT",
+            phpCategory: "PHP",
+            scrumCategory: "SCRUM",
+
+            // Database Category
+            databaseCategory: "BASE DE DATOS",
+
+            // Sections
+            startups: "STARTUPS",
+            websitesSection: "SITIOS WEB",
+            iotSection: "IoT",
+
+            // Websites
+            architecture: "Arquitectura",
+            cuisine: "Gastronomía",
+            journalism: "Periodismo",
+            games: "Juegos",
+            agency: "Agencia",
+
+            // Applications
+            smartLockers: "Armarios Inteligentes",
+            virtualStore: "Tienda Virtual",
+            aestheticClinic: "Clínica Estética",
+            systemsSection: "SISTEMAS",
+
+            // Common Terms
+            duration: "Duración:",
+            year: "Año:",
+            doi: "DOI:",
+            hours: "horas",
+            minutes: "minutos",
 
             //iot
             connectedWardrobe: "Armario Conectado",
@@ -593,12 +965,15 @@ document.addEventListener("DOMContentLoaded", function () {
             professionalIoTDescription: "Internet de las Cosas (IoT) en la Práctica: Desarrolle Proyectos con Sensores, Protocolos y Plataformas Comerciales",
             programmingLogicDescription: "Aprende diagramas de flujo, pseudocódigo, variables, condicionales y bucles para resolver problemas de programación y desarrollar el pensamiento lógico.",
             programmingLogicTitle: "Lógica de Programación y Algoritmos: Guía Completa",
+            databaseAdministrationTitle: "Administración de Bases de Datos: SQL, MySQL y DBA",
+            databaseAdministrationDescription: "Aprende seguridad, rendimiento, backup y recovery para trabajar como DBA profesional y dominar SGBDs",
           },
         },
       },
     })
     .then(function () {
       updateContent();
+      updateLanguageButtons();
     });
 });
 
@@ -609,8 +984,23 @@ function updateContent() {
   });
 }
 
+function updateLanguageButtons() {
+  const currentLang = i18next.language;
+  document.querySelectorAll('.language-button').forEach(button => {
+    button.classList.remove('active');
+    const buttonLang = button.onclick.toString().match(/'(\w{2})'/);
+    if (buttonLang && buttonLang[1] === currentLang) {
+      button.classList.add('active');
+    }
+  });
+}
+
 function changeLanguage(lang) {
+  // Salvar preferência do usuário no localStorage
+  localStorage.setItem('userPreferredLanguage', lang);
+  
   i18next.changeLanguage(lang).then(() => {
     updateContent();
+    updateLanguageButtons();
   });
 }

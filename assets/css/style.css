@@ -406,11 +406,24 @@ header {
   align-items: center;
   gap: 5px;
   font-size: 14px;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .language-button:hover {
   background: rgba(0, 0, 0, 0.1);
+  border-color: #999;
+}
+
+.language-button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.language-button.active:hover {
+  background: #0056b3;
+  border-color: #0056b3;
 }
 
 .flag-icon {
