@@ -387,13 +387,13 @@ header {
   position: fixed;
   top: 60px;
   right: 10px;
-  z-index: 1000;
+  z-index: 9999 !important;
   display: flex;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 5px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 .language-button {
@@ -667,5 +667,58 @@ header {
   }
   .img-startup {
     margin-left: auto;
+  }
+}
+
+/* Curriculum Section Styles */
+#curriculum .embed-responsive {
+  margin-bottom: 20px;
+}
+
+#curriculum .embed-responsive iframe {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Curriculum download button - override Bootstrap primary */
+#curriculum .btn.btn-primary.curriculum-download-btn,
+#curriculum .btn-primary.curriculum-download-btn.btn-lg {
+  background-color: orange !important;
+  background-image: none !important;
+  border-color: orange !important;
+  color: white !important;
+  padding: 12px 30px !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+  margin-top: 15px !important;
+}
+
+#curriculum .btn.btn-primary.curriculum-download-btn:hover,
+#curriculum .btn-primary.curriculum-download-btn.btn-lg:hover,
+#curriculum .btn.btn-primary.curriculum-download-btn:focus,
+#curriculum .btn-primary.curriculum-download-btn.btn-lg:focus,
+#curriculum .btn.btn-primary.curriculum-download-btn:active,
+#curriculum .btn-primary.curriculum-download-btn.btn-lg:active {
+  background-color: darkorange !important;
+  background-image: none !important;
+  border-color: darkorange !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(255, 140, 0, 0.3) !important;
+  outline: none !important;
+}
+
+#curriculum .curriculum-download-btn i {
+  margin-right: 8px;
+}
+
+/* Responsive adjustments for curriculum section */
+@media (max-width: 767px) {
+  #curriculum .col-md-6 {
+    margin-bottom: 20px;
+  }
+  
+  #curriculum .embed-responsive {
+    margin-bottom: 15px;
   }
 }
