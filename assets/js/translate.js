@@ -147,6 +147,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             title: "Jackson F. Magnabosco",
             subtitle:
               "Software Engineer, University Professor, and Course Creator",
+            courseAuthorityText: "Mentoring 350+ students across 25 countries in Latin America and worldwide through online courses on Udemy. Specialized in professional development in software engineering, data science, artificial intelligence, and web technologies with an average rating of 4.5/5 stars.",
             skills: "Skills as a Software Developer",
             bachelorDegree: "BACHELOR'S DEGREE",
             curriculumTitle: "RESUME",
@@ -440,6 +441,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             title: "Jackson F. Magnabosco",
             subtitle:
               "Engenheiro de Software, Professor Universitário e Criador de Cursos",
+            courseAuthorityText: "Mentoreando mais de 350 estudantes em 25 países da América Latina e do mundo através de cursos online na Udemy. Especializado em desenvolvimento profissional em engenharia de software, ciência de dados, inteligência artificial e tecnologias web com avaliação média de 4.5/5 estrelas.",
             skills: "Habilidades como Desenvolvedor de Software",
             bachelorDegree: "GRADUAÇÃO",
             curriculumTitle: "CURRÍCULO",
@@ -737,6 +739,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             title: "Jackson F. Magnabosco",
             subtitle:
               "Ingeniero de Software, Profesor Universitario y Creador de Cursos",
+            courseAuthorityText: "Mentoreando a más de 350 estudiantes en 25 países de América Latina y el mundo a través de cursos online en Udemy. Especializado en desarrollo profesional en ingeniería de software, ciencia de datos, inteligencia artificial y tecnologías web con calificación promedio de 4.5/5 estrellas.",
             skills: "Habilidades como Desarrollador de Software",
             bachelorDegree: "LICENCIATURA",
             curriculumTitle: "CURRÍCULUM",

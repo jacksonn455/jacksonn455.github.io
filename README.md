@@ -93,7 +93,7 @@ This portfolio showcases a diverse range of projects including:
 - **Performance Optimization** - High-performance application development
 - **Process Automation** - Workflow and business process automation
 
-## 🎓 Education & Certifications
+## Education & Certifications
 
 - **Postgraduate** - Software Engineering
 - **Postgraduate** - Database Administration
