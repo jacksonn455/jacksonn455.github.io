@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             // Contact
             email: "E-mail:",
             whatsapp: "Whatsapp:",
-            professionalExperience: "Professional Experience",
+            professionalExperience: "PROFESSIONAL EXPERIENCE",
 
             // Articles
             publishedArticles: "PUBLISHED ARTICLES",
@@ -393,15 +393,15 @@ document.addEventListener("DOMContentLoaded", async function () {
             breweryAutomation: "Brewery Automation",
 
             //virtual reality
-             virtualRealityTitle: "Virtual Reality",
-            virtualRealityDescription: "This event was organized for the computer science course, aiming to contribute to the improvement of the professional and civic education of those involved. The project's objective was to model the entire Uri Campus II Erechim University in 3D in less than 24 hours.",
+            virtualRealityTitle: "Virtual Reality",
+            virtualRealityDescription: "Este evento foi organizado para o curso de ciência da computação, com o objetivo de contribuir para a melhoria da educação profissional e cívica dos envolvidos. O objetivo do projeto era modelar todo o Campus II da Universidade URI Erechim em 3D em menos de 24 horas.",
 
             //course for sale
             coursesForSale: "Courses for Sale",
             webDevelopmentTitle: "Web Development",
             webDevelopmentDescription: "Learn to build complete web applications from scratch, mastering HTML, CSS, JavaScript, and database management.",
             interfaceDesignTitle: "Interface Design",
-            interfaceDesignDescription: "Master HCI: paradigms, accessibility, usability, prototyping, and user-centered design and experience.",
+            interfaceDesignDescription: "Master HCI: paradigmas, acessibilidade, usabilidade, prototipagem e design e experiência centrados no usuário.",
             dataMiningTitle: "Data Mining with KDD, Python, R, and Google Colab",
             dataMiningDescription: "Data Mining in Practice: KDD, Data Selection, and Preprocessing with Python, R, WEKA, and Google Colab.",
             professionalEthicsTitle: "Professional Ethics and Legislation",
@@ -419,6 +419,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             liveCodingInterviewsTitle: "Live Coding JavaScript Interviews",
             liveCodingInterviewsDescription: "Learn how to solve algorithm challenges and think out loud during international technical interviews.",
             underConstruction: "🚧 Under Construction 🚧",
+            universityName: "Integrated Regional University <br> of Alto Uruguai and Missions (2024 - 2025)",
           },
         },
         pt: {
@@ -717,6 +718,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             liveCodingInterviewsTitle: "Entrevistas de Live Coding JavaScript",
             liveCodingInterviewsDescription: "Aprenda a resolver desafios de algoritmos e pensar em voz alta durante entrevistas técnicas internacionais.",
             underConstruction: "🚧 Em construção 🚧",
+            universityName: "Universidade Regional Integrada <br> do Alto Uruguai e das Missões (2024 - 2025)",
           },
         },
         es: {
@@ -813,13 +815,13 @@ document.addEventListener("DOMContentLoaded", async function () {
             delphiLazarus: "Aprende Delphi y Lazarus desde Cero (Duración: 6.5 horas) Udemy.",
             webServicesIntegration:
               "Integración de Soluciones con Servicios Web (Duración: 1 hora) Udemy.",
-            apiSpecifications: "Especificaciones de API con Swagger y OpenAPI (Duración: 3.5 horas) Udemy.",
+            apiSpecifications: "Especificações de API com Swagger e OpenAPI (Duración: 3.5 horas) Udemy.",
             restApiDocumentation:
               "Comprensión y Documentación de APIs REST/RESTful (Duración: 5 horas) Udemy.",
             webpackModules:
               "Webpack: Manipulando Módulos en Tu Aplicación Web (Duración: 8 horas) Alura.",
             chromeDevTools:
-              "Chrome DevTools: Analiza, Inspecciona y Depura Tus Páginas Web (Duración: 9 horas) Alura.",
+              "Chrome DevTools: Analiza, Inspecciona y Depure Tus Páginas Web (Duración: 9 horas) Alura.",
             httpUnderstanding: "HTTP: Entendiendo la Web Bajo el Capó (Duración: 14 horas) Alura.",
             lgpdImpacts: "LGPD: Conociendo y Entendiendo Sus Impactos (Duración: 10 horas) Alura.",
             webPerformance: "Rendimiento Web I: Optimizando el Front-End (Duración: 20 horas) Alura.",
@@ -868,7 +870,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             vuePart2: "Vue Parte 2: Construyendo Aplicaciones de Página Única (Duración: 16 horas) Alura.",
             jqueryIntroduction: "jQuery: Introducción a jQuery (Duración: 1 hora) Udemy.",
             jqueryPart1:
-              "jQuery Parte 1: Domina la Biblioteca Más Popular del Mercado (Duración: 12 horas) Alura.",
+              "jQuery Parte 1: Domine la Biblioteca Más Popular del Mercado (Duración: 12 horas) Alura.",
             jqueryPart2:
               "jQuery Parte 2: Avanza con la Biblioteca Más Popular del Mercado (Duración: 12 horas) Alura.",
             nodeJsApis: "Node.js: Creando APIs (Duración: 2 horas) Udemy.",
@@ -885,7 +887,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             // Additional Education
             englishLiterature: "Lengua y Literatura Extranjera 'Inglés' (Duración: 250 horas) Topway English School, Erechim y Passo Fundo.",
             computerTechnician:
-              "Técnico en Informática 'Hardware, Software, Redes' (Duración: 192 horas) SENAC Erechim.",
+              "Técnico em Informática 'Hardware, Software, Redes' (Duración: 192 horas) SENAC Erechim.",
             administrativeAssistant: "Asistente Administrativo (Duración: 180 horas) SENAC Erechim.",
             basicToAdvancedComputing:
               "Informática Básica a Avanzada 'Word, Excel, Powerpoint, Windows, Linux, Mecanografía, Internet' (Duración: 160 horas) Escola JB Informática.",
@@ -939,17 +941,17 @@ document.addEventListener("DOMContentLoaded", async function () {
             webDevelopment: "Desarrollo Web",
             ethicsAndLegislation: "Ética y Legislación Profesional",
             specialTopicsComputing1: "Temas Especiales en Computación I",
-            specialTopicsComputing2: "Temas Especiales en Computación II",
+            specialTopicsComputing2: "Temas Especiais en Computación II",
             computationalThinking: "Pensamiento Computacional",
 
             // Workshop Categories
             cloudCategory: "NUBE",
-            applicationsCategory: "APLICACIONES",
-            accessibilityCategory: "ACCESIBILIDAD",
+            applicationsCategory: "APLICAÇÕES",
+            accessibilityCategory: "ACCESIBILIDADE",
             devopsCategory: "DEVOPS",
             devToolsCategory: "HERRAMIENTAS DE DEV",
             htmlCssCategory: "HTML Y CSS",
-            additionalEducationCategory: "EDUCACIÓN ADICIONAL",
+            additionalEducationCategory: "EDUCAÇÃO ADICIONAL",
             gitGithubCategory: "GIT Y GITHUB",
             javaCategory: "JAVA",
             testsCategory: "PRUEBAS",
@@ -1000,24 +1002,25 @@ document.addEventListener("DOMContentLoaded", async function () {
             webDevelopmentTitle: "Desarrollo Web",
             webDevelopmentDescription: "Aprende a construir aplicaciones web completas desde cero, dominando HTML, CSS, JavaScript y gestión de bases de datos.",
             interfaceDesignTitle: "Diseño de Interfaz",
-            interfaceDesignDescription: "Domina HCI: paradigmas, accesibilidad, usabilidad, prototipado y diseño y experiencia centrados en el usuario.",
+            interfaceDesignDescription: "Domine IHC: paradigmas, accesibilidad, usabilidad, prototipado y diseño y experiencia centrados en el usuario.",
             dataMiningTitle: "Minería de Datos con KDD, Python, R y Google Colab",
             dataMiningDescription: "Minería de Datos en la Práctica: KDD, Selección y Preprocesamiento de Datos con Python, R, WEKA y Google Colab.",
             professionalEthicsTitle: "Ética Profesional y Legislación",
-            professionalEthicsDescription: "Derechos, Deberes y Código de Ética para Profesionales de TI y Tecnología | Legislación Actualizada.",    
+            professionalEthicsDescription: "Derechos, Deberes y Código de Ética para Profesionales de TI y Tecnologia | Legislação Atualizada.",    
             professionalIoTTitle: "Internet de las Cosas: Fundamentos y Aplicaciones",
             professionalIoTDescription: "Internet de las Cosas (IoT) en la Práctica: Desarrolle Proyectos con Sensores, Protocolos y Plataformas Comerciales",
             programmingLogicDescription: "Aprende diagramas de flujo, pseudocódigo, variables, condicionales y bucles para resolver problemas de programación y desarrollar el pensamiento lógico.",
             programmingLogicTitle: "Lógica de Programación y Algoritmos: Guía Completa",
-            databaseAdministrationTitle: "Administración de Bases de Datos: SQL, MySQL y DBA",
-            databaseAdministrationDescription: "Aprende seguridad, rendimiento, backup y recovery para trabajar como DBA profesional y dominar SGBDs",
-            globalProfileCourseTitle: "Construye Tu Perfil Profesional Global",
-            globalProfileCourseDescription: "Posiciona tu currículum y LinkedIn para destacar en procesos de contratación remotos e internacionales.",
+            databaseAdministrationTitle: "Administração de Bases de Dados: SQL, MySQL e DBA",
+            databaseAdministrationDescription: "Aprenda segurança, performance, backup e recovery para trabalhar como DBA profissional e dominar SGBDs",
+            globalProfileCourseTitle: "Construa Seu Perfil Profissional Global",
+            globalProfileCourseDescription: "Posicione seu currículo e LinkedIn para destacar em processos de contratação remotos e internacionais.",
             aiPromptEngineeringTitle: "Ingeniería de Prompts de IA en la Práctica",
             aiPromptEngineeringDescription: "Comprende cómo funciona la IA generativa y aprende a diseñar prompts poderosos para aplicaciones del mundo real.",
             liveCodingInterviewsTitle: "Entrevistas de Live Coding JavaScript",
             liveCodingInterviewsDescription: "Aprende a resolver desafíos de algoritmos y pensar en voz alta durante entrevistas técnicas internacionales.",
             underConstruction: "🚧 En construcción 🚧",
+            universityName: "Universidad Regional Integrada <br> del Alto Uruguay y las Misiones (2024 - 2025)",
           },
         },
       },
