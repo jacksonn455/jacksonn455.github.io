@@ -334,6 +334,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             seniorSoftwareEngineer: "Senior Software Engineer",
             codingAgentExperience: "Senior Software Engineer (Coding Agent Experience)",
             professorComputerScience: "Professor of Computer Science",
+            tempoFullStackDeveloper: "Full Stack Developer",
 
             // Subjects/Courses
             interfaceDesign: "Interface Design",
@@ -633,6 +634,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             seniorSoftwareEngineer: "Engenheiro de Software Sênior",
             codingAgentExperience: "Engenheiro de Software Sênior (Experiência de Agente de Codificação)",
             professorComputerScience: "Professor de Ciência da Computação",
+            tempoFullStackDeveloper: "Desenvolvedor Full Stack",
 
             // Subjects/Courses
             interfaceDesign: "Design de Interface",
@@ -935,6 +937,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             seniorSoftwareEngineer: "Ingeniero de Software Sénior",
             codingAgentExperience: "Ingeniero de Software Sénior (Experiencia de Agente de Codificación)",
             professorComputerScience: "Profesor de Ciencias de la Computación",
+            tempoFullStackDeveloper: "Desarrollador Full Stack",
 
             // Subjects/Courses
             interfaceDesign: "Diseño de Interfaz",
