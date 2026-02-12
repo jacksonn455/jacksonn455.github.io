@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             startupExperience:
               "In these editions, I had the opportunity to work in multifunctional teams with incredibly talented and motivated individuals. Together, we tackled complex and exciting challenges, from conceiving an idea to creating a functional prototype and crafting a robust business model. The fast-paced nature of Startup Weekend pushed us to learn how to collaborate effectively, make quick decisions, and efficiently prioritize tasks.",
             virtualRealityDescription:
-              "This event was organized for the computer science course, aiming to contribute to the improvement of the professional and civic education of those involved. The project's objective was to model the entire Uri Campus II Erechim University in 3D in less than 24 hours.",
+              "This event was organized for the computer science course, with the goal of contributing to the improvement of professional and civic education for those involved. The project's objective was to model the entire Campus II of URI Erechim University in 3D in less than 24 hours.",
 
             // Certificates
             scrumFoundations:
@@ -395,14 +395,14 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             //virtual reality
             virtualRealityTitle: "Virtual Reality",
-            virtualRealityDescription: "Este evento foi organizado para o curso de ciência da computação, com o objetivo de contribuir para a melhoria da educação profissional e cívica dos envolvidos. O objetivo do projeto era modelar todo o Campus II da Universidade URI Erechim em 3D em menos de 24 horas.",
+            virtualRealityDescription: "This event was organized for the computer science course, with the goal of contributing to the improvement of professional and civic education for those involved. The project's objective was to model the entire Campus II of URI Erechim University in 3D in less than 24 hours.",
 
             //course for sale
             coursesForSale: "Courses for Sale",
             webDevelopmentTitle: "Web Development",
             webDevelopmentDescription: "Learn to build complete web applications from scratch, mastering HTML, CSS, JavaScript, and database management.",
             interfaceDesignTitle: "Interface Design",
-            interfaceDesignDescription: "Master HCI: paradigmas, acessibilidade, usabilidade, prototipagem e design e experiência centrados no usuário.",
+            interfaceDesignDescription: "Master HCI: paradigms, accessibility, usability, prototyping, and user-centered design and experience.",
             dataMiningTitle: "Data Mining with KDD, Python, R, and Google Colab",
             dataMiningDescription: "Data Mining in Practice: KDD, Data Selection, and Preprocessing with Python, R, WEKA, and Google Colab.",
             professionalEthicsTitle: "Professional Ethics and Legislation",
