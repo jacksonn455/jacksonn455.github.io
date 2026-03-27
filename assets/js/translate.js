@@ -332,7 +332,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             // Job Titles
             seniorSoftwareEngineer: "Senior Software Engineer",
-            codingAgentExperience: "Senior Software Engineer (Coding Agent Experience)",
+            codingAgentExperience: "AI Coding Agent Trainer",
             professorComputerScience: "Professor of Computer Science",
             tempoFullStackDeveloper: "Full Stack Developer",
 
@@ -632,7 +632,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             // Job Titles
             seniorSoftwareEngineer: "Engenheiro de Software Sênior",
-            codingAgentExperience: "Engenheiro de Software Sênior (Experiência de Agente de Codificação)",
+            codingAgentExperience: "Treinamento de Agente de Codificação",
             professorComputerScience: "Professor de Ciência da Computação",
             tempoFullStackDeveloper: "Desenvolvedor Full Stack",
 
@@ -935,7 +935,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             // Job Titles
             seniorSoftwareEngineer: "Ingeniero de Software Sénior",
-            codingAgentExperience: "Ingeniero de Software Sénior (Experiencia de Agente de Codificación)",
+            codingAgentExperience: "Treinador de Agente de Codificación",
             professorComputerScience: "Profesor de Ciencias de la Computación",
             tempoFullStackDeveloper: "Desarrollador Full Stack",
 
