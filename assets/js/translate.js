@@ -332,9 +332,21 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             // Job Titles
             seniorSoftwareEngineer: "Senior Software Engineer",
+            productEngineer: "Product Engineer (Contract via Oowlish)",
             codingAgentExperience: "AI Coding Agent Trainer",
             professorComputerScience: "Professor of Computer Science",
             tempoFullStackDeveloper: "Full Stack Developer",
+
+            // Technical Skills - Covetrus
+            backendArchitecture: "Backend & Architecture:",
+            productEngineering: "Product Engineering:",
+            businessSolutionsTranslation: "Translating business needs into production-ready solutions",
+            aiFirstDevelopment: "AI-first Development:",
+            qualitySDLC: "Quality & SDLC:",
+            testAutomationProcess: "Test automation, CI/CD improvements, faster and reliable releases",
+            frontend: "Frontend:",
+            practices: "Practices:",
+            agileSystemDesign: "Agile (Scrum, Kanban), system design, high ownership mindset",
 
             // Subjects/Courses
             interfaceDesign: "Interface Design",
@@ -632,9 +644,21 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             // Job Titles
             seniorSoftwareEngineer: "Engenheiro de Software Sênior",
+            productEngineer: "Engenheiro de Produto (Contrato via Oowlish)",
             codingAgentExperience: "Treinamento de Agente de Codificação",
             professorComputerScience: "Professor de Ciência da Computação",
             tempoFullStackDeveloper: "Desenvolvedor Full Stack",
+
+            // Technical Skills - Covetrus
+            backendArchitecture: "Backend & Arquitetura:",
+            productEngineering: "Engenharia de Produto:",
+            businessSolutionsTranslation: "Traduzindo necessidades de negócio em soluções prontas para produção",
+            aiFirstDevelopment: "Desenvolvimento com IA:",
+            qualitySDLC: "Qualidade & SDLC:",
+            testAutomationProcess: "Automação de testes, melhorias CI/CD, releases mais rápidos e confiáveis",
+            frontend: "Frontend:",
+            practices: "Práticas:",
+            agileSystemDesign: "Ágil (Scrum, Kanban), design de sistema, mentalidade de alta responsabilidade",
 
             // Subjects/Courses
             interfaceDesign: "Design de Interface",
@@ -935,9 +959,21 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             // Job Titles
             seniorSoftwareEngineer: "Ingeniero de Software Sénior",
+            productEngineer: "Ingeniero de Producto (Contrato vía Oowlish)",
             codingAgentExperience: "Treinador de Agente de Codificación",
             professorComputerScience: "Profesor de Ciencias de la Computación",
             tempoFullStackDeveloper: "Desarrollador Full Stack",
+
+            // Technical Skills - Covetrus
+            backendArchitecture: "Backend & Arquitectura:",
+            productEngineering: "Ingeniería de Producto:",
+            businessSolutionsTranslation: "Traduciendo necesidades de negocio en soluciones listas para producción",
+            aiFirstDevelopment: "Desarrollo con IA:",
+            qualitySDLC: "Calidad & SDLC:",
+            testAutomationProcess: "Automatización de pruebas, mejoras CI/CD, lanzamientos más rápidos y confiables",
+            frontend: "Frontend:",
+            practices: "Prácticas:",
+            agileSystemDesign: "Ágil (Scrum, Kanban), diseño de sistema, mentalidad de alta responsabilidad",
 
             // Subjects/Courses
             interfaceDesign: "Diseño de Interfaz",
