@@ -38,6 +38,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
+    <link rel="stylesheet" href="assets/css/testimonials-carousel.css">
+    <script src="assets/js/testimonials-carousel.js"></script>
+    <script src="assets/js/init-testimonials.js"></script>
 </head>
 
 <body>
@@ -1178,6 +1181,223 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+         <section id="recommendations" class="container">
+            <h2 data-i18n="recommendationsTitle">RECOMMENDATIONS</h2>
+
+            <!-- Carousel for recommendations (one card per slide) -->
+            <div id="carousel-recommendations" class="carousel slide" data-ride="carousel" data-interval="15000" data-bs-interval="15000">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-recommendations" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-recommendations" data-slide-to="1"></li>
+                    <li data-target="#carousel-recommendations" data-slide-to="2"></li>
+                    <li data-target="#carousel-recommendations" data-slide-to="3"></li>
+                    <li data-target="#carousel-recommendations" data-slide-to="4"></li>
+                    <li data-target="#carousel-recommendations" data-slide-to="5"></li>
+                    <li data-target="#carousel-recommendations" data-slide-to="6"></li>
+                    <li data-target="#carousel-recommendations" data-slide-to="7"></li>
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                    <!-- Slide 1 -->
+                    <div class="item active">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p><strong data-i18n="rec1.date">July 9, 2026</strong> — <span data-i18n="rec1.relationship">Managed Jackson directly</span></p>
+                                <p data-i18n="rec1.text"></p>
+                                <hr>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQErPAvpRQZDUQ/profile-displayphoto-scale_100_100/B4DZn49enPGwAc-/0/1760818491322?e=1785369600&v=beta&t=R241KOa5Afr7LuEMF7UreN9OdcCZVZzczPXsPm7xb6I" alt="Kentaro Mori" class="img-circle" style="width:64px;height:64px;margin-right:12px;">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="https://www.linkedin.com/in/kenmori/" target="_blank" data-i18n="rec1.name">Kentaro Mori</a> <a class="rec-linkedin" href="https://www.linkedin.com/in/kenmori/" target="_blank" aria-label="Kentaro Mori on LinkedIn"><i class="fa fa-linkedin"></i></a></h4>
+                                        <p class="small text-muted" data-i18n="rec1.role">Startup Builder | Engineering Leader | Scaling Tech for High-Growth Businesses</p>
+                                    </div>
+                                    <div class="media-right">
+                                        <a class="btn btn-default" href="https://www.linkedin.com/in/kenmori/" target="_blank"><i class="fa fa-linkedin"></i> <span data-i18n="viewLinkedIn">View on LinkedIn</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="item">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p><strong data-i18n="rec2.date">August 21, 2025</strong> — <span data-i18n="rec2.relationship">Managed Jackson directly</span></p>
+                                <p data-i18n="rec2.text"></p>
+                                <hr>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQG7HDSHwX0jjw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1715597613777?e=1785369600&v=beta&t=f5AKGd-uqIGAFKahSjC9mFjIheE790ZryDmp_8GoKdA" alt="Rômulo Paiva" class="img-circle" style="width:64px;height:64px;margin-right:12px;">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="https://www.linkedin.com/in/romulopaiva/" target="_blank" data-i18n="rec2.name">Rômulo Paiva</a> <a class="rec-linkedin" href="https://www.linkedin.com/in/romulopaiva/" target="_blank" aria-label="Rômulo Paiva on LinkedIn"><i class="fa fa-linkedin"></i></a></h4>
+                                        <p class="small text-muted" data-i18n="rec2.role">CSPO® | Product Owner | Product Manager at Superbid</p>
+                                    </div>
+                                    <div class="media-right">
+                                        <a class="btn btn-default" href="https://www.linkedin.com/in/romulopaiva/" target="_blank"><i class="fa fa-linkedin"></i> <span data-i18n="viewLinkedIn">View on LinkedIn</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="item">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p><strong data-i18n="rec3.date">August 20, 2025</strong> — <span data-i18n="rec3.relationship">Managed Jackson directly</span></p>
+                                <p data-i18n="rec3.text"></p>
+                                <hr>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQENhBoEg6-jQg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1677084200219?e=1785369600&v=beta&t=LTX6ejIWLVdQxEJkVQCGuvvXl7eo9bG3Z-8fdoFwX0A" alt="Francélio Alencar" class="img-circle" style="width:64px;height:64px;margin-right:12px;">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="https://www.linkedin.com/in/francelio-alencar/" target="_blank" data-i18n="rec3.name">Francélio Alencar</a> <a class="rec-linkedin" href="https://www.linkedin.com/in/francelio-alencar/" target="_blank" aria-label="Francélio Alencar on LinkedIn"><i class="fa fa-linkedin"></i></a></h4>
+                                        <p class="small text-muted" data-i18n="rec3.role">Tech Lead | Engenheiro de Software Sênior | Especialista em Microservices | Java, Spring Boot, NestJS, AWS</p>
+                                    </div>
+                                    <div class="media-right">
+                                        <a class="btn btn-default" href="https://www.linkedin.com/in/francelio-alencar/" target="_blank"><i class="fa fa-linkedin"></i> <span data-i18n="viewLinkedIn">View on LinkedIn</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="item">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p><strong data-i18n="rec4.date">August 19, 2025</strong> — <span data-i18n="rec4.relationship">Worked with Jackson on the same team</span></p>
+                                <p data-i18n="rec4.text"></p>
+                                <hr>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="https://media.licdn.com/dms/image/v2/C4E03AQF_o06uFYoaLA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1572623984586?e=1785369600&v=beta&t=R7p1E7UdWG39X730_wkqWLDWrajFbQg2iZSQE8v1hU0" alt="Jonathan Jesus" class="img-circle" style="width:64px;height:64px;margin-right:12px;">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="https://www.linkedin.com/in/jonathan-jesus-173a40145/" target="_blank" data-i18n="rec4.name">Jonathan Jesus</a> <a class="rec-linkedin" href="https://www.linkedin.com/in/jonathan-jesus-173a40145/" target="_blank" aria-label="Jonathan Jesus on LinkedIn"><i class="fa fa-linkedin"></i></a></h4>
+                                        <p class="small text-muted" data-i18n="rec4.role">Senior Frontend Engineer | Javascript + Typescript | ReactJS & NextJS | NodeJS | Performance & Clean Code</p>
+                                    </div>
+                                    <div class="media-right">
+                                        <a class="btn btn-default" href="https://www.linkedin.com/in/jonathan-jesus-173a40145/" target="_blank"><i class="fa fa-linkedin"></i> <span data-i18n="viewLinkedIn">View on LinkedIn</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="item">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p><strong data-i18n="rec5.date">March 17, 2025</strong> — <span data-i18n="rec5.relationship">Studied together</span></p>
+                                <p data-i18n="rec5.text"></p>
+                                <hr>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQHcIy4daXueqg/profile-displayphoto-scale_100_100/B4DZ8lUoy2I0AY-/0/1783037595588?e=1785369600&v=beta&t=HKQg92wqsFgK9_6E8me0PmEPItrFl1NxfHDwoix8fTI" alt="Ezequiel Menegas" class="img-circle" style="width:64px;height:64px;margin-right:12px;">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="https://www.linkedin.com/in/ezequiel-me/" target="_blank" data-i18n="rec5.name">Ezequiel Menegas</a> <a class="rec-linkedin" href="https://www.linkedin.com/in/ezequiel-me/" target="_blank" aria-label="Ezequiel Menegas on LinkedIn"><i class="fa fa-linkedin"></i></a></h4>
+                                        <p class="small text-muted" data-i18n="rec5.role">Developer Sr at AGROTIS | CSPO | AI Agents LangChain | Agro | Spec Driven Development</p>
+                                    </div>
+                                    <div class="media-right">
+                                        <a class="btn btn-default" href="https://www.linkedin.com/in/ezequiel-me/" target="_blank"><i class="fa fa-linkedin"></i> <span data-i18n="viewLinkedIn">View on LinkedIn</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="item">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p><strong data-i18n="rec6.date">December 11, 2023</strong> — <span data-i18n="rec6.relationship">Worked with Jackson on the same team</span></p>
+                                <p data-i18n="rec6.text"></p>
+                                <hr>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="https://media.licdn.com/dms/image/v2/D4E03AQH8f1WmTxEzBA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1694701674611?e=1785369600&v=beta&t=1DbHmR8OqsbcbuxMhtwc6PnucUinIl5rXiCjBizWPs4" alt="Lucas Gulart da Silveira" class="img-circle" style="width:64px;height:64px;margin-right:12px;">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="https://www.linkedin.com/in/gulartlucas/" target="_blank" data-i18n="rec6.name">Lucas Gulart da Silveira</a> <a class="rec-linkedin" href="https://www.linkedin.com/in/gulartlucas/" target="_blank" aria-label="Lucas Gulart da Silveira on LinkedIn"><i class="fa fa-linkedin"></i></a></h4>
+                                        <p class="small text-muted" data-i18n="rec6.role">Co-founder of Rancho | Software Engineer | NestJS · TypeScript · Node.js · Expo</p>
+                                    </div>
+                                    <div class="media-right">
+                                        <a class="btn btn-default" href="https://www.linkedin.com/in/gulartlucas/" target="_blank"><i class="fa fa-linkedin"></i> <span data-i18n="viewLinkedIn">View on LinkedIn</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 7 -->
+                    <div class="item">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p><strong data-i18n="rec7.date">September 19, 2023</strong> — <span data-i18n="rec7.relationship">Worked with Jackson on the same team</span></p>
+                                <p data-i18n="rec7.text"></p>
+                                <hr>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="https://media.licdn.com/dms/image/v2/C4E03AQFSJGrxX81C2A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1626111238007?e=1785369600&v=beta&t=tI4CXQHcctANr4eB0uTu7hErwXuK4ZgsHf2qSym0v_g" alt="Levi Santos Rocha" class="img-circle" style="width:64px;height:64px;margin-right:12px;">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="https://www.linkedin.com/in/levi-sr93/" target="_blank" data-i18n="rec7.name">Levi Santos Rocha</a> <a class="rec-linkedin" href="https://www.linkedin.com/in/levi-sr93/" target="_blank" aria-label="Levi Santos Rocha on LinkedIn"><i class="fa fa-linkedin"></i></a></h4>
+                                        <p class="small text-muted" data-i18n="rec7.role">Senior Fullstack Engineer | React | Next | React Native | NodeJs | Python | AWS</p>
+                                    </div>
+                                    <div class="media-right">
+                                        <a class="btn btn-default" href="https://www.linkedin.com/in/levi-sr93/" target="_blank"><i class="fa fa-linkedin"></i> <span data-i18n="viewLinkedIn">View on LinkedIn</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 8 -->
+                    <div class="item">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p><strong data-i18n="rec8.date">September 10, 2023</strong> — <span data-i18n="rec8.relationship">Worked with Jackson on the same team</span></p>
+                                <p data-i18n="rec8.text"></p>
+                                <hr>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEkTaaDYNPQbg/profile-displayphoto-scale_100_100/B4DZm7AMvqJIAc-/0/1759779025144?e=1785369600&v=beta&t=ozY_ZuBVcyLOMK_GY-Tc-TJJmy8_XPPwXL8R1cWvzDA" alt="Patrick Berlatto Piccini" class="img-circle" style="width:64px;height:64px;margin-right:12px;">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="https://www.linkedin.com/in/patrick-berlatto-piccini/" target="_blank" data-i18n="rec8.name">Patrick Berlatto Piccini</a> <a class="rec-linkedin" href="https://www.linkedin.com/in/patrick-berlatto-piccini/" target="_blank" aria-label="Patrick Berlatto Piccini on LinkedIn"><i class="fa fa-linkedin"></i></a></h4>
+                                        <p class="small text-muted" data-i18n="rec8.role">Solutions Architect | Back-End Developer | DevOps | Python | Django | DRF | Automation | Cloud | Git | Docker</p>
+                                    </div>
+                                    <div class="media-right">
+                                        <a class="btn btn-default" href="https://www.linkedin.com/in/patrick-berlatto-piccini/" target="_blank"><i class="fa fa-linkedin"></i> <span data-i18n="viewLinkedIn">View on LinkedIn</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-recommendations" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-recommendations" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
             </div>
         </section>
 

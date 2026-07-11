@@ -177,6 +177,10 @@ document.addEventListener("DOMContentLoaded", async function () {
               "<strong>2023-2024/02:</strong> Database Administration",
             collegeName: "Metropolitan College",
 
+            // Recommendations
+            recommendationsTitle: "RECOMMENDATIONS",
+            viewLinkedIn: "View on LinkedIn",
+
             // Descriptions
             basedInErechim:
               "Based in Erechim, northern Rio Grande do Sul, Brazil, I hold a Bachelor's degree in Computer Science from <abbr title='Universidade Regional Integrada do Alto Uruguai e das Missões Erechim'>URI-Erechim.</abbr> <br> I am a dedicated Software Engineer and Professor, with completed postgraduate studies in Software Engineering and Database Administration. <br> With the goal of continuous professional development in the field of information technology, aiming to assist companies in maximizing their results through study, dedication, research, and innovation. <br> In recent years, I have consistently improved my skills, contributing to projects I've been a part of, always with a sense of responsibility and professionalism, and actively seeking to learn from and exchange experiences with fellow professionals. I prioritize solving business-related issues, possess a strong sense of ownership and urgency.",
@@ -400,6 +404,125 @@ document.addEventListener("DOMContentLoaded", async function () {
             websitesSection: "WEBSITES",
             iotSection: "IoT",
 
+            // Recommendations
+            recommendationsTitle: "RECOMMENDATIONS",
+            viewLinkedIn: "View on LinkedIn",
+            
+            rec1: {
+              name: "Kentaro Mori",
+              role: "Startup Builder | Engineering Leader | Scaling Tech for High-Growth Businesses",
+              date: "9 de julio de 2026",
+              relationship: "Gestionó a Jackson directamente",
+              text: "Tuve el placer de trabajar con Jackson en el proyecto Kora, donde contribuyó como Desarrollador Backend Java.\n\nJackson es un ingeniero técnicamente fuerte y confiable con un enfoque práctico para resolver problemas. Entregó de forma consistente con rapidez, colaboró muy bien con el equipo y ayudó a impulsar iniciativas clave del proyecto."
+            },
+            rec2: {
+              name: "Rômulo Paiva",
+              role: "CSPO® | Product Owner | Product Manager at Superbid",
+              date: "21 de agosto de 2025",
+              relationship: "Gestionó a Jackson directamente",
+              text: "Tuve la oportunidad de trabajar con Jackson durante tres años en Superbid, período en el que fui su PM. Fue nuestro desarrollador backend Java y se destacó no solo por su experiencia técnica sino también por el valor adicional que aportó al equipo.\n\nComo propietario de un canal de programación en YouTube y docente de cursos presenciales y en Udemy, Jackson fue más allá del código: documentó magistralmente cada flujo de trabajo en el que participó, cubriendo tanto los aspectos técnicos como las reglas de negocio.\n\nAdemás de ser un profesional destacado, Jackson es una persona admirable: calmada, atenta y siempre dispuesta a ayudar."
+            },
+            rec3: {
+              name: "Francélio Alencar",
+              role: "Tech Lead | Engenheiro de Software Sênior | Especialista em Microservices | Java, Spring Boot, NestJS, AWS",
+              date: "20 de agosto de 2025",
+              relationship: "Gestionó a Jackson directamente",
+              text: "Con gran entusiasmo recomiendo a Jackson Felipe Magnabosco, un excepcional Senior Software Engineer con quien tengo el privilegio de trabajar directamente en Superbid.\n\nJackson se destaca por su experiencia en desarrollo backend y por su conocimiento de herramientas AWS, entregando soluciones escalables que optimizan significativamente los sistemas.\n\nDemuestra un dominio impresionante en Java, JavaScript, TypeScript y Node.js, combinado con un enfoque ágil que asegura entregables de alta calidad.\n\nProactivo, colaborador y siempre en busca de la excelencia, Jackson es un profesional sobresaliente que aporta valor a cualquier equipo."
+            },
+            rec4: {
+              name: "Jonathan Jesus",
+              role: "Senior Frontend Engineer | Javascript + Typescript | ReactJS & NextJS | NodeJS | Performance & Clean Code",
+              date: "19 de agosto de 2025",
+              relationship: "Trabajó con Jackson en el mismo equipo",
+              text: "Jackson es uno de los profesionales más dedicados con los que he tenido el placer de trabajar.\n\nNo le teme a un desafío, viéndolo como una oportunidad para perfeccionar sus habilidades. Su curiosidad y voluntad de aprender lo convierten en un profesional en constante evolución.\n\nEsta combinación de iniciativa y mentalidad de crecimiento lo hace un miembro de equipo de gran valor."
+            },
+            rec5: {
+              name: "Ezequiel Menegas",
+              role: "Developer Sr at AGROTIS | CSPO | AI Agents LangChain | Agro | Spec Driven Development",
+              date: "17 de marzo de 2025",
+              relationship: "Estudiamos juntos",
+              text: "Estudié tecnología con él en la universidad, y siempre admiré su dedicación y respeto por todos a su alrededor.\n\nDurante nuestros años juntos, se destacó no solo por su conocimiento técnico, sino también por su capacidad de colaborar y ayudar a otros a entender conceptos.\n\nSu habilidad para transmitir conocimiento de forma clara y atractiva es inspiradora."
+            },
+            rec6: {
+              name: "Lucas Gulart da Silveira",
+              role: "Co-founder of Rancho | Software Engineer | NestJS · TypeScript · Node.js · Expo",
+              date: "11 de diciembre de 2023",
+              relationship: "Trabajó con Jackson en el mismo equipo",
+              text: "Jackson destaca en el desarrollo con sus notables habilidades.\n\nEnfrenta desafíos técnicos con eficacia, demostrando un dominio consistente en el área.\n\nSu enfoque colaborativo y disposición para compartir conocimiento contribuyen positivamente al entorno de trabajo."
+            },
+            rec7: {
+              name: "Levi Santos Rocha",
+              role: "Senior Fullstack Engineer | React | Next | React Native | NodeJs | Python | AWS",
+              date: "19 de septiembre de 2023",
+              relationship: "Trabajó con Jackson en el mismo equipo",
+              text: "Jackson es un profesional de excelencia y un miembro valioso en nuestro equipo.\n\nDurante todo el tiempo que trabajamos juntos, pude ver su enorme dedicación y pasión por la programación.\n\nTambién destaco su ética de trabajo y actitud positiva, convirtiéndolo en una contribución importante para los proyectos."
+            },
+            rec8: {
+              name: "Patrick Berlatto Piccini",
+              role: "Solutions Architect | Back-End Developer | DevOps | Python | Django | DRF | Automation | Cloud | Git | Docker",
+              date: "10 de septiembre de 2023",
+              relationship: "Trabajó con Jackson en el mismo equipo",
+              text: "Jackson es un profesional con habilidades excepcionales en el desarrollo de software.\n\nSu incansable búsqueda de la excelencia conduce a mejoras continuas en la calidad del código.\n\nValora la colaboración, trabajando de manera armoniosa con los colegas y compartiendo conocimiento a través de revisiones de código.\n\nSu dedicación y compromiso con la mejora lo convierten en un activo clave para los equipos de desarrollo de software."
+            },
+
+            // English (en) translations will be added below in the resources block further down
+            rec1: {
+              name: "Kentaro Mori",
+              role: "Startup Builder | Engineering Leader | Scaling Tech for High-Growth Businesses",
+              date: "July 9, 2026",
+              relationship: "Managed Jackson directly",
+              text: "I had the pleasure of working with Jackson on the Kora project, where he contributed as a Java Backend Developer.\n\nJackson is a reliable, technically strong engineer with a practical approach to solving problems. He consistently delivered with speed, collaborated very well with the team, and helped move key project initiatives forward."
+            },
+            rec2: {
+              name: "Rômulo Paiva",
+              role: "CSPO® | Product Owner | Product Manager at Superbid",
+              date: "August 21, 2025",
+              relationship: "Managed Jackson directly",
+              text: "I had the opportunity to work with Jackson for three years at Superbid, during which I served as his PM. He was our backend Java developer and stood out not only for his technical expertise but also for the additional value he brought to the team.\n\nAs the owner of a programming channel on YouTube and a teacher of both in-person and Udemy courses, Jackson went far beyond coding: he masterfully documented every workflow he was involved in, covering both the technical aspects and the business rules.\n\nIn addition to being an outstanding professional, Jackson is an admirable person: calm, attentive, and always willing to help."
+            },
+            rec3: {
+              name: "Francélio Alencar",
+              role: "Tech Lead | Engenheiro de Software Sênior | Especialista em Microservices | Java, Spring Boot, NestJS, AWS",
+              date: "August 20, 2025",
+              relationship: "Managed Jackson directly",
+              text: "It is with great enthusiasm that I recommend Jackson Felipe Magnabosco, an exceptional Senior Software Engineer with whom I have the privilege of working directly at Superbid.\n\nJackson stands out for his expertise in back-end development and knowledge of AWS tools, delivering scalable solutions that significantly optimize systems.\n\nHe demonstrates impressive mastery in Java, JavaScript, TypeScript, and Node.js, combined with an agile approach that ensures high-quality deliverables.\n\nProactive, collaborative, and always striving for excellence, Jackson is an outstanding professional who adds value to any team."
+            },
+            rec4: {
+              name: "Jonathan Jesus",
+              role: "Senior Frontend Engineer | Javascript + Typescript | ReactJS & NextJS | NodeJS | Performance & Clean Code",
+              date: "August 19, 2025",
+              relationship: "Worked with Jackson on the same team",
+              text: "Jackson is one of the most dedicated professionals I've had the pleasure of working with.\n\nHe's not afraid of a challenge, seeing it as an opportunity to hone his skills. His curiosity and willingness to learn make him a constantly evolving professional.\n\nThis combination of initiative and a growth mindset makes him a highly valuable team member."
+            },
+            rec5: {
+              name: "Ezequiel Menegas",
+              role: "Developer Sr at AGROTIS | CSPO | AI Agents LangChain | Agro | Spec Driven Development",
+              date: "March 17, 2025",
+              relationship: "Studied together",
+              text: "Estudei tecnologia com ele na faculdade, e sempre admirei sua dedicação e respeito por todos ao seu redor.\n\nDurante os nossos anos juntos, ele se destacou não apenas por seu conhecimento técnico, mas também pela sua capacidade de colaborar e ajudar os outros a entender conceitos.\n\nSua habilidade de transmitir conhecimento de forma clara e envolvente é inspiradora."
+            },
+            rec6: {
+              name: "Lucas Gulart da Silveira",
+              role: "Co-founder of Rancho | Software Engineer | NestJS · TypeScript · Node.js · Expo",
+              date: "December 11, 2023",
+              relationship: "Worked with Jackson on the same team",
+              text: "Jackson destaca-se no desenvolvimento com suas habilidades notáveis.\n\nEle enfrenta desafios técnicos com eficácia, demonstrando um domínio consistente nessa área.\n\nSua abordagem colaborativa e disposição para compartilhar conhecimento contribuem positivamente para o ambiente de trabalho."
+            },
+            rec7: {
+              name: "Levi Santos Rocha",
+              role: "Senior Fullstack Engineer | React | Next | React Native | NodeJs | Python | AWS",
+              date: "September 19, 2023",
+              relationship: "Worked with Jackson on the same team",
+              text: "Jackson é um profissional de excelência e um membro valioso em nossa equipe.\n\nEm todo o período em que trabalhamos juntos, pude ver sua enorme dedicação e paixão pela programação.\n\nDestaco também sua ética de trabalho e atitude positiva, tornando-o uma contribuição importante para os projetos."
+            },
+            rec8: {
+              name: "Patrick Berlatto Piccini",
+              role: "Solutions Architect | Back-End Developer | DevOps | Python | Django | DRF | Automation | Cloud | Git | Docker",
+              date: "September 10, 2023",
+              relationship: "Worked with Jackson on the same team",
+              text: "Jackson is a professional with exceptional skills in software development.\n\nHis relentless pursuit of excellence leads to continuous improvements in code quality.\n\nHe values collaboration, working harmoniously with colleagues and sharing knowledge through code reviews.\n\nHis dedication and commitment to improvement make him a key asset to software development teams."
+            },
+
             //iot
             connectedWardrobe: "Connected Wardrobe",
             smartMailbox: "Smart Mailbox",
@@ -520,6 +643,10 @@ document.addEventListener("DOMContentLoaded", async function () {
             databaseAdmin:
               "<strong>2023-2024/02:</strong> Administração de Banco de Dados",
             collegeName: "Faculdade Metropolitana",
+
+            // Recommendations
+            recommendationsTitle: "RECOMENDAÇÕES",
+            viewLinkedIn: "Ver no LinkedIn",
 
             // Descriptions
             basedInErechim:
@@ -834,6 +961,10 @@ document.addEventListener("DOMContentLoaded", async function () {
             applications: "APLICACIONES",
             systems: "SISTEMAS",
             contact: "CONTACTO",
+
+            // Recommendations
+            recommendationsTitle: "RECOMENDACIONES",
+            viewLinkedIn: "Ver en LinkedIn",
 
             // Titles and Headings
             title: "Jackson F. Magnabosco",
