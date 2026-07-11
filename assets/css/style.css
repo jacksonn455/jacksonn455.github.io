@@ -390,6 +390,19 @@ header h1 {
   text-decoration: underline;
 }
 
+/* Ensure links inside panel bodies and project section follow the project's link color and hover (orange) */
+#projects .panel-body a,
+.panel-body a {
+  color: inherit; /* use surrounding text color */
+  text-decoration: none;
+}
+
+#projects .panel-body a:hover,
+.panel-body a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
 .texto-realidade {
   color: white;
 }

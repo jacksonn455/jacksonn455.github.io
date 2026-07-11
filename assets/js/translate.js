@@ -396,6 +396,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             // Sections
             startups: "STARTUPS",
+            projects: "PROJECTS",
             websitesSection: "WEBSITES",
             iotSection: "IoT",
 
@@ -433,6 +434,41 @@ document.addEventListener("DOMContentLoaded", async function () {
             liveCodingInterviewsDescription: "Learn how to solve algorithm challenges and think out loud during international technical interviews.",
             underConstruction: "🚧 Under Construction 🚧",
             universityName: "Integrated Regional University <br> of Alto Uruguai and Missions (2024 - 2025)",
+            // Projects
+            project1: {
+              title: "Great Pet Care Platform - Pet Parent & Practice Management",
+              period: "Apr 2026 – Present",
+              description: "Contributed to the Great Pet Care platform, a Covetrus solution connecting veterinary practices and pet parents by enabling appointment scheduling, prescription management, and centralized pet health tracking. Worked on backend features for both the pet parent-facing dashboard and the platform's administrative panel, using Node.js and TypeScript. Contributed to the evolution of account management flows and pet/practice data handling, applying an AI-first development approach. Participated in architecture decisions focused on scalability and maintainability as the platform grew.",
+              company: "Covetrus"
+            },
+            project2: {
+              title: "KORA",
+              period: "May 2025 – Apr 2026",
+              associated: "Tempo",
+              description: "KORA is a next-generation Field Service Management (FSM) platform developed by Tempo, one of Brazil's leading companies in assistance, convenience, and specialized services. The platform modernizes post-purchase service operations, including furniture assembly, home appliance installation, and telecom services, connecting retailers, manufacturers, customers, and service providers. As a Senior Backend Software Engineer, contributed to the architecture, technical discovery, and development of scalable microservices responsible for scheduling, dispatching, and executing field services. Worked with API-first and event-driven architecture using Java, Spring Boot, Kafka, AWS, and Kubernetes.",
+              company: "Tempo"
+            },
+            project3: {
+              title: "BidTv",
+              period: "Sep 2022 – Sep 2025",
+              associated: "Superbid Exchange",
+              description: "Worked within one of the largest digital auction transaction platforms in Latin America, connecting buyers and sellers across different industries and market segments. Contributed to the evolution of platform features and backend solutions supporting digital auction operations.",
+              company: "Superbid Exchange"
+            },
+            project4: {
+              title: "Brewery Automation",
+              period: "Feb 2020 – Dec 2020",
+              associated: "Universidade Regional Integrada do Alto Uruguai e das Missões - URI",
+              description: "Developed the \"Velha Guarda\" mobile application, an automated control solution for craft beer production processes. The project aimed to improve productivity, safety, and efficiency by monitoring temperature throughout different brewing stages using IoT technology. The application was developed with Flutter, Dart, Firebase, and integrated with ESP8266 NodeMCU V3 using C programming and DS18B20 temperature sensors. The solution enabled recipe management, temperature monitoring, and improved control over brewing operations.",
+              skills: "Breadboard, DS18B20, IoT, Flutter, Firebase"
+            },
+            project5: {
+              title: "Smart Locker",
+              period: "Jan 2020 – Dec 2020",
+              associated: "Armários Inteligentes",
+              description: "Developed a smart locker application based on the Internet of Things (IoT) concept, controlled through a mobile application and API. The system allows locker configuration, user management, door opening control, compartment allocation, and occupancy management. A web-based management interface provides occupancy reports and access logs.",
+              skills: "SQL, Flutter, IoT"
+            },
           },
         },
         pt: {
@@ -688,6 +724,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             // Sections
             startups: "STARTUPS",
+            projects: "PROJETOS",
             websitesSection: "SITES",
             iotSection: "IoT",
 
@@ -745,6 +782,41 @@ document.addEventListener("DOMContentLoaded", async function () {
             liveCodingInterviewsDescription: "Aprenda a resolver desafios de algoritmos e pensar em voz alta durante entrevistas técnicas internacionais.",
             underConstruction: "🚧 Em construção 🚧",
             universityName: "Universidade Regional Integrada <br> do Alto Uruguai e das Missões (2024 - 2025)",
+            // Projects
+            project1: {
+              title: "Great Pet Care Platform - Gestão para Tutores e Clínicas",
+              period: "Abr 2026 – Presente",
+              description: "Contribuí para a plataforma Great Pet Care, uma solução da Covetrus conectando clínicas veterinárias e tutores de pets, permitindo agendamento de consultas, gerenciamento de prescrições e centralização do histórico de saúde dos animais. Trabalhei em funcionalidades de backend tanto no dashboard voltado para tutores quanto no painel administrativo da plataforma, utilizando Node.js e TypeScript. Contribuí para a evolução dos fluxos de gestão de contas e tratamento de dados de pets/clinicas, aplicando uma abordagem de desenvolvimento AI-first. Participei de decisões de arquitetura focadas em escalabilidade e manutenibilidade à medida que a plataforma crescia.",
+              company: "Covetrus"
+            },
+            project2: {
+              title: "KORA",
+              period: "Mai 2025 – Abr 2026",
+              associated: "Tempo",
+              description: "KORA é uma plataforma de Field Service Management (FSM) de próxima geração desenvolvida pela Tempo, uma das principais empresas do Brasil em assistência, conveniência e serviços especializados. A plataforma moderniza operações de pós-venda, incluindo montagem de móveis, instalação de eletrodomésticos e serviços de telecom, conectando varejistas, fabricantes, clientes e prestadores de serviço. Como Engenheiro de Software Back-end Sênior, colaborei na arquitetura, descoberta técnica e desenvolvimento de microsserviços escaláveis responsáveis por agendamento, despacho e execução dos serviços de campo. Trabalhei com arquitetura API-first e orientada a eventos usando Java, Spring Boot, Kafka, AWS e Kubernetes.",
+              company: "Tempo"
+            },
+            project3: {
+              title: "BidTv",
+              period: "Set 2022 – Set 2025",
+              associated: "Superbid Exchange",
+              description: "Atuei em uma das maiores plataformas de transações por leilão digital da América Latina, conectando compradores e vendedores de diferentes indústrias e segmentos de mercado. Contribuí para a evolução de funcionalidades da plataforma e soluções de backend que sustentam operações de leilão digital.",
+              company: "Superbid Exchange"
+            },
+            project4: {
+              title: "Automação para Cervejaria",
+              period: "Fev 2020 – Dez 2020",
+              associated: "Universidade Regional Integrada do Alto Uruguai e das Missões - URI",
+              description: "Desenvolvi o aplicativo móvel \"Velha Guarda\", uma solução de controle automatizado para processos de produção de cerveja artesanal. O projeto buscou melhorar produtividade, segurança e eficiência por meio do monitoramento de temperatura nas diferentes etapas da brassagem utilizando tecnologia IoT. A aplicação foi desenvolvida com Flutter, Dart, Firebase e integrada com ESP8266 NodeMCU V3 em C e sensores DS18B20. A solução possibilitou gerenciamento de receitas, monitoramento de temperatura e melhor controle das operações de produção.",
+              skills: "Breadboard, DS18B20, IoT, Flutter, Firebase"
+            },
+            project5: {
+              title: "Armário Inteligente",
+              period: "Jan 2020 – Dez 2020",
+              associated: "Armários Inteligentes",
+              description: "Desenvolvi uma aplicação de armário inteligente baseada no conceito de Internet das Coisas (IoT), controlada por aplicativo móvel e API. O sistema permite configuração de armários, gestão de usuários, controle de abertura de portas, alocação de compartimentos e gerenciamento de ocupação. Uma interface de gestão web fornece relatórios de ocupação e logs de acesso.",
+              skills: "SQL, Flutter, IoT"
+            },
           },
         },
         es: {
@@ -1003,6 +1075,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             // Sections
             startups: "STARTUPS",
+            projects: "PROYECTOS",
             websitesSection: "SITIOS WEB",
             iotSection: "IoT",
 
@@ -1060,6 +1133,41 @@ document.addEventListener("DOMContentLoaded", async function () {
             liveCodingInterviewsDescription: "Aprende a resolver desafíos de algoritmos y pensar en voz alta durante entrevistas técnicas internacionales.",
             underConstruction: "🚧 En construcción 🚧",
             universityName: "Universidad Regional Integrada <br> del Alto Uruguay y las Misiones (2024 - 2025)",
+            // Projects
+            project1: {
+              title: "Great Pet Care Platform - Gestión para Tutores y Clínicas",
+              period: "Abr 2026 – Presente",
+              description: "Contribuí a la plataforma Great Pet Care, una solución de Covetrus que conecta clínicas veterinarias y tutores de mascotas, permitiendo la programación de citas, gestión de recetas y el seguimiento centralizado de la salud de las mascotas. Trabajé en funcionalidades de backend tanto para el panel dirigido a tutores como para el panel administrativo de la plataforma, utilizando Node.js y TypeScript. Contribuí a la evolución de los flujos de gestión de cuentas y manejo de datos de mascotas/clinicas, aplicando un enfoque de desarrollo AI-first. Participé en decisiones de arquitectura centradas en la escalabilidad y mantenibilidad conforme la plataforma crecía.",
+              company: "Covetrus"
+            },
+            project2: {
+              title: "KORA",
+              period: "May 2025 – Abr 2026",
+              associated: "Tempo",
+              description: "KORA es una plataforma de Field Service Management (FSM) de próxima generación desarrollada por Tempo, una de las principales empresas de Brasil en asistencia, conveniencia y servicios especializados. La plataforma moderniza las operaciones de posventa, incluida la instalación de muebles, montaje de electrodomésticos y servicios de telecomunicaciones, conectando minoristas, fabricantes, clientes y proveedores de servicios. Como Ingeniero de Software Backend Senior, contribuí a la arquitectura, descubrimiento técnico y desarrollo de microservicios escalables responsables de la programación, despacho y ejecución de los servicios de campo. Trabajé con arquitectura API-first y basada en eventos usando Java, Spring Boot, Kafka, AWS y Kubernetes.",
+              company: "Tempo"
+            },
+            project3: {
+              title: "BidTv",
+              period: "Sep 2022 – Sep 2025",
+              associated: "Superbid Exchange",
+              description: "Trabajé dentro de una de las mayores plataformas de transacciones de subastas digitales en América Latina, conectando compradores y vendedores en diferentes industrias y segmentos de mercado. Contribuí a la evolución de funcionalidades de la plataforma y soluciones backend que soportan las operaciones de subasta digital.",
+              company: "Superbid Exchange"
+            },
+            project4: {
+              title: "Automatización de Cervecería",
+              period: "Feb 2020 – Dic 2020",
+              associated: "Universidad Regional Integrada del Alto Uruguay y de las Misiones - URI",
+              description: "Desarrollé la aplicación móvil \"Velha Guarda\", una solución de control automatizado para los procesos de producción de cerveza artesanal. El proyecto tenía como objetivo mejorar la productividad, seguridad y eficiencia mediante el monitoreo de temperatura en las diferentes etapas de la fabricación utilizando tecnología IoT. La aplicación se desarrolló con Flutter, Dart, Firebase e integrada con ESP8266 NodeMCU V3 en C y sensores DS18B20. La solución permitió la gestión de recetas, monitoreo de temperatura y mejor control de las operaciones de producción.",
+              skills: "Breadboard, DS18B20, IoT, Flutter, Firebase"
+            },
+            project5: {
+              title: "Taquilla Inteligente",
+              period: "Ene 2020 – Dic 2020",
+              associated: "Armários Inteligentes",
+              description: "Desarrollé una aplicación de taquilla inteligente basada en el concepto de Internet de las Cosas (IoT), controlada mediante una aplicación móvil y una API. El sistema permite la configuración de taquillas, gestión de usuarios, control de apertura de puertas, asignación de compartimentos y gestión de ocupación. Una interfaz de gestión web proporciona informes de ocupación y registros de acceso.",
+              skills: "SQL, Flutter, IoT"
+            },
           },
         },
       },
