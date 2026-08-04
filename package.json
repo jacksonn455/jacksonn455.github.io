@@ -23,7 +23,7 @@
     "html-validate": "^8.24.2",
     "jsdom": "^25.0.1",
     "prettier": "^3.3.3",
-    "sharp": "^0.33.5"
+    "sharp": "^0.35.0"
   },
   "prettier": {
     "printWidth": 100,
