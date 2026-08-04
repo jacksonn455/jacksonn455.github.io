@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+# O deploy NAO acontece aqui de proposito.
+# O GitHub Pages deste repositorio esta configurado como "Deploy from a branch"
+# (master, raiz), entao publicar e simplesmente dar push no master — exatamente
+# como funcionava antes. Este workflow so verifica a qualidade do que subiu.
+# Se um dia a fonte do Pages virar "GitHub Actions", ai sim adicione um job de
+# deploy com actions/deploy-pages.
+
+jobs:
+  quality:
+    name: Validate & audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Verify index.html is in sync with the i18n sources
+        run: |
+          npm run build
+          git diff --exit-code index.html \
+            || (echo "::error::index.html desatualizado — rode 'npm run build' e commite" && exit 1)
+
+      - name: Validate HTML
+        run: npm run check:html
+
+      - name: Check JS syntax, links, i18n keys and a11y hygiene
+        run: npm run check:links
+
+      - name: Check formatting
+        run: npm run check:format
+
+      - name: Lighthouse CI
+        run: npm run lighthouse
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

@@ -1,7 +1,32 @@
 {
-"homepage": "https://jacksonn455.github.io/",
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-}
+  "name": "jacksonn455-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Portfolio of Jackson Felipe Magnabosco - vanilla HTML, CSS and JavaScript.",
+  "homepage": "https://jacksonmagnabosco.dev/",
+  "author": "Jackson Felipe Magnabosco",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node scripts/serve.js",
+    "build": "node scripts/build-i18n.js",
+    "images": "node scripts/optimize-images.js",
+    "check:links": "node scripts/check-links.js",
+    "check:html": "html-validate index.html",
+    "check:format": "prettier --check \"assets/**/*.{css,js,json}\" \"*.{json,md}\"",
+    "format": "prettier --write \"assets/**/*.{css,js,json}\" \"*.{json,md}\"",
+    "check": "npm run check:html && npm run check:links",
+    "lighthouse": "lhci autorun"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.14.0",
+    "html-validate": "^8.24.2",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.3.3",
+    "sharp": "^0.33.5"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true
+  }
 }
