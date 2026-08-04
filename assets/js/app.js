@@ -468,6 +468,18 @@
       $$('[data-video]').forEach((wrapper) => {
         const facade = $('.video__facade', wrapper);
         if (!facade) return;
+
+        /* Nem todo video tem maxresdefault - cai para a miniatura garantida */
+        const thumb = $('img[data-thumb-fallback]', facade);
+        if (thumb) {
+          const useFallback = () => {
+            thumb.src = thumb.dataset.thumbFallback;
+            delete thumb.dataset.thumbFallback;
+          };
+          if (thumb.complete && thumb.naturalWidth === 0) useFallback();
+          else thumb.addEventListener('error', useFallback, { once: true });
+        }
+
         facade.addEventListener(
           'click',
           () => {
