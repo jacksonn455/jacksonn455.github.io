@@ -29,6 +29,10 @@
 
   --udemy: #6d28d9;
   --udemy-hover: #5b21b6;
+  /* Vermelho do YouTube escurecido: #C4302B = 5.52:1 com texto branco (o
+     #FF0000 da marca da apenas 4.00:1 e reprovaria no WCAG AA) */
+  --youtube: #c4302b;
+  --youtube-hover: #a02422;
   --linkedin: #0a66c2;
 
   --focus: #2563eb;
@@ -107,6 +111,8 @@
 
     --udemy: #7c3aed; /* 5.70:1 com texto branco */
     --udemy-hover: #6d28d9;
+    --youtube: #d32f2f; /* 4.98:1 com texto branco */
+    --youtube-hover: #b71c1c;
     --linkedin: #58a6ff;
 
     --focus: #58a6ff;
@@ -138,6 +144,8 @@
 
   --udemy: #7c3aed;
   --udemy-hover: #6d28d9;
+  --youtube: #d32f2f;
+  --youtube-hover: #b71c1c;
   --linkedin: #58a6ff;
 
   --focus: #58a6ff;
@@ -566,6 +574,16 @@ hr {
 
 .btn--udemy:hover {
   background: var(--udemy-hover);
+  color: #fff;
+}
+
+.btn--youtube {
+  background: var(--youtube);
+  color: #fff;
+}
+
+.btn--youtube:hover {
+  background: var(--youtube-hover);
   color: #fff;
 }
 
