@@ -27,11 +27,11 @@ jobs:
 
       - run: npm ci
 
-      - name: Verify index.html is in sync with the i18n sources
+      - name: Verify generated files are in sync with their sources
         run: |
           npm run build
-          git diff --exit-code index.html \
-            || (echo "::error::index.html desatualizado — rode 'npm run build' e commite" && exit 1)
+          git diff --exit-code \
+            || (echo "::error::arquivos gerados desatualizados — rode 'npm run build' e commite" && exit 1)
 
       - name: Validate HTML
         run: npm run check:html

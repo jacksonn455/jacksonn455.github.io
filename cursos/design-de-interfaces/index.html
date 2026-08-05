@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Curso de Design de Interfaces, Usabilidade e UX (IHC)</title>
+  <meta name="description" content="Curso de IHC em português: paradigmas de interação, affordance, acessibilidade, comunicabilidade, prototipação, modelagem, usabilidade, UX e avaliação de interfaces.">
+  <meta name="keywords" content="curso de ihc, design de interfaces, usabilidade, experiência do usuário, ux em português, acessibilidade, prototipação">
+  <meta name="author" content="Jackson Felipe Magnabosco">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://jacksonmagnabosco.dev/cursos/design-de-interfaces/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jackson F. Magnabosco">
+  <meta property="og:title" content="Curso de Design de Interfaces, Usabilidade e UX (IHC)">
+  <meta property="og:description" content="Curso de IHC em português: paradigmas de interação, affordance, acessibilidade, comunicabilidade, prototipação, modelagem, usabilidade, UX e avaliação de interfaces.">
+  <meta property="og:url" content="https://jacksonmagnabosco.dev/cursos/design-de-interfaces/">
+  <meta property="og:image" content="https://jacksonmagnabosco.dev/assets/img/curso-design-de-interfaces.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="Curso de Design de Interfaces, Usabilidade e Experiência do Usuário">
+  <meta property="og:locale" content="pt_BR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Curso de Design de Interfaces, Usabilidade e UX (IHC)">
+  <meta name="twitter:description" content="Curso de IHC em português: paradigmas de interação, affordance, acessibilidade, comunicabilidade, prototipação, modelagem, usabilidade, UX e avaliação de interfaces.">
+  <meta name="twitter:image" content="https://jacksonmagnabosco.dev/assets/img/curso-design-de-interfaces.webp">
+  <meta name="twitter:image:alt" content="Curso de Design de Interfaces, Usabilidade e Experiência do Usuário">
+
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="../../favicon.ico" sizes="32x32">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+
+  <!-- aplica o tema antes da primeira pintura para nao piscar -->
+  <script>
+    (() => {
+      try {
+        const t = localStorage.getItem('preferredTheme');
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://jacksonmagnabosco.dev/#person",
+      "name": "Jackson Felipe Magnabosco",
+      "alternateName": "Jackson Magnabosco",
+      "url": "https://jacksonmagnabosco.dev/",
+      "image": "https://jacksonmagnabosco.dev/assets/img/perfil.webp",
+      "jobTitle": "Engenheiro de Software Sênior e Professor de Ciência da Computação",
+      "description": "Engenheiro de Software Sênior e Professor de Ciência da Computação. Atua com Node.js, TypeScript, Java e AWS, leciona na graduação e produz cursos online de tecnologia em português.",
+      "knowsLanguage": [
+        "pt-BR",
+        "en"
+      ],
+      "sameAs": [
+        "https://github.com/jacksonn455",
+        "https://www.youtube.com/@JacksonMagnabosco",
+        "https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/",
+        "https://medium.com/@jacksonn455",
+        "https://www.udemy.com/user/jackson-felipe-magnabosco/",
+        "http://lattes.cnpq.br/4613856780210407"
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://jacksonmagnabosco.dev/cursos/design-de-interfaces/#course",
+      "name": "Design de Interfaces, Usabilidade e Experiência do Usuário",
+      "alternateName": "Design de Interfaces: Usabilidade e Experiência do Usuário",
+      "description": "Curso de Interação Humano-Computador (IHC) que percorre dos fundamentos às técnicas avançadas de design de interfaces. Cobre estilos e paradigmas de interação, interface, interação e affordance, acessibilidade e comunicabilidade, levantamento de requisitos e coleta de dados, prototipação, modelagem de interfaces, design com usuários, usabilidade, experiência do usuário, avaliação em IHC e processos de design.",
+      "url": "https://jacksonmagnabosco.dev/cursos/design-de-interfaces/",
+      "image": "https://jacksonmagnabosco.dev/assets/img/curso-design-de-interfaces.webp",
+      "inLanguage": "pt-BR",
+      "educationalLevel": "Iniciante a intermediário",
+      "about": "UX e Interação Humano-Computador",
+      "teaches": [
+        "Dominar os fundamentos de IHC e os estilos e paradigmas de interação",
+        "Diferenciar interface, interação e affordance no projeto de um sistema",
+        "Projetar com acessibilidade e comunicabilidade desde o início",
+        "Levantar requisitos e coletar dados junto dos usuários",
+        "Prototipar e modelar interfaces antes de escrever código",
+        "Avaliar usabilidade e experiência do usuário com métodos de IHC",
+        "Conduzir um processo de design centrado no usuário de ponta a ponta"
+      ],
+      "coursePrerequisites": [
+        "Nenhum pré-requisito técnico",
+        "Não é necessário saber programar nem dominar ferramentas de design",
+        "Um computador com acesso à internet"
+      ],
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      },
+      "keywords": "curso de ihc, design de interfaces, usabilidade, experiência do usuário, ux em português, acessibilidade, prototipação",
+      "provider": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "author": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "instructor": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "isAccessibleForFree": false,
+      "syllabusSections": [
+        {
+          "@type": "Syllabus",
+          "position": 1,
+          "name": "Introdução à IHC"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 2,
+          "name": "Estilos e paradigmas de interação"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 3,
+          "name": "Interface, interação e affordance"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 4,
+          "name": "Acessibilidade e comunicabilidade"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 5,
+          "name": "Requisitos e coleta de dados"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 6,
+          "name": "Prototipação e concepção"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 7,
+          "name": "Modelagem de interfaces"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 8,
+          "name": "Design de interfaces com usuários"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 9,
+          "name": "Usabilidade e experiência do usuário"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 10,
+          "name": "Avaliação em IHC"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 11,
+          "name": "Processos de design de IHC I e II"
+        }
+      ],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "inLanguage": "pt-BR",
+        "instructor": {
+          "@id": "https://jacksonmagnabosco.dev/#person"
+        }
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "category": "Paid",
+          "url": "https://www.udemy.com/course/design-de-interfaces-usabilidade-e-experiencia-do-usuario/?referralCode=008977C1440E40D2B09F",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Udemy",
+            "url": "https://www.udemy.com/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "category": "Paid",
+          "url": "https://go.hotmart.com/U101226734S",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Hotmart",
+            "url": "https://www.hotmart.com/"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://jacksonmagnabosco.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cursos",
+          "item": "https://jacksonmagnabosco.dev/cursos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Design de Interfaces"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Este curso é de UX ou de IHC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De IHC, que é a base científica de onde o UX vem. Usabilidade e experiência do usuário são módulos do curso, tratados com os métodos e o vocabulário de Interação Humano-Computador — inclusive avaliação, que é o que falta na maioria dos cursos de UX."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso saber usar Figma ou outra ferramenta de design?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O foco é o raciocínio de projeto: paradigmas de interação, affordance, requisitos, prototipação, modelagem e avaliação. Esses conceitos valem em qualquer ferramenta, do papel ao Figma."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é affordance e por que isso importa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Affordance é a propriedade de um elemento que sugere como ele deve ser usado — um botão que parece clicável, uma alça que pede para ser puxada. É um dos conceitos centrais do curso porque explica por que interfaces falham mesmo quando estão visualmente bonitas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Acessibilidade é tratada de verdade ou só citada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tem módulo próprio, junto de comunicabilidade. Acessibilidade entra como requisito de projeto desde a concepção, e não como correção depois que o sistema já está pronto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Serve para quem programa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Serve, e bastante. Quem desenvolve toma dezenas de decisões de interface por semana. Ter os critérios de usabilidade e os métodos de avaliação muda a qualidade dessas decisões — e combina diretamente com o curso de Desenvolvimento Web."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://jacksonmagnabosco.dev/cursos/design-de-interfaces/",
+      "url": "https://jacksonmagnabosco.dev/cursos/design-de-interfaces/",
+      "name": "Curso de Design de Interfaces, Usabilidade e UX (IHC)",
+      "description": "Curso de IHC em português: paradigmas de interação, affordance, acessibilidade, comunicabilidade, prototipação, modelagem, usabilidade, UX e avaliação de interfaces.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://jacksonmagnabosco.dev/#website"
+      },
+      "primaryImageOfPage": "https://jacksonmagnabosco.dev/assets/img/curso-design-de-interfaces.webp",
+      "about": {
+        "@id": "https://jacksonmagnabosco.dev/cursos/design-de-interfaces/#course"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jacksonmagnabosco.dev/#website",
+      "url": "https://jacksonmagnabosco.dev/",
+      "name": "Jackson F. Magnabosco",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Ir para o conteúdo</a>
+<nav class="site-nav" aria-label="Principal">
+  <div class="container site-nav__inner">
+    <a class="site-nav__brand" href="../../">Jackson<span class="u-accent">.</span>M</a>
+
+    <button type="button" class="icon-btn nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></button>
+
+    <ul class="site-nav__list" id="nav-list" data-nav-list>
+      <li><a href="../../">Início</a></li>
+      <li><a href="../../cursos/" aria-current="page">Cursos</a></li>
+      <li><a href="../../afiliados/">Afiliados</a></li>
+      <li><a href="../../#projects">Projetos</a></li>
+      <li><a href="../../#portfolio">Portfólio</a></li>
+      <li><a href="../../#contact">Contato</a></li>
+    </ul>
+
+    <div class="site-nav__actions">
+      <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Alternar modo escuro">
+        <span data-theme-icon="light"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span>
+        <span data-theme-icon="dark" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<nav class="breadcrumb container" aria-label="Trilha de navegação">
+  <ol class="breadcrumb__list">
+    <li><a href="../../">Início</a></li>
+    <li><a href="../../cursos/">Cursos</a></li>
+    <li><span aria-current="page">Design de Interfaces</span></li>
+  </ol>
+</nav>
+
+<main id="main">
+  <article class="section">
+    <div class="container">
+      <header class="page-head">
+        <p class="eyebrow">Curso online · UX e Interação Humano-Computador</p>
+        <h1>Curso de Design de Interfaces, Usabilidade e Experiência do Usuário</h1>
+        <p class="lead">Curso de Interação Humano-Computador (IHC) que percorre dos fundamentos às técnicas avançadas de design de interfaces. Cobre estilos e paradigmas de interação, interface, interação e affordance, acessibilidade e comunicabilidade, levantamento de requisitos e coleta de dados, prototipação, modelagem de interfaces, design com usuários, usabilidade, experiência do usuário, avaliação em IHC e processos de design.</p>
+        <ul class="chips">
+          <li class="chip"><strong>Nível:</strong> Iniciante a intermediário</li>
+          <li class="chip"><strong>Idioma:</strong> Português (pt-BR)</li>
+          <li class="chip"><strong>Formato:</strong> Vídeoaulas online, no seu ritmo</li>
+          <li class="chip"><strong>Instrutor:</strong> Jackson Magnabosco</li>
+          <li class="chip"><strong>Onde comprar:</strong> Udemy e Hotmart</li>
+        </ul>
+        <p class="course-card__actions">
+          <a class="btn btn--udemy" href="https://www.udemy.com/course/design-de-interfaces-usabilidade-e-experiencia-do-usuario/?referralCode=008977C1440E40D2B09F" target="_blank" rel="noopener">Comprar na Udemy</a>
+          <a class="btn btn--hotmart" href="https://go.hotmart.com/U101226734S" target="_blank" rel="noopener">Comprar na Hotmart</a>
+        </p>
+      </header>
+
+      <img class="course-hero__img" src="../../assets/img/curso-design-de-interfaces.webp" width="1200" height="675" fetchpriority="high" decoding="async" alt="Curso de Design de Interfaces, Usabilidade e Experiência do Usuário">
+
+      <div class="prose">
+        <div class="tldr">
+          <h2>Em resumo</h2>
+          <p>Curso de Interação Humano-Computador (IHC) que percorre dos fundamentos às técnicas avançadas de design de interfaces. Cobre estilos e paradigmas de interação, interface, interação e affordance, acessibilidade e comunicabilidade, levantamento de requisitos e coleta de dados, prototipação, modelagem de interfaces, design com usuários, usabilidade, experiência do usuário, avaliação em IHC e processos de design.</p>
+        </div>
+
+        <section aria-labelledby="sobre">
+          <h2 id="sobre">Sobre o curso</h2>
+          <p>Interface bonita e interface boa não são a mesma coisa. O que separa as duas é IHC — Interação Humano-Computador — a disciplina que estuda como as pessoas realmente usam sistemas, e que dá o vocabulário e os métodos para projetar com base em evidência em vez de gosto pessoal.</p>
+          <p>O curso faz essa jornada completa: começa nos fundamentos e nos paradigmas de interação, trata de affordance, acessibilidade e comunicabilidade, passa por levantamento de requisitos e coleta de dados com usuários, avança para prototipação e modelagem de interfaces, e chega a usabilidade, experiência do usuário, métodos de avaliação e processos de design de IHC.</p>
+        </section>
+
+        <section aria-labelledby="aprender">
+          <h2 id="aprender">O que você vai aprender</h2>
+          <ul>
+          <li>Dominar os fundamentos de IHC e os estilos e paradigmas de interação</li>
+          <li>Diferenciar interface, interação e affordance no projeto de um sistema</li>
+          <li>Projetar com acessibilidade e comunicabilidade desde o início</li>
+          <li>Levantar requisitos e coletar dados junto dos usuários</li>
+          <li>Prototipar e modelar interfaces antes de escrever código</li>
+          <li>Avaliar usabilidade e experiência do usuário com métodos de IHC</li>
+          <li>Conduzir um processo de design centrado no usuário de ponta a ponta</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="conteudo">
+          <h2 id="conteudo">Conteúdo do curso</h2>
+          <ol>
+          <li>Introdução à IHC</li>
+          <li>Estilos e paradigmas de interação</li>
+          <li>Interface, interação e affordance</li>
+          <li>Acessibilidade e comunicabilidade</li>
+          <li>Requisitos e coleta de dados</li>
+          <li>Prototipação e concepção</li>
+          <li>Modelagem de interfaces</li>
+          <li>Design de interfaces com usuários</li>
+          <li>Usabilidade e experiência do usuário</li>
+          <li>Avaliação em IHC</li>
+          <li>Processos de design de IHC I e II</li>
+        </ol>
+        </section>
+
+        <section aria-labelledby="publico">
+          <h2 id="publico">Para quem é este curso</h2>
+          <ul>
+          <li>Desenvolvedores que querem entregar telas que as pessoas conseguem usar</li>
+          <li>Designers que precisam da base teórica de IHC e de métodos de avaliação</li>
+          <li>Estudantes de computação e design com disciplina de IHC</li>
+          <li>Product owners e analistas que decidem sobre interfaces</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="requisitos">
+          <h2 id="requisitos">Pré-requisitos</h2>
+          <ul>
+          <li>Nenhum pré-requisito técnico</li>
+          <li>Não é necessário saber programar nem dominar ferramentas de design</li>
+          <li>Um computador com acesso à internet</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="temas">
+          <h2 id="temas">Tecnologias e temas abordados</h2>
+          <ul class="chips">
+            <li class="chip">IHC</li>
+            <li class="chip">Usabilidade</li>
+            <li class="chip">UX</li>
+            <li class="chip">Acessibilidade</li>
+            <li class="chip">Prototipação</li>
+            <li class="chip">Avaliação heurística</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="subsection" aria-labelledby="onde-comprar">
+        <h2 id="onde-comprar">Onde comprar: Udemy ou Hotmart</h2>
+        <p class="u-measure u-muted">O conteúdo é o mesmo nas duas plataformas. A diferença está no que cada uma oferece em volta dele.</p>
+        <div class="table-wrap">
+          <table class="table">
+            <caption>Plataformas em que <em>Design de Interfaces</em> está disponível</caption>
+            <thead>
+              <tr>
+                <th scope="col">Plataforma</th>
+                <th scope="col">Como funciona</th>
+                <th scope="col">Link</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">Udemy</th>
+              <td>Compra direta na Udemy, com app oficial e acompanhamento de progresso. Preço e promoções seguem a plataforma.</td>
+              <td><a class="btn btn--udemy btn--sm" href="https://www.udemy.com/course/design-de-interfaces-usabilidade-e-experiencia-do-usuario/?referralCode=008977C1440E40D2B09F" target="_blank" rel="noopener">Ver na Udemy</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Hotmart</th>
+              <td>Compra direta na Hotmart. É também a plataforma do programa de afiliados: dá para revender o curso e receber 40% por venda.</td>
+              <td><a class="btn btn--hotmart btn--sm" href="https://go.hotmart.com/U101226734S" target="_blank" rel="noopener">Ver na Hotmart</a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="faq">
+        <h2 id="faq">Perguntas frequentes</h2>
+        <div class="faq">
+          <details class="faq__item">
+            <summary>Este curso é de UX ou de IHC?</summary>
+            <div class="faq__answer"><p>De IHC, que é a base científica de onde o UX vem. Usabilidade e experiência do usuário são módulos do curso, tratados com os métodos e o vocabulário de Interação Humano-Computador — inclusive avaliação, que é o que falta na maioria dos cursos de UX.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Preciso saber usar Figma ou outra ferramenta de design?</summary>
+            <div class="faq__answer"><p>Não. O foco é o raciocínio de projeto: paradigmas de interação, affordance, requisitos, prototipação, modelagem e avaliação. Esses conceitos valem em qualquer ferramenta, do papel ao Figma.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>O que é affordance e por que isso importa?</summary>
+            <div class="faq__answer"><p>Affordance é a propriedade de um elemento que sugere como ele deve ser usado — um botão que parece clicável, uma alça que pede para ser puxada. É um dos conceitos centrais do curso porque explica por que interfaces falham mesmo quando estão visualmente bonitas.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Acessibilidade é tratada de verdade ou só citada?</summary>
+            <div class="faq__answer"><p>Tem módulo próprio, junto de comunicabilidade. Acessibilidade entra como requisito de projeto desde a concepção, e não como correção depois que o sistema já está pronto.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Serve para quem programa?</summary>
+            <div class="faq__answer"><p>Serve, e bastante. Quem desenvolve toma dezenas de decisões de interface por semana. Ter os critérios de usabilidade e os métodos de avaliação muda a qualidade dessas decisões — e combina diretamente com o curso de Desenvolvimento Web.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="instrutor">
+        <h2 id="instrutor">Quem ensina</h2>
+        <div class="author-card">
+          <img class="author-card__img" src="../../assets/img/perfil.webp" width="555" height="394" loading="lazy" decoding="async" alt="Jackson Felipe Magnabosco">
+          <div class="author-card__body">
+            <p><strong>Jackson Felipe Magnabosco</strong> — Engenheiro de Software Sênior e Professor de Ciência da Computação. Bacharel em Ciência da Computação pela URI-Erechim, com pós-graduação em Engenharia de Software e em Administração de Banco de Dados.</p>
+            <p>Trabalha com Node.js, TypeScript, Java e AWS em produtos usados no Brasil e no exterior, lecionou na graduação em Ciência da Computação e mantém um canal no YouTube com mais de 1.500 vídeos. Os cursos online somam mais de 400 alunos em 25 países.</p>
+            <ul class="inline-links">
+              <li><a href="../../#experience">Trajetória profissional</a></li>
+              <li><a href="../../#education">Formação e certificações</a></li>
+              <li><a href="https://www.udemy.com/user/jackson-felipe-magnabosco/" target="_blank" rel="noopener">Perfil na Udemy</a></li>
+              <li><a href="https://www.youtube.com/@JacksonMagnabosco" target="_blank" rel="noopener">Canal no YouTube</a></li>
+              <li><a href="https://github.com/jacksonn455" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="http://lattes.cnpq.br/4613856780210407" target="_blank" rel="noopener">Currículo Lattes</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="relacionados">
+        <h2 id="relacionados">Cursos relacionados</h2>
+        <ul class="mini-grid">
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/desenvolvimento-web/">Desenvolvimento Web</a></h3>
+            <p>Formação completa de desenvolvimento web, do zero ao nível profissional.</p>
+          </li>
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/logica-de-programacao/">Lógica de Programação e Algoritmos</a></h3>
+            <p>Curso online de lógica de programação e algoritmos para quem está começando.</p>
+          </li>
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/posicionamento-profissional-global/">Posicionamento Profissional Global</a></h3>
+            <p>Curso sobre como posicionar currículo e LinkedIn para processos seletivos remotos e internacionais.</p>
+          </li>
+        </ul>
+        <p><a href="../../cursos/">Ver o catálogo completo de cursos</a></p>
+      </section>
+
+      <section class="subsection" aria-labelledby="conteudo-extra">
+        <h2 id="conteudo-extra">Conteúdo relacionado no site</h2>
+        <ul class="link-list">
+          <li><a class="link-item" href="https://jacksonmagnabosco.dev/#portfolio">Portfólio de interfaces, sites e sistemas</a></li>
+          <li><a class="link-item" href="https://jacksonmagnabosco.dev/#education">Certificações de acessibilidade e usabilidade</a></li>
+        </ul>
+      </section>
+
+      <aside class="cta-band">
+        <div class="cta-band__text">
+          <h2>Ganhe 40% revendendo este curso</h2>
+          <p>Este curso participa do programa de afiliados da Hotmart: você divulga com um link exclusivo e recebe 40% de comissão por venda. O cadastro é gratuito.</p>
+        </div>
+        <p><a class="btn btn--ghost" href="https://app-vlc.hotmart.com/affiliate-recruiting/view/0968D101226755" target="_blank" rel="noopener">Quero me afiliar a este curso</a></p>
+      </aside>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav aria-label="Rodapé">
+      <ul class="inline-links">
+        <li><a href="../../">Início</a></li>
+        <li><a href="../../cursos/">Todos os cursos</a></li>
+        <li><a href="../../afiliados/">Programa de afiliados</a></li>
+        <li><a href="../../#experience">Experiência</a></li>
+        <li><a href="../../#education">Formação</a></li>
+        <li><a href="../../#contact">Contato</a></li>
+        <li><a href="https://www.youtube.com/@JacksonMagnabosco" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://github.com/jacksonn455" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__note">© 2026 Jackson Felipe Magnabosco</p>
+  </div>
+</footer>
+
+<button type="button" class="to-top" data-to-top data-visible="false" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+
+<script src="../../assets/js/app.js" defer></script>
+
+</body></html>

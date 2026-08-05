@@ -1,0 +1,44 @@
+# Jackson F. Magnabosco
+
+> Engenheiro de Software Sênior e Professor de Ciência da Computação (Erechim, RS, Brasil). Desenvolve backends e produtos digitais com Node.js, TypeScript, Java e AWS, e produz cursos online de tecnologia em português com mais de 400 alunos em 25 países.
+
+Site pessoal e catálogo de cursos. Conteúdo em português (cursos) e em inglês, português e espanhol (página inicial).
+
+## Perfil
+
+- Formação: Bacharelado em Ciência da Computação (URI-Erechim), pós-graduação em Engenharia de Software e em Administração de Banco de Dados.
+- Atuação: engenharia de software sênior (backend, arquitetura, produto), docência em Ciência da Computação e produção de cursos online.
+- Tecnologias: Node.js, TypeScript, Java, Spring Boot, NestJS, React, AWS, microsserviços, SQL, MySQL, Python, R, mineração de dados, IoT, IHC/UX.
+- Publicação científica: artigo no Brazilian Journal of Technology (DOI 10.38152/bjtv8n3-002).
+- Canal no YouTube com mais de 1.500 vídeos gratuitos de programação e tecnologia.
+
+## Páginas principais
+
+- [Página inicial](https://jacksonmagnabosco.dev/): projetos, experiência profissional, formação, certificações e portfólio.
+- [Catálogo de cursos](https://jacksonmagnabosco.dev/cursos/): os nove cursos, com comparativo de nível, área e plataforma, e trilhas de estudo sugeridas.
+- [Programa de afiliados](https://jacksonmagnabosco.dev/afiliados/): como revender os cursos na Hotmart com 40% de comissão por venda.
+
+## Cursos
+
+- [Lógica de Programação e Algoritmos: Guia Completo](https://jacksonmagnabosco.dev/cursos/logica-de-programacao/): Curso online de lógica de programação e algoritmos para quem está começando. Você aprende a estruturar o raciocínio antes de escrever código: tipos de dados, comandos de entrada e saída, algoritmos sequenciais, pseudocódigo no Visualg, estruturas condicionais e de repetição, modularização e passagem de parâmetros. Nível: Iniciante. Idioma: português (pt-BR). Onde comprar: Udemy e Hotmart.
+- [Desenvolvimento Web Eficiente](https://jacksonmagnabosco.dev/cursos/desenvolvimento-web/): Formação completa de desenvolvimento web, do zero ao nível profissional. Cobre o ciclo inteiro de um sistema web: estudo do sistema e análise de requisitos, criação de layout, HTML e CSS, JavaScript, SQL com MySQL e DBeaver, estrutura front-end/back-end com APIs e microsserviços, hospedagem e gerenciamento de servidor, integração entre sistemas e segurança com validação de dados. Nível: Iniciante a avançado. Idioma: português (pt-BR). Onde comprar: Udemy e Hotmart.
+- [Administração de Banco de Dados: SQL, MySQL e DBA](https://jacksonmagnabosco.dev/cursos/administracao-de-banco-de-dados/): Curso de administração de banco de dados do básico ao avançado, voltado a quem quer atuar como DBA. Cobre conceitos e funções dos SGBDs, arquiteturas centralizadas e distribuídas, dicionário de dados, gerenciamento de usuários, segurança e controle de acesso, backup e recuperação, refinamento e diagnóstico de performance, álgebra relacional, consultas avançadas em SQL e ETL. Nível: Básico ao avançado. Idioma: português (pt-BR). Onde comprar: Udemy e Hotmart.
+- [Mineração de Dados com KDD, Python, R e Google Colab](https://jacksonmagnabosco.dev/cursos/mineracao-de-dados/): Curso de mineração de dados centrado no processo de KDD (Knowledge Discovery in Databases). Cobre fundamentos de data mining, as etapas de seleção e pré-processamento de dados, uso prático do WEKA e análises com Python, R e Google Colab, aplicados a casos reais de mercado. Nível: Iniciante a intermediário. Idioma: português (pt-BR). Onde comprar: Udemy e Hotmart.
+- [Design de Interfaces, Usabilidade e Experiência do Usuário](https://jacksonmagnabosco.dev/cursos/design-de-interfaces/): Curso de Interação Humano-Computador (IHC) que percorre dos fundamentos às técnicas avançadas de design de interfaces. Cobre estilos e paradigmas de interação, interface, interação e affordance, acessibilidade e comunicabilidade, levantamento de requisitos e coleta de dados, prototipação, modelagem de interfaces, design com usuários, usabilidade, experiência do usuário, avaliação em IHC e processos de design. Nível: Iniciante a intermediário. Idioma: português (pt-BR). Onde comprar: Udemy e Hotmart.
+- [Internet das Coisas: Fundamentos e Aplicações](https://jacksonmagnabosco.dev/cursos/internet-das-coisas/): Curso de Internet das Coisas que vai da história e evolução da IoT às aplicações reais. Cobre fundamentos técnicos com sensores, atuadores e modelos arquiteturais, protocolos de comunicação como MQTT, middleware de IoT, objetos inteligentes, sistemas operacionais embarcados, aplicações em cidades inteligentes, automação industrial e saúde, segurança e privacidade, Web of Things e integração com computação em nuvem. Nível: Iniciante a intermediário. Idioma: português (pt-BR). Onde comprar: Udemy e Hotmart.
+- [Ética e Legislação Profissional](https://jacksonmagnabosco.dev/cursos/etica-e-legislacao-profissional/): Curso de ética e legislação profissional voltado à área de tecnologia da informação. Cobre os fundamentos da ética profissional em TI, direitos e deveres dos profissionais, Lei Geral de Proteção de Dados (LGPD), Marco Civil da Internet, propriedade intelectual e crimes digitais, segurança cibernética e privacidade, dilemas éticos na computação e análise de casos e jurisprudências. Nível: Todos os níveis. Idioma: português (pt-BR). Onde comprar: Udemy e Hotmart.
+- [Inteligência Artificial na Prática: Engenharia de Prompt](https://jacksonmagnabosco.dev/cursos/engenharia-de-prompt/): Curso de engenharia de prompt focado em uso profissional de IA generativa. Você entende como esses modelos funcionam por dentro e aprende a projetar prompts com contexto, papel, formato e critérios de qualidade para resolver problemas reais de trabalho, em vez de improvisar pedido por pedido. Nível: Iniciante. Idioma: português (pt-BR). Onde comprar: Udemy.
+- [Construa Seu Perfil Profissional Global](https://jacksonmagnabosco.dev/cursos/posicionamento-profissional-global/): Curso sobre como posicionar currículo e LinkedIn para processos seletivos remotos e internacionais. O foco é a diferença entre o perfil que funciona no mercado local e o que é avaliado por empresas de fora: como descrever experiência, o que priorizar e como se destacar em uma seleção global. Nível: Todos os níveis. Idioma: português (pt-BR). Onde comprar: Udemy.
+
+## Programa de afiliados
+
+Sete dos nove cursos (todos exceto Engenharia de Prompt e Posicionamento Profissional Global) estão disponíveis para afiliação na Hotmart, com comissão de 40% por venda. O cadastro na Hotmart é gratuito e a solicitação de afiliação é feita por curso.
+
+## Links externos
+
+- Perfil de instrutor na Udemy: https://www.udemy.com/user/jackson-felipe-magnabosco/
+- YouTube: https://www.youtube.com/@JacksonMagnabosco
+- GitHub: https://github.com/jacksonn455
+- LinkedIn: https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/
+- Medium: https://medium.com/@jacksonn455
+- Currículo Lattes: http://lattes.cnpq.br/4613856780210407

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Curso de Administração de Banco de Dados (DBA): SQL e MySQL</title>
+  <meta name="description" content="Curso de DBA em português: SGBDs, arquiteturas, dicionário de dados, usuários, segurança, backup e recuperação, performance, álgebra relacional, SQL avançado e ETL.">
+  <meta name="keywords" content="curso de dba, administração de banco de dados, curso sql avançado, mysql, backup e recuperação, etl, tuning de banco de dados">
+  <meta name="author" content="Jackson Felipe Magnabosco">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://jacksonmagnabosco.dev/cursos/administracao-de-banco-de-dados/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jackson F. Magnabosco">
+  <meta property="og:title" content="Curso de Administração de Banco de Dados (DBA): SQL e MySQL">
+  <meta property="og:description" content="Curso de DBA em português: SGBDs, arquiteturas, dicionário de dados, usuários, segurança, backup e recuperação, performance, álgebra relacional, SQL avançado e ETL.">
+  <meta property="og:url" content="https://jacksonmagnabosco.dev/cursos/administracao-de-banco-de-dados/">
+  <meta property="og:image" content="https://jacksonmagnabosco.dev/assets/img/curso-administracao-de-banco-de-dados.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="Curso de Administração de Banco de Dados">
+  <meta property="og:locale" content="pt_BR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Curso de Administração de Banco de Dados (DBA): SQL e MySQL">
+  <meta name="twitter:description" content="Curso de DBA em português: SGBDs, arquiteturas, dicionário de dados, usuários, segurança, backup e recuperação, performance, álgebra relacional, SQL avançado e ETL.">
+  <meta name="twitter:image" content="https://jacksonmagnabosco.dev/assets/img/curso-administracao-de-banco-de-dados.webp">
+  <meta name="twitter:image:alt" content="Curso de Administração de Banco de Dados">
+
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="../../favicon.ico" sizes="32x32">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+
+  <!-- aplica o tema antes da primeira pintura para nao piscar -->
+  <script>
+    (() => {
+      try {
+        const t = localStorage.getItem('preferredTheme');
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://jacksonmagnabosco.dev/#person",
+      "name": "Jackson Felipe Magnabosco",
+      "alternateName": "Jackson Magnabosco",
+      "url": "https://jacksonmagnabosco.dev/",
+      "image": "https://jacksonmagnabosco.dev/assets/img/perfil.webp",
+      "jobTitle": "Engenheiro de Software Sênior e Professor de Ciência da Computação",
+      "description": "Engenheiro de Software Sênior e Professor de Ciência da Computação. Atua com Node.js, TypeScript, Java e AWS, leciona na graduação e produz cursos online de tecnologia em português.",
+      "knowsLanguage": [
+        "pt-BR",
+        "en"
+      ],
+      "sameAs": [
+        "https://github.com/jacksonn455",
+        "https://www.youtube.com/@JacksonMagnabosco",
+        "https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/",
+        "https://medium.com/@jacksonn455",
+        "https://www.udemy.com/user/jackson-felipe-magnabosco/",
+        "http://lattes.cnpq.br/4613856780210407"
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://jacksonmagnabosco.dev/cursos/administracao-de-banco-de-dados/#course",
+      "name": "Administração de Banco de Dados: SQL, MySQL e DBA",
+      "alternateName": "Administração de Banco de Dados: Do Básico ao Avançado",
+      "description": "Curso de administração de banco de dados do básico ao avançado, voltado a quem quer atuar como DBA. Cobre conceitos e funções dos SGBDs, arquiteturas centralizadas e distribuídas, dicionário de dados, gerenciamento de usuários, segurança e controle de acesso, backup e recuperação, refinamento e diagnóstico de performance, álgebra relacional, consultas avançadas em SQL e ETL.",
+      "url": "https://jacksonmagnabosco.dev/cursos/administracao-de-banco-de-dados/",
+      "image": "https://jacksonmagnabosco.dev/assets/img/curso-administracao-de-banco-de-dados.webp",
+      "inLanguage": "pt-BR",
+      "educationalLevel": "Básico ao avançado",
+      "about": "Banco de dados",
+      "teaches": [
+        "Entender os conceitos e as funções de um SGBD e suas arquiteturas",
+        "Consultar e usar o dicionário de dados",
+        "Gerenciar usuários, permissões, segurança e controle de acesso",
+        "Planejar e executar backup e recuperação de bancos de dados",
+        "Identificar problemas de performance e refinar o banco",
+        "Aplicar álgebra relacional e escrever consultas SQL avançadas",
+        "Montar processos de ETL (extração, transformação e carga)"
+      ],
+      "coursePrerequisites": [
+        "Noção básica de SQL ajuda, mas o curso começa pelos conceitos",
+        "Um computador com acesso à internet",
+        "Vontade de praticar consultas — a parte avançada é hands-on"
+      ],
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      },
+      "keywords": "curso de dba, administração de banco de dados, curso sql avançado, mysql, backup e recuperação, etl, tuning de banco de dados",
+      "provider": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "author": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "instructor": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "isAccessibleForFree": false,
+      "syllabusSections": [
+        {
+          "@type": "Syllabus",
+          "position": 1,
+          "name": "Conceitos e funções dos SGBDs"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 2,
+          "name": "Arquiteturas centralizadas e distribuídas"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 3,
+          "name": "Dicionário de dados"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 4,
+          "name": "Gerenciamento de usuários"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 5,
+          "name": "Segurança e controle de acesso"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 6,
+          "name": "Backup de banco de dados"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 7,
+          "name": "Recuperação de banco de dados"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 8,
+          "name": "Refinamento de banco de dados"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 9,
+          "name": "Identificação de problemas de performance"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 10,
+          "name": "Álgebra relacional"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 11,
+          "name": "Consultas avançadas em SQL"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 12,
+          "name": "Práticas avançadas de consultas"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 13,
+          "name": "ETL — Extract, Transform, Load"
+        }
+      ],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "inLanguage": "pt-BR",
+        "instructor": {
+          "@id": "https://jacksonmagnabosco.dev/#person"
+        }
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "category": "Paid",
+          "url": "https://www.udemy.com/course/administracao-de-banco-de-dados/?referralCode=5D4996FBA2F0F1548E37",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Udemy",
+            "url": "https://www.udemy.com/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "category": "Paid",
+          "url": "https://go.hotmart.com/F101261137X",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Hotmart",
+            "url": "https://www.hotmart.com/"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://jacksonmagnabosco.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cursos",
+          "item": "https://jacksonmagnabosco.dev/cursos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Administração de Banco de Dados"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que faz um DBA e o curso prepara para isso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Um DBA (administrador de banco de dados) cuida de arquitetura, usuários, segurança, backup, recuperação e performance da base. Esses são exatamente os módulos centrais do curso, que vai do básico ao avançado nessas frentes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso saber SQL antes de começar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não é obrigatório. O curso parte dos conceitos de SGBD e evolui até consultas avançadas e álgebra relacional. Quem já escreve SQL no dia a dia aproveita mais rápido a parte de performance e ETL."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual banco é usado nas aulas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MySQL como base prática, mas os fundamentos — arquiteturas, dicionário de dados, controle de acesso, backup, tuning, álgebra relacional — se aplicam a qualquer SGBD relacional, incluindo PostgreSQL, SQL Server e Oracle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O curso cobre ETL e análise de dados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O módulo final trata de ETL (extração, transformação e carga), que é a ponte entre administração de banco e projetos de dados. Para seguir por esse caminho, o curso de Mineração de Dados é a continuação natural."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Serve para faculdade ou só para o mercado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Serve para os dois. O conteúdo acompanha a ementa de disciplinas de banco de dados e administração de dados da graduação, com o recorte prático de quem administra bases em produção."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://jacksonmagnabosco.dev/cursos/administracao-de-banco-de-dados/",
+      "url": "https://jacksonmagnabosco.dev/cursos/administracao-de-banco-de-dados/",
+      "name": "Curso de Administração de Banco de Dados (DBA): SQL e MySQL",
+      "description": "Curso de DBA em português: SGBDs, arquiteturas, dicionário de dados, usuários, segurança, backup e recuperação, performance, álgebra relacional, SQL avançado e ETL.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://jacksonmagnabosco.dev/#website"
+      },
+      "primaryImageOfPage": "https://jacksonmagnabosco.dev/assets/img/curso-administracao-de-banco-de-dados.webp",
+      "about": {
+        "@id": "https://jacksonmagnabosco.dev/cursos/administracao-de-banco-de-dados/#course"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jacksonmagnabosco.dev/#website",
+      "url": "https://jacksonmagnabosco.dev/",
+      "name": "Jackson F. Magnabosco",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Ir para o conteúdo</a>
+<nav class="site-nav" aria-label="Principal">
+  <div class="container site-nav__inner">
+    <a class="site-nav__brand" href="../../">Jackson<span class="u-accent">.</span>M</a>
+
+    <button type="button" class="icon-btn nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></button>
+
+    <ul class="site-nav__list" id="nav-list" data-nav-list>
+      <li><a href="../../">Início</a></li>
+      <li><a href="../../cursos/" aria-current="page">Cursos</a></li>
+      <li><a href="../../afiliados/">Afiliados</a></li>
+      <li><a href="../../#projects">Projetos</a></li>
+      <li><a href="../../#portfolio">Portfólio</a></li>
+      <li><a href="../../#contact">Contato</a></li>
+    </ul>
+
+    <div class="site-nav__actions">
+      <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Alternar modo escuro">
+        <span data-theme-icon="light"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span>
+        <span data-theme-icon="dark" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<nav class="breadcrumb container" aria-label="Trilha de navegação">
+  <ol class="breadcrumb__list">
+    <li><a href="../../">Início</a></li>
+    <li><a href="../../cursos/">Cursos</a></li>
+    <li><span aria-current="page">Administração de Banco de Dados</span></li>
+  </ol>
+</nav>
+
+<main id="main">
+  <article class="section">
+    <div class="container">
+      <header class="page-head">
+        <p class="eyebrow">Curso online · Banco de dados</p>
+        <h1>Curso de Administração de Banco de Dados: SQL, MySQL e DBA</h1>
+        <p class="lead">Curso de administração de banco de dados do básico ao avançado, voltado a quem quer atuar como DBA. Cobre conceitos e funções dos SGBDs, arquiteturas centralizadas e distribuídas, dicionário de dados, gerenciamento de usuários, segurança e controle de acesso, backup e recuperação, refinamento e diagnóstico de performance, álgebra relacional, consultas avançadas em SQL e ETL.</p>
+        <ul class="chips">
+          <li class="chip"><strong>Nível:</strong> Básico ao avançado</li>
+          <li class="chip"><strong>Idioma:</strong> Português (pt-BR)</li>
+          <li class="chip"><strong>Formato:</strong> Vídeoaulas online, no seu ritmo</li>
+          <li class="chip"><strong>Instrutor:</strong> Jackson Magnabosco</li>
+          <li class="chip"><strong>Onde comprar:</strong> Udemy e Hotmart</li>
+        </ul>
+        <p class="course-card__actions">
+          <a class="btn btn--udemy" href="https://www.udemy.com/course/administracao-de-banco-de-dados/?referralCode=5D4996FBA2F0F1548E37" target="_blank" rel="noopener">Comprar na Udemy</a>
+          <a class="btn btn--hotmart" href="https://go.hotmart.com/F101261137X" target="_blank" rel="noopener">Comprar na Hotmart</a>
+        </p>
+      </header>
+
+      <img class="course-hero__img" src="../../assets/img/curso-administracao-de-banco-de-dados.webp" width="1200" height="675" fetchpriority="high" decoding="async" alt="Curso de Administração de Banco de Dados">
+
+      <div class="prose">
+        <div class="tldr">
+          <h2>Em resumo</h2>
+          <p>Curso de administração de banco de dados do básico ao avançado, voltado a quem quer atuar como DBA. Cobre conceitos e funções dos SGBDs, arquiteturas centralizadas e distribuídas, dicionário de dados, gerenciamento de usuários, segurança e controle de acesso, backup e recuperação, refinamento e diagnóstico de performance, álgebra relacional, consultas avançadas em SQL e ETL.</p>
+        </div>
+
+        <section aria-labelledby="sobre">
+          <h2 id="sobre">Sobre o curso</h2>
+          <p>Escrever um SELECT é o começo. Administrar um banco de dados é outra profissão: envolve decidir arquitetura, controlar quem acessa o quê, garantir que exista backup testado, recuperar a base quando algo dá errado e descobrir por que aquela consulta que rodava em 200 ms agora leva 40 segundos.</p>
+          <p>Este curso percorre exatamente essa trilha, do básico ao avançado. Começa nos conceitos e funções de um SGBD e nas arquiteturas centralizadas e distribuídas, passa por dicionário de dados, gerenciamento de usuários, segurança e controle de acesso, backup e recuperação, refinamento e identificação de problemas de performance, e fecha com a parte analítica: álgebra relacional, consultas avançadas em SQL e processos de ETL.</p>
+        </section>
+
+        <section aria-labelledby="aprender">
+          <h2 id="aprender">O que você vai aprender</h2>
+          <ul>
+          <li>Entender os conceitos e as funções de um SGBD e suas arquiteturas</li>
+          <li>Consultar e usar o dicionário de dados</li>
+          <li>Gerenciar usuários, permissões, segurança e controle de acesso</li>
+          <li>Planejar e executar backup e recuperação de bancos de dados</li>
+          <li>Identificar problemas de performance e refinar o banco</li>
+          <li>Aplicar álgebra relacional e escrever consultas SQL avançadas</li>
+          <li>Montar processos de ETL (extração, transformação e carga)</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="conteudo">
+          <h2 id="conteudo">Conteúdo do curso</h2>
+          <ol>
+          <li>Conceitos e funções dos SGBDs</li>
+          <li>Arquiteturas centralizadas e distribuídas</li>
+          <li>Dicionário de dados</li>
+          <li>Gerenciamento de usuários</li>
+          <li>Segurança e controle de acesso</li>
+          <li>Backup de banco de dados</li>
+          <li>Recuperação de banco de dados</li>
+          <li>Refinamento de banco de dados</li>
+          <li>Identificação de problemas de performance</li>
+          <li>Álgebra relacional</li>
+          <li>Consultas avançadas em SQL</li>
+          <li>Práticas avançadas de consultas</li>
+          <li>ETL — Extract, Transform, Load</li>
+        </ol>
+        </section>
+
+        <section aria-labelledby="publico">
+          <h2 id="publico">Para quem é este curso</h2>
+          <ul>
+          <li>Desenvolvedores que querem parar de depender de outra pessoa para mexer no banco</li>
+          <li>Quem pretende atuar como DBA ou analista de dados</li>
+          <li>Estudantes de tecnologia com disciplinas de banco de dados</li>
+          <li>Profissionais responsáveis por bases em produção</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="requisitos">
+          <h2 id="requisitos">Pré-requisitos</h2>
+          <ul>
+          <li>Noção básica de SQL ajuda, mas o curso começa pelos conceitos</li>
+          <li>Um computador com acesso à internet</li>
+          <li>Vontade de praticar consultas — a parte avançada é hands-on</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="temas">
+          <h2 id="temas">Tecnologias e temas abordados</h2>
+          <ul class="chips">
+            <li class="chip">SQL</li>
+            <li class="chip">MySQL</li>
+            <li class="chip">SGBD</li>
+            <li class="chip">Álgebra relacional</li>
+            <li class="chip">ETL</li>
+            <li class="chip">Backup e recovery</li>
+            <li class="chip">Tuning</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="subsection" aria-labelledby="onde-comprar">
+        <h2 id="onde-comprar">Onde comprar: Udemy ou Hotmart</h2>
+        <p class="u-measure u-muted">O conteúdo é o mesmo nas duas plataformas. A diferença está no que cada uma oferece em volta dele.</p>
+        <div class="table-wrap">
+          <table class="table">
+            <caption>Plataformas em que <em>Administração de Banco de Dados</em> está disponível</caption>
+            <thead>
+              <tr>
+                <th scope="col">Plataforma</th>
+                <th scope="col">Como funciona</th>
+                <th scope="col">Link</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">Udemy</th>
+              <td>Compra direta na Udemy, com app oficial e acompanhamento de progresso. Preço e promoções seguem a plataforma.</td>
+              <td><a class="btn btn--udemy btn--sm" href="https://www.udemy.com/course/administracao-de-banco-de-dados/?referralCode=5D4996FBA2F0F1548E37" target="_blank" rel="noopener">Ver na Udemy</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Hotmart</th>
+              <td>Compra direta na Hotmart. É também a plataforma do programa de afiliados: dá para revender o curso e receber 40% por venda.</td>
+              <td><a class="btn btn--hotmart btn--sm" href="https://go.hotmart.com/F101261137X" target="_blank" rel="noopener">Ver na Hotmart</a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="faq">
+        <h2 id="faq">Perguntas frequentes</h2>
+        <div class="faq">
+          <details class="faq__item">
+            <summary>O que faz um DBA e o curso prepara para isso?</summary>
+            <div class="faq__answer"><p>Um DBA (administrador de banco de dados) cuida de arquitetura, usuários, segurança, backup, recuperação e performance da base. Esses são exatamente os módulos centrais do curso, que vai do básico ao avançado nessas frentes.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Preciso saber SQL antes de começar?</summary>
+            <div class="faq__answer"><p>Não é obrigatório. O curso parte dos conceitos de SGBD e evolui até consultas avançadas e álgebra relacional. Quem já escreve SQL no dia a dia aproveita mais rápido a parte de performance e ETL.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Qual banco é usado nas aulas?</summary>
+            <div class="faq__answer"><p>MySQL como base prática, mas os fundamentos — arquiteturas, dicionário de dados, controle de acesso, backup, tuning, álgebra relacional — se aplicam a qualquer SGBD relacional, incluindo PostgreSQL, SQL Server e Oracle.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>O curso cobre ETL e análise de dados?</summary>
+            <div class="faq__answer"><p>Sim. O módulo final trata de ETL (extração, transformação e carga), que é a ponte entre administração de banco e projetos de dados. Para seguir por esse caminho, o curso de Mineração de Dados é a continuação natural.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Serve para faculdade ou só para o mercado?</summary>
+            <div class="faq__answer"><p>Serve para os dois. O conteúdo acompanha a ementa de disciplinas de banco de dados e administração de dados da graduação, com o recorte prático de quem administra bases em produção.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="instrutor">
+        <h2 id="instrutor">Quem ensina</h2>
+        <div class="author-card">
+          <img class="author-card__img" src="../../assets/img/perfil.webp" width="555" height="394" loading="lazy" decoding="async" alt="Jackson Felipe Magnabosco">
+          <div class="author-card__body">
+            <p><strong>Jackson Felipe Magnabosco</strong> — Engenheiro de Software Sênior e Professor de Ciência da Computação. Bacharel em Ciência da Computação pela URI-Erechim, com pós-graduação em Engenharia de Software e em Administração de Banco de Dados.</p>
+            <p>Trabalha com Node.js, TypeScript, Java e AWS em produtos usados no Brasil e no exterior, lecionou na graduação em Ciência da Computação e mantém um canal no YouTube com mais de 1.500 vídeos. Os cursos online somam mais de 400 alunos em 25 países.</p>
+            <ul class="inline-links">
+              <li><a href="../../#experience">Trajetória profissional</a></li>
+              <li><a href="../../#education">Formação e certificações</a></li>
+              <li><a href="https://www.udemy.com/user/jackson-felipe-magnabosco/" target="_blank" rel="noopener">Perfil na Udemy</a></li>
+              <li><a href="https://www.youtube.com/@JacksonMagnabosco" target="_blank" rel="noopener">Canal no YouTube</a></li>
+              <li><a href="https://github.com/jacksonn455" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="http://lattes.cnpq.br/4613856780210407" target="_blank" rel="noopener">Currículo Lattes</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="relacionados">
+        <h2 id="relacionados">Cursos relacionados</h2>
+        <ul class="mini-grid">
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/mineracao-de-dados/">Mineração de Dados</a></h3>
+            <p>Curso de mineração de dados centrado no processo de KDD (Knowledge Discovery in Databases).</p>
+          </li>
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/desenvolvimento-web/">Desenvolvimento Web</a></h3>
+            <p>Formação completa de desenvolvimento web, do zero ao nível profissional.</p>
+          </li>
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/logica-de-programacao/">Lógica de Programação e Algoritmos</a></h3>
+            <p>Curso online de lógica de programação e algoritmos para quem está começando.</p>
+          </li>
+        </ul>
+        <p><a href="../../cursos/">Ver o catálogo completo de cursos</a></p>
+      </section>
+
+      <section class="subsection" aria-labelledby="conteudo-extra">
+        <h2 id="conteudo-extra">Conteúdo relacionado no site</h2>
+        <ul class="link-list">
+          <li><a class="link-item" href="https://github.com/jacksonn455/Scalable-Product-Import-System" target="_blank" rel="noopener">Scalable Product Import System — pipeline de importação de dados (GitHub)</a></li>
+          <li><a class="link-item" href="https://jacksonmagnabosco.dev/#education">Pós-graduação em Administração de Banco de Dados</a></li>
+        </ul>
+      </section>
+
+      <aside class="cta-band">
+        <div class="cta-band__text">
+          <h2>Ganhe 40% revendendo este curso</h2>
+          <p>Este curso participa do programa de afiliados da Hotmart: você divulga com um link exclusivo e recebe 40% de comissão por venda. O cadastro é gratuito.</p>
+        </div>
+        <p><a class="btn btn--ghost" href="https://app-vlc.hotmart.com/affiliate-recruiting/view/8012A101261158" target="_blank" rel="noopener">Quero me afiliar a este curso</a></p>
+      </aside>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav aria-label="Rodapé">
+      <ul class="inline-links">
+        <li><a href="../../">Início</a></li>
+        <li><a href="../../cursos/">Todos os cursos</a></li>
+        <li><a href="../../afiliados/">Programa de afiliados</a></li>
+        <li><a href="../../#experience">Experiência</a></li>
+        <li><a href="../../#education">Formação</a></li>
+        <li><a href="../../#contact">Contato</a></li>
+        <li><a href="https://www.youtube.com/@JacksonMagnabosco" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://github.com/jacksonn455" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__note">© 2026 Jackson Felipe Magnabosco</p>
+  </div>
+</footer>
+
+<button type="button" class="to-top" data-to-top data-visible="false" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+
+<script src="../../assets/js/app.js" defer></script>
+
+</body></html>

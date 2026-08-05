@@ -1,14 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://jacksonmagnabosco.dev/</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://jacksonmagnabosco.dev/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://jacksonmagnabosco.dev/?lang=pt"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://jacksonmagnabosco.dev/?lang=es"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jacksonmagnabosco.dev/"/>
+  </url>
+  <url>
+    <loc>https://jacksonmagnabosco.dev/cursos/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jacksonmagnabosco.dev/afiliados/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jacksonmagnabosco.dev/cursos/logica-de-programacao/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://jacksonmagnabosco.dev/assets/img/curso-logica-de-programacao.webp</image:loc>
+      <image:title>Curso de Lógica de Programação e Algoritmos</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jacksonmagnabosco.dev/cursos/desenvolvimento-web/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://jacksonmagnabosco.dev/assets/img/curso-desenvolvimento-web.webp</image:loc>
+      <image:title>Curso de Desenvolvimento Web</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jacksonmagnabosco.dev/cursos/administracao-de-banco-de-dados/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://jacksonmagnabosco.dev/assets/img/curso-administracao-de-banco-de-dados.webp</image:loc>
+      <image:title>Curso de Administração de Banco de Dados</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jacksonmagnabosco.dev/cursos/mineracao-de-dados/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://jacksonmagnabosco.dev/assets/img/curso-mineracao-de-dados.webp</image:loc>
+      <image:title>Curso de Mineração de Dados com KDD, Python, R e Google Colab</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jacksonmagnabosco.dev/cursos/design-de-interfaces/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://jacksonmagnabosco.dev/assets/img/curso-design-de-interfaces.webp</image:loc>
+      <image:title>Curso de Design de Interfaces, Usabilidade e Experiência do Usuário</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jacksonmagnabosco.dev/cursos/internet-das-coisas/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://jacksonmagnabosco.dev/assets/img/curso-internet-das-coisas.webp</image:loc>
+      <image:title>Curso de Internet das Coisas: Fundamentos e Aplicações</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jacksonmagnabosco.dev/cursos/etica-e-legislacao-profissional/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://jacksonmagnabosco.dev/assets/img/curso-etica-e-legislacao-profissional.webp</image:loc>
+      <image:title>Curso de Ética e Legislação Profissional em Tecnologia</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jacksonmagnabosco.dev/cursos/engenharia-de-prompt/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://jacksonmagnabosco.dev/assets/img/curso-engenharia-de-prompt.webp</image:loc>
+      <image:title>Curso de Engenharia de Prompt e Inteligência Artificial na Prática</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jacksonmagnabosco.dev/cursos/posicionamento-profissional-global/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://jacksonmagnabosco.dev/assets/img/curso-posicionamento-profissional-global.webp</image:loc>
+      <image:title>Curso Construa Seu Perfil Profissional Global</image:title>
+    </image:image>
   </url>
 </urlset>

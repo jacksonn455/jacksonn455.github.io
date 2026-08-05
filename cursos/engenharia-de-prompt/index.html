@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Curso de Engenharia de Prompt e IA Generativa na Prática</title>
+  <meta name="description" content="Curso de engenharia de prompt em português: como a IA generativa funciona e como escrever prompts com contexto, papel e critérios que geram resultado no trabalho.">
+  <meta name="keywords" content="curso de engenharia de prompt, prompt engineering em português, inteligência artificial na prática, ia generativa, chatgpt para profissionais, produtividade com ia">
+  <meta name="author" content="Jackson Felipe Magnabosco">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://jacksonmagnabosco.dev/cursos/engenharia-de-prompt/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jackson F. Magnabosco">
+  <meta property="og:title" content="Curso de Engenharia de Prompt e IA Generativa na Prática">
+  <meta property="og:description" content="Curso de engenharia de prompt em português: como a IA generativa funciona e como escrever prompts com contexto, papel e critérios que geram resultado no trabalho.">
+  <meta property="og:url" content="https://jacksonmagnabosco.dev/cursos/engenharia-de-prompt/">
+  <meta property="og:image" content="https://jacksonmagnabosco.dev/assets/img/curso-engenharia-de-prompt.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="Curso de Engenharia de Prompt e Inteligência Artificial na Prática">
+  <meta property="og:locale" content="pt_BR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Curso de Engenharia de Prompt e IA Generativa na Prática">
+  <meta name="twitter:description" content="Curso de engenharia de prompt em português: como a IA generativa funciona e como escrever prompts com contexto, papel e critérios que geram resultado no trabalho.">
+  <meta name="twitter:image" content="https://jacksonmagnabosco.dev/assets/img/curso-engenharia-de-prompt.webp">
+  <meta name="twitter:image:alt" content="Curso de Engenharia de Prompt e Inteligência Artificial na Prática">
+
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="../../favicon.ico" sizes="32x32">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+
+  <!-- aplica o tema antes da primeira pintura para nao piscar -->
+  <script>
+    (() => {
+      try {
+        const t = localStorage.getItem('preferredTheme');
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://jacksonmagnabosco.dev/#person",
+      "name": "Jackson Felipe Magnabosco",
+      "alternateName": "Jackson Magnabosco",
+      "url": "https://jacksonmagnabosco.dev/",
+      "image": "https://jacksonmagnabosco.dev/assets/img/perfil.webp",
+      "jobTitle": "Engenheiro de Software Sênior e Professor de Ciência da Computação",
+      "description": "Engenheiro de Software Sênior e Professor de Ciência da Computação. Atua com Node.js, TypeScript, Java e AWS, leciona na graduação e produz cursos online de tecnologia em português.",
+      "knowsLanguage": [
+        "pt-BR",
+        "en"
+      ],
+      "sameAs": [
+        "https://github.com/jacksonn455",
+        "https://www.youtube.com/@JacksonMagnabosco",
+        "https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/",
+        "https://medium.com/@jacksonn455",
+        "https://www.udemy.com/user/jackson-felipe-magnabosco/",
+        "http://lattes.cnpq.br/4613856780210407"
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://jacksonmagnabosco.dev/cursos/engenharia-de-prompt/#course",
+      "name": "Inteligência Artificial na Prática: Engenharia de Prompt",
+      "alternateName": "Inteligência Artificial na Prática: Engenharia de Prompt",
+      "description": "Curso de engenharia de prompt focado em uso profissional de IA generativa. Você entende como esses modelos funcionam por dentro e aprende a projetar prompts com contexto, papel, formato e critérios de qualidade para resolver problemas reais de trabalho, em vez de improvisar pedido por pedido.",
+      "url": "https://jacksonmagnabosco.dev/cursos/engenharia-de-prompt/",
+      "image": "https://jacksonmagnabosco.dev/assets/img/curso-engenharia-de-prompt.webp",
+      "inLanguage": "pt-BR",
+      "educationalLevel": "Iniciante",
+      "about": "Inteligência artificial",
+      "teaches": [
+        "Entender como a IA generativa funciona e por que ela erra do jeito que erra",
+        "Estruturar prompts com contexto, papel, formato e critérios de qualidade",
+        "Projetar prompts para aplicações reais do trabalho, não exemplos de brincadeira",
+        "Iterar sobre respostas insatisfatórias com método, e não por tentativa e erro",
+        "Reconhecer os limites e os riscos de confiar em modelos de linguagem"
+      ],
+      "coursePrerequisites": [
+        "Nenhum conhecimento técnico prévio",
+        "Não é necessário saber programar",
+        "Acesso a uma ferramenta de IA generativa para praticar"
+      ],
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      },
+      "keywords": "curso de engenharia de prompt, prompt engineering em português, inteligência artificial na prática, ia generativa, chatgpt para profissionais, produtividade com ia",
+      "provider": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "author": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "instructor": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "isAccessibleForFree": false,
+      "syllabusSections": [
+        {
+          "@type": "Syllabus",
+          "position": 1,
+          "name": "Como funciona a IA generativa"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 2,
+          "name": "Anatomia de um prompt eficaz: contexto, papel, formato e critérios"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 3,
+          "name": "Prompts aplicados a problemas reais de trabalho"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 4,
+          "name": "Refinamento e iteração de prompts"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 5,
+          "name": "Limites, riscos e uso responsável de IA generativa"
+        }
+      ],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "inLanguage": "pt-BR",
+        "instructor": {
+          "@id": "https://jacksonmagnabosco.dev/#person"
+        }
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "category": "Paid",
+          "url": "https://www.udemy.com/course/inteligencia-artificial-na-pratica-engenharia-de-prompt/?referralCode=55301FF4742C770BD1D2",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Udemy",
+            "url": "https://www.udemy.com/"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://jacksonmagnabosco.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cursos",
+          "item": "https://jacksonmagnabosco.dev/cursos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Engenharia de Prompt"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Preciso saber programar para fazer o curso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Engenharia de prompt é uma habilidade de comunicação e estruturação de problema. O curso é feito para funcionar tanto para quem programa quanto para quem nunca escreveu código."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que estudar como a IA funciona, se eu só quero usar melhor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque as falhas dos modelos são previsíveis quando você entende o mecanismo. Saber por que um modelo inventa uma referência ou perde o fio em um texto longo é o que permite escrever o prompt que evita o problema, em vez de tentar de novo até dar certo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O curso é preso a uma ferramenta específica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Os princípios — contexto, papel, formato, critérios de qualidade, iteração — se aplicam a qualquer assistente de IA generativa, o que também protege o conteúdo da troca constante de ferramentas do mercado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este curso está disponível na Hotmart?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ainda não: no momento ele é vendido apenas na Udemy. Sete dos cursos do catálogo já estão nas duas plataformas e são os que fazem parte do programa de afiliados com 40% de comissão."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é a experiência do instrutor com IA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Atuo como engenheiro de software sênior com experiência em treinamento e avaliação de agentes de codificação, além de lecionar Ciência da Computação. A experiência com aplicação profissional de IA vem desse trabalho, não apenas de uso pessoal de ferramentas."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://jacksonmagnabosco.dev/cursos/engenharia-de-prompt/",
+      "url": "https://jacksonmagnabosco.dev/cursos/engenharia-de-prompt/",
+      "name": "Curso de Engenharia de Prompt e IA Generativa na Prática",
+      "description": "Curso de engenharia de prompt em português: como a IA generativa funciona e como escrever prompts com contexto, papel e critérios que geram resultado no trabalho.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://jacksonmagnabosco.dev/#website"
+      },
+      "primaryImageOfPage": "https://jacksonmagnabosco.dev/assets/img/curso-engenharia-de-prompt.webp",
+      "about": {
+        "@id": "https://jacksonmagnabosco.dev/cursos/engenharia-de-prompt/#course"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jacksonmagnabosco.dev/#website",
+      "url": "https://jacksonmagnabosco.dev/",
+      "name": "Jackson F. Magnabosco",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Ir para o conteúdo</a>
+<nav class="site-nav" aria-label="Principal">
+  <div class="container site-nav__inner">
+    <a class="site-nav__brand" href="../../">Jackson<span class="u-accent">.</span>M</a>
+
+    <button type="button" class="icon-btn nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></button>
+
+    <ul class="site-nav__list" id="nav-list" data-nav-list>
+      <li><a href="../../">Início</a></li>
+      <li><a href="../../cursos/" aria-current="page">Cursos</a></li>
+      <li><a href="../../afiliados/">Afiliados</a></li>
+      <li><a href="../../#projects">Projetos</a></li>
+      <li><a href="../../#portfolio">Portfólio</a></li>
+      <li><a href="../../#contact">Contato</a></li>
+    </ul>
+
+    <div class="site-nav__actions">
+      <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Alternar modo escuro">
+        <span data-theme-icon="light"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span>
+        <span data-theme-icon="dark" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<nav class="breadcrumb container" aria-label="Trilha de navegação">
+  <ol class="breadcrumb__list">
+    <li><a href="../../">Início</a></li>
+    <li><a href="../../cursos/">Cursos</a></li>
+    <li><span aria-current="page">Engenharia de Prompt</span></li>
+  </ol>
+</nav>
+
+<main id="main">
+  <article class="section">
+    <div class="container">
+      <header class="page-head">
+        <p class="eyebrow">Curso online · Inteligência artificial</p>
+        <h1>Curso de Engenharia de Prompt: Inteligência Artificial na Prática</h1>
+        <p class="lead">Curso de engenharia de prompt focado em uso profissional de IA generativa. Você entende como esses modelos funcionam por dentro e aprende a projetar prompts com contexto, papel, formato e critérios de qualidade para resolver problemas reais de trabalho, em vez de improvisar pedido por pedido.</p>
+        <ul class="chips">
+          <li class="chip"><strong>Nível:</strong> Iniciante</li>
+          <li class="chip"><strong>Idioma:</strong> Português (pt-BR)</li>
+          <li class="chip"><strong>Formato:</strong> Vídeoaulas online, no seu ritmo</li>
+          <li class="chip"><strong>Instrutor:</strong> Jackson Magnabosco</li>
+          <li class="chip"><strong>Onde comprar:</strong> Udemy</li>
+        </ul>
+        <p class="course-card__actions">
+          <a class="btn btn--udemy" href="https://www.udemy.com/course/inteligencia-artificial-na-pratica-engenharia-de-prompt/?referralCode=55301FF4742C770BD1D2" target="_blank" rel="noopener">Comprar na Udemy</a>
+        </p>
+      </header>
+
+      <img class="course-hero__img" src="../../assets/img/curso-engenharia-de-prompt.webp" width="1200" height="675" fetchpriority="high" decoding="async" alt="Curso de Engenharia de Prompt e Inteligência Artificial na Prática">
+
+      <div class="prose">
+        <div class="tldr">
+          <h2>Em resumo</h2>
+          <p>Curso de engenharia de prompt focado em uso profissional de IA generativa. Você entende como esses modelos funcionam por dentro e aprende a projetar prompts com contexto, papel, formato e critérios de qualidade para resolver problemas reais de trabalho, em vez de improvisar pedido por pedido.</p>
+        </div>
+
+        <section aria-labelledby="sobre">
+          <h2 id="sobre">Sobre o curso</h2>
+          <p>A diferença entre alguém que &quot;usa o ChatGPT&quot; e alguém que extrai trabalho de verdade de um modelo de linguagem quase nunca é a ferramenta — é o pedido. Prompt bem construído carrega contexto, define papel, delimita formato e diz explicitamente o que conta como boa resposta.</p>
+          <p>O curso ataca os dois lados disso. Primeiro o funcionamento da IA generativa, porque entender como o modelo produz texto explica por que certos prompts falham de forma previsível. Depois a prática: montar prompts para aplicações reais do dia a dia profissional, iterar sobre resultados ruins e reconhecer os limites do que essas ferramentas conseguem fazer com confiabilidade.</p>
+        </section>
+
+        <section aria-labelledby="aprender">
+          <h2 id="aprender">O que você vai aprender</h2>
+          <ul>
+          <li>Entender como a IA generativa funciona e por que ela erra do jeito que erra</li>
+          <li>Estruturar prompts com contexto, papel, formato e critérios de qualidade</li>
+          <li>Projetar prompts para aplicações reais do trabalho, não exemplos de brincadeira</li>
+          <li>Iterar sobre respostas insatisfatórias com método, e não por tentativa e erro</li>
+          <li>Reconhecer os limites e os riscos de confiar em modelos de linguagem</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="conteudo">
+          <h2 id="conteudo">Conteúdo do curso</h2>
+          <ol>
+          <li>Como funciona a IA generativa</li>
+          <li>Anatomia de um prompt eficaz: contexto, papel, formato e critérios</li>
+          <li>Prompts aplicados a problemas reais de trabalho</li>
+          <li>Refinamento e iteração de prompts</li>
+          <li>Limites, riscos e uso responsável de IA generativa</li>
+        </ol>
+        </section>
+
+        <section aria-labelledby="publico">
+          <h2 id="publico">Para quem é este curso</h2>
+          <ul>
+          <li>Profissionais de qualquer área que querem usar IA com método no trabalho</li>
+          <li>Desenvolvedores que usam assistentes de código e querem melhores resultados</li>
+          <li>Estudantes que precisam usar IA sem terceirizar o próprio raciocínio</li>
+          <li>Quem já testou ferramentas de IA e achou os resultados genéricos</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="requisitos">
+          <h2 id="requisitos">Pré-requisitos</h2>
+          <ul>
+          <li>Nenhum conhecimento técnico prévio</li>
+          <li>Não é necessário saber programar</li>
+          <li>Acesso a uma ferramenta de IA generativa para praticar</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="temas">
+          <h2 id="temas">Tecnologias e temas abordados</h2>
+          <ul class="chips">
+            <li class="chip">IA generativa</li>
+            <li class="chip">Modelos de linguagem (LLMs)</li>
+            <li class="chip">Engenharia de prompt</li>
+            <li class="chip">Produtividade com IA</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="subsection" aria-labelledby="onde-comprar">
+        <h2 id="onde-comprar">Onde comprar: Udemy ou Hotmart</h2>
+        <p class="u-measure u-muted">Este curso é vendido apenas na Udemy no momento.</p>
+        <div class="table-wrap">
+          <table class="table">
+            <caption>Plataformas em que <em>Engenharia de Prompt</em> está disponível</caption>
+            <thead>
+              <tr>
+                <th scope="col">Plataforma</th>
+                <th scope="col">Como funciona</th>
+                <th scope="col">Link</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">Udemy</th>
+              <td>Compra direta na Udemy, com app oficial e acompanhamento de progresso. Preço e promoções seguem a plataforma.</td>
+              <td><a class="btn btn--udemy btn--sm" href="https://www.udemy.com/course/inteligencia-artificial-na-pratica-engenharia-de-prompt/?referralCode=55301FF4742C770BD1D2" target="_blank" rel="noopener">Ver na Udemy</a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="faq">
+        <h2 id="faq">Perguntas frequentes</h2>
+        <div class="faq">
+          <details class="faq__item">
+            <summary>Preciso saber programar para fazer o curso?</summary>
+            <div class="faq__answer"><p>Não. Engenharia de prompt é uma habilidade de comunicação e estruturação de problema. O curso é feito para funcionar tanto para quem programa quanto para quem nunca escreveu código.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Por que estudar como a IA funciona, se eu só quero usar melhor?</summary>
+            <div class="faq__answer"><p>Porque as falhas dos modelos são previsíveis quando você entende o mecanismo. Saber por que um modelo inventa uma referência ou perde o fio em um texto longo é o que permite escrever o prompt que evita o problema, em vez de tentar de novo até dar certo.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>O curso é preso a uma ferramenta específica?</summary>
+            <div class="faq__answer"><p>Não. Os princípios — contexto, papel, formato, critérios de qualidade, iteração — se aplicam a qualquer assistente de IA generativa, o que também protege o conteúdo da troca constante de ferramentas do mercado.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Este curso está disponível na Hotmart?</summary>
+            <div class="faq__answer"><p>Ainda não: no momento ele é vendido apenas na Udemy. Sete dos cursos do catálogo já estão nas duas plataformas e são os que fazem parte do programa de afiliados com 40% de comissão.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Qual é a experiência do instrutor com IA?</summary>
+            <div class="faq__answer"><p>Atuo como engenheiro de software sênior com experiência em treinamento e avaliação de agentes de codificação, além de lecionar Ciência da Computação. A experiência com aplicação profissional de IA vem desse trabalho, não apenas de uso pessoal de ferramentas.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="instrutor">
+        <h2 id="instrutor">Quem ensina</h2>
+        <div class="author-card">
+          <img class="author-card__img" src="../../assets/img/perfil.webp" width="555" height="394" loading="lazy" decoding="async" alt="Jackson Felipe Magnabosco">
+          <div class="author-card__body">
+            <p><strong>Jackson Felipe Magnabosco</strong> — Engenheiro de Software Sênior e Professor de Ciência da Computação. Bacharel em Ciência da Computação pela URI-Erechim, com pós-graduação em Engenharia de Software e em Administração de Banco de Dados.</p>
+            <p>Trabalha com Node.js, TypeScript, Java e AWS em produtos usados no Brasil e no exterior, lecionou na graduação em Ciência da Computação e mantém um canal no YouTube com mais de 1.500 vídeos. Os cursos online somam mais de 400 alunos em 25 países.</p>
+            <ul class="inline-links">
+              <li><a href="../../#experience">Trajetória profissional</a></li>
+              <li><a href="../../#education">Formação e certificações</a></li>
+              <li><a href="https://www.udemy.com/user/jackson-felipe-magnabosco/" target="_blank" rel="noopener">Perfil na Udemy</a></li>
+              <li><a href="https://www.youtube.com/@JacksonMagnabosco" target="_blank" rel="noopener">Canal no YouTube</a></li>
+              <li><a href="https://github.com/jacksonn455" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="http://lattes.cnpq.br/4613856780210407" target="_blank" rel="noopener">Currículo Lattes</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="relacionados">
+        <h2 id="relacionados">Cursos relacionados</h2>
+        <ul class="mini-grid">
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/mineracao-de-dados/">Mineração de Dados</a></h3>
+            <p>Curso de mineração de dados centrado no processo de KDD (Knowledge Discovery in Databases).</p>
+          </li>
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/posicionamento-profissional-global/">Posicionamento Profissional Global</a></h3>
+            <p>Curso sobre como posicionar currículo e LinkedIn para processos seletivos remotos e internacionais.</p>
+          </li>
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/desenvolvimento-web/">Desenvolvimento Web</a></h3>
+            <p>Formação completa de desenvolvimento web, do zero ao nível profissional.</p>
+          </li>
+        </ul>
+        <p><a href="../../cursos/">Ver o catálogo completo de cursos</a></p>
+      </section>
+
+      <section class="subsection" aria-labelledby="conteudo-extra">
+        <h2 id="conteudo-extra">Conteúdo relacionado no site</h2>
+        <ul class="link-list">
+          <li><a class="link-item" href="https://jacksonmagnabosco.dev/#experience">Experiência com treinamento de agentes de codificação</a></li>
+          <li><a class="link-item" href="https://medium.com/@jacksonn455" target="_blank" rel="noopener">Artigos técnicos no Medium</a></li>
+        </ul>
+      </section>
+
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav aria-label="Rodapé">
+      <ul class="inline-links">
+        <li><a href="../../">Início</a></li>
+        <li><a href="../../cursos/">Todos os cursos</a></li>
+        <li><a href="../../afiliados/">Programa de afiliados</a></li>
+        <li><a href="../../#experience">Experiência</a></li>
+        <li><a href="../../#education">Formação</a></li>
+        <li><a href="../../#contact">Contato</a></li>
+        <li><a href="https://www.youtube.com/@JacksonMagnabosco" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://github.com/jacksonn455" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__note">© 2026 Jackson Felipe Magnabosco</p>
+  </div>
+</footer>
+
+<button type="button" class="to-top" data-to-top data-visible="false" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+
+<script src="../../assets/js/app.js" defer></script>
+
+</body></html>

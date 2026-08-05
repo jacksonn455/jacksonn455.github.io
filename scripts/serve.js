@@ -36,7 +36,14 @@ http
     if (fs.existsSync(file) && fs.statSync(file).isDirectory()) {
       file = path.join(file, 'index.html');
     }
+    // espelha o GitHub Pages: rota inexistente cai na 404.html do proprio site
     if (!fs.existsSync(file)) {
+      const custom = path.join(ROOT, '404.html');
+      if (fs.existsSync(custom)) {
+        res.writeHead(404, { 'Content-Type': TYPES['.html'], 'Cache-Control': 'no-cache' });
+        fs.createReadStream(custom).pipe(res);
+        return;
+      }
       res.writeHead(404, { 'Content-Type': 'text/plain' }).end('404 ' + url);
       return;
     }

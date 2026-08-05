@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Curso de Internet das Coisas (IoT): MQTT, Sensores e WoT</title>
+  <meta name="description" content="Curso de IoT em português: sensores e atuadores, modelos arquiteturais, protocolo MQTT, middleware, objetos inteligentes, sistemas embarcados, segurança, WoT e nuvem.">
+  <meta name="keywords" content="curso de internet das coisas, curso iot em português, mqtt, sensores e atuadores, sistemas embarcados, web of things, cidades inteligentes">
+  <meta name="author" content="Jackson Felipe Magnabosco">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://jacksonmagnabosco.dev/cursos/internet-das-coisas/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jackson F. Magnabosco">
+  <meta property="og:title" content="Curso de Internet das Coisas (IoT): MQTT, Sensores e WoT">
+  <meta property="og:description" content="Curso de IoT em português: sensores e atuadores, modelos arquiteturais, protocolo MQTT, middleware, objetos inteligentes, sistemas embarcados, segurança, WoT e nuvem.">
+  <meta property="og:url" content="https://jacksonmagnabosco.dev/cursos/internet-das-coisas/">
+  <meta property="og:image" content="https://jacksonmagnabosco.dev/assets/img/curso-internet-das-coisas.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="Curso de Internet das Coisas: Fundamentos e Aplicações">
+  <meta property="og:locale" content="pt_BR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Curso de Internet das Coisas (IoT): MQTT, Sensores e WoT">
+  <meta name="twitter:description" content="Curso de IoT em português: sensores e atuadores, modelos arquiteturais, protocolo MQTT, middleware, objetos inteligentes, sistemas embarcados, segurança, WoT e nuvem.">
+  <meta name="twitter:image" content="https://jacksonmagnabosco.dev/assets/img/curso-internet-das-coisas.webp">
+  <meta name="twitter:image:alt" content="Curso de Internet das Coisas: Fundamentos e Aplicações">
+
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="../../favicon.ico" sizes="32x32">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+
+  <!-- aplica o tema antes da primeira pintura para nao piscar -->
+  <script>
+    (() => {
+      try {
+        const t = localStorage.getItem('preferredTheme');
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://jacksonmagnabosco.dev/#person",
+      "name": "Jackson Felipe Magnabosco",
+      "alternateName": "Jackson Magnabosco",
+      "url": "https://jacksonmagnabosco.dev/",
+      "image": "https://jacksonmagnabosco.dev/assets/img/perfil.webp",
+      "jobTitle": "Engenheiro de Software Sênior e Professor de Ciência da Computação",
+      "description": "Engenheiro de Software Sênior e Professor de Ciência da Computação. Atua com Node.js, TypeScript, Java e AWS, leciona na graduação e produz cursos online de tecnologia em português.",
+      "knowsLanguage": [
+        "pt-BR",
+        "en"
+      ],
+      "sameAs": [
+        "https://github.com/jacksonn455",
+        "https://www.youtube.com/@JacksonMagnabosco",
+        "https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/",
+        "https://medium.com/@jacksonn455",
+        "https://www.udemy.com/user/jackson-felipe-magnabosco/",
+        "http://lattes.cnpq.br/4613856780210407"
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://jacksonmagnabosco.dev/cursos/internet-das-coisas/#course",
+      "name": "Internet das Coisas: Fundamentos e Aplicações",
+      "alternateName": "Internet das Coisas: Fundamentos e Aplicações",
+      "description": "Curso de Internet das Coisas que vai da história e evolução da IoT às aplicações reais. Cobre fundamentos técnicos com sensores, atuadores e modelos arquiteturais, protocolos de comunicação como MQTT, middleware de IoT, objetos inteligentes, sistemas operacionais embarcados, aplicações em cidades inteligentes, automação industrial e saúde, segurança e privacidade, Web of Things e integração com computação em nuvem.",
+      "url": "https://jacksonmagnabosco.dev/cursos/internet-das-coisas/",
+      "image": "https://jacksonmagnabosco.dev/assets/img/curso-internet-das-coisas.webp",
+      "inLanguage": "pt-BR",
+      "educationalLevel": "Iniciante a intermediário",
+      "about": "Internet das Coisas e sistemas embarcados",
+      "teaches": [
+        "Entender a história, a evolução e os modelos arquiteturais da IoT",
+        "Trabalhar com sensores, atuadores e os fundamentos técnicos de aquisição de dados",
+        "Aplicar protocolos de comunicação de IoT, com foco em MQTT",
+        "Entender o papel do middleware e dos objetos inteligentes",
+        "Conhecer sistemas operacionais embarcados",
+        "Analisar aplicações reais: cidades inteligentes, automação industrial e saúde",
+        "Tratar segurança e privacidade em dispositivos conectados",
+        "Integrar IoT com Web of Things, computação em nuvem e web services"
+      ],
+      "coursePrerequisites": [
+        "Noções de lógica de programação e de redes ajudam",
+        "Não é obrigatório ter hardware para acompanhar o conteúdo conceitual",
+        "Um computador com acesso à internet"
+      ],
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      },
+      "keywords": "curso de internet das coisas, curso iot em português, mqtt, sensores e atuadores, sistemas embarcados, web of things, cidades inteligentes",
+      "provider": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "author": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "instructor": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "isAccessibleForFree": false,
+      "syllabusSections": [
+        {
+          "@type": "Syllabus",
+          "position": 1,
+          "name": "História e evolução da IoT"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 2,
+          "name": "Fundamentos técnicos: sensores, atuadores e modelos arquiteturais"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 3,
+          "name": "Protocolos de comunicação e MQTT"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 4,
+          "name": "Middleware de IoT"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 5,
+          "name": "Objetos inteligentes"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 6,
+          "name": "Sistemas operacionais embarcados"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 7,
+          "name": "Aplicações reais: cidades inteligentes, automação industrial e saúde"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 8,
+          "name": "Segurança e privacidade"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 9,
+          "name": "Web of Things (WoT)"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 10,
+          "name": "Computação em nuvem e web services"
+        }
+      ],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "inLanguage": "pt-BR",
+        "instructor": {
+          "@id": "https://jacksonmagnabosco.dev/#person"
+        }
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "category": "Paid",
+          "url": "https://www.udemy.com/course/internet-das-coisas-fundamentos/?referralCode=210B6283B33375D328C1",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Udemy",
+            "url": "https://www.udemy.com/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "category": "Paid",
+          "url": "https://go.hotmart.com/Y101238939C",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Hotmart",
+            "url": "https://www.hotmart.com/"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://jacksonmagnabosco.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cursos",
+          "item": "https://jacksonmagnabosco.dev/cursos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Internet das Coisas (IoT)"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Preciso comprar Arduino, ESP8266 ou algum kit para fazer o curso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não para acompanhar o conteúdo: fundamentos, arquitetura, protocolos, middleware, segurança e WoT são tratados de forma que você entenda o projeto inteiro. Ter hardware em mãos naturalmente enriquece a experiência, mas não é condição para aprender."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que o MQTT recebe destaque entre os protocolos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque é o protocolo dominante em IoT: leve, baseado em publicação/assinatura e projetado para redes instáveis e dispositivos com pouca memória — exatamente o cenário de um sensor em campo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é Web of Things e como difere de IoT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A IoT conecta dispositivos; a Web of Things expõe esses dispositivos como recursos web, com URLs e APIs, para que sistemas conversem com eles usando os padrões da web. O curso tem um módulo dedicado a essa camada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O curso trata segurança em IoT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, com módulo próprio de segurança e privacidade. É um tema central porque dispositivos conectados costumam ser o elo mais fraco de uma rede, e frequentemente ficam anos sem atualização."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Existe algum projeto real de IoT do instrutor para eu ver?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A automação de cervejaria com ESP8266 e sensores de temperatura rendeu um artigo publicado no Brazilian Journal of Technology, e o código e os vídeos dos projetos de IoT estão no portfólio e no GitHub — todos linkados abaixo."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://jacksonmagnabosco.dev/cursos/internet-das-coisas/",
+      "url": "https://jacksonmagnabosco.dev/cursos/internet-das-coisas/",
+      "name": "Curso de Internet das Coisas (IoT): MQTT, Sensores e WoT",
+      "description": "Curso de IoT em português: sensores e atuadores, modelos arquiteturais, protocolo MQTT, middleware, objetos inteligentes, sistemas embarcados, segurança, WoT e nuvem.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://jacksonmagnabosco.dev/#website"
+      },
+      "primaryImageOfPage": "https://jacksonmagnabosco.dev/assets/img/curso-internet-das-coisas.webp",
+      "about": {
+        "@id": "https://jacksonmagnabosco.dev/cursos/internet-das-coisas/#course"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jacksonmagnabosco.dev/#website",
+      "url": "https://jacksonmagnabosco.dev/",
+      "name": "Jackson F. Magnabosco",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Ir para o conteúdo</a>
+<nav class="site-nav" aria-label="Principal">
+  <div class="container site-nav__inner">
+    <a class="site-nav__brand" href="../../">Jackson<span class="u-accent">.</span>M</a>
+
+    <button type="button" class="icon-btn nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></button>
+
+    <ul class="site-nav__list" id="nav-list" data-nav-list>
+      <li><a href="../../">Início</a></li>
+      <li><a href="../../cursos/" aria-current="page">Cursos</a></li>
+      <li><a href="../../afiliados/">Afiliados</a></li>
+      <li><a href="../../#projects">Projetos</a></li>
+      <li><a href="../../#portfolio">Portfólio</a></li>
+      <li><a href="../../#contact">Contato</a></li>
+    </ul>
+
+    <div class="site-nav__actions">
+      <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Alternar modo escuro">
+        <span data-theme-icon="light"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span>
+        <span data-theme-icon="dark" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<nav class="breadcrumb container" aria-label="Trilha de navegação">
+  <ol class="breadcrumb__list">
+    <li><a href="../../">Início</a></li>
+    <li><a href="../../cursos/">Cursos</a></li>
+    <li><span aria-current="page">Internet das Coisas (IoT)</span></li>
+  </ol>
+</nav>
+
+<main id="main">
+  <article class="section">
+    <div class="container">
+      <header class="page-head">
+        <p class="eyebrow">Curso online · Internet das Coisas e sistemas embarcados</p>
+        <h1>Curso de Internet das Coisas (IoT): Fundamentos e Aplicações</h1>
+        <p class="lead">Curso de Internet das Coisas que vai da história e evolução da IoT às aplicações reais. Cobre fundamentos técnicos com sensores, atuadores e modelos arquiteturais, protocolos de comunicação como MQTT, middleware de IoT, objetos inteligentes, sistemas operacionais embarcados, aplicações em cidades inteligentes, automação industrial e saúde, segurança e privacidade, Web of Things e integração com computação em nuvem.</p>
+        <ul class="chips">
+          <li class="chip"><strong>Nível:</strong> Iniciante a intermediário</li>
+          <li class="chip"><strong>Idioma:</strong> Português (pt-BR)</li>
+          <li class="chip"><strong>Formato:</strong> Vídeoaulas online, no seu ritmo</li>
+          <li class="chip"><strong>Instrutor:</strong> Jackson Magnabosco</li>
+          <li class="chip"><strong>Onde comprar:</strong> Udemy e Hotmart</li>
+        </ul>
+        <p class="course-card__actions">
+          <a class="btn btn--udemy" href="https://www.udemy.com/course/internet-das-coisas-fundamentos/?referralCode=210B6283B33375D328C1" target="_blank" rel="noopener">Comprar na Udemy</a>
+          <a class="btn btn--hotmart" href="https://go.hotmart.com/Y101238939C" target="_blank" rel="noopener">Comprar na Hotmart</a>
+        </p>
+      </header>
+
+      <img class="course-hero__img" src="../../assets/img/curso-internet-das-coisas.webp" width="1200" height="675" fetchpriority="high" decoding="async" alt="Curso de Internet das Coisas: Fundamentos e Aplicações">
+
+      <div class="prose">
+        <div class="tldr">
+          <h2>Em resumo</h2>
+          <p>Curso de Internet das Coisas que vai da história e evolução da IoT às aplicações reais. Cobre fundamentos técnicos com sensores, atuadores e modelos arquiteturais, protocolos de comunicação como MQTT, middleware de IoT, objetos inteligentes, sistemas operacionais embarcados, aplicações em cidades inteligentes, automação industrial e saúde, segurança e privacidade, Web of Things e integração com computação em nuvem.</p>
+        </div>
+
+        <section aria-labelledby="sobre">
+          <h2 id="sobre">Sobre o curso</h2>
+          <p>IoT é frequentemente reduzida a &quot;conectar um sensor à internet&quot;. O trabalho de verdade está nas camadas entre o sensor e a decisão: qual modelo arquitetural usar, qual protocolo aguenta milhares de dispositivos com pouca banda, onde entra o middleware, como o objeto se torna inteligente, e como nada disso vira uma porta de entrada para invasão.</p>
+          <p>O curso trata dessas camadas na ordem. Começa pela história e evolução da IoT e pelos fundamentos técnicos — sensores, atuadores e modelos arquiteturais —, passa por protocolos de comunicação com foco em MQTT, middleware, objetos inteligentes e sistemas operacionais embarcados, e chega a aplicações reais em cidades inteligentes, automação industrial e saúde, além de segurança e privacidade, Web of Things e integração com nuvem e web services.</p>
+        </section>
+
+        <section aria-labelledby="aprender">
+          <h2 id="aprender">O que você vai aprender</h2>
+          <ul>
+          <li>Entender a história, a evolução e os modelos arquiteturais da IoT</li>
+          <li>Trabalhar com sensores, atuadores e os fundamentos técnicos de aquisição de dados</li>
+          <li>Aplicar protocolos de comunicação de IoT, com foco em MQTT</li>
+          <li>Entender o papel do middleware e dos objetos inteligentes</li>
+          <li>Conhecer sistemas operacionais embarcados</li>
+          <li>Analisar aplicações reais: cidades inteligentes, automação industrial e saúde</li>
+          <li>Tratar segurança e privacidade em dispositivos conectados</li>
+          <li>Integrar IoT com Web of Things, computação em nuvem e web services</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="conteudo">
+          <h2 id="conteudo">Conteúdo do curso</h2>
+          <ol>
+          <li>História e evolução da IoT</li>
+          <li>Fundamentos técnicos: sensores, atuadores e modelos arquiteturais</li>
+          <li>Protocolos de comunicação e MQTT</li>
+          <li>Middleware de IoT</li>
+          <li>Objetos inteligentes</li>
+          <li>Sistemas operacionais embarcados</li>
+          <li>Aplicações reais: cidades inteligentes, automação industrial e saúde</li>
+          <li>Segurança e privacidade</li>
+          <li>Web of Things (WoT)</li>
+          <li>Computação em nuvem e web services</li>
+        </ol>
+        </section>
+
+        <section aria-labelledby="publico">
+          <h2 id="publico">Para quem é este curso</h2>
+          <ul>
+          <li>Desenvolvedores que querem entrar em projetos de hardware conectado</li>
+          <li>Estudantes de computação, engenharia elétrica, eletrônica e mecatrônica</li>
+          <li>Profissionais de automação industrial buscando a camada de software</li>
+          <li>Quem quer entender IoT antes de escolher plataforma e hardware</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="requisitos">
+          <h2 id="requisitos">Pré-requisitos</h2>
+          <ul>
+          <li>Noções de lógica de programação e de redes ajudam</li>
+          <li>Não é obrigatório ter hardware para acompanhar o conteúdo conceitual</li>
+          <li>Um computador com acesso à internet</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="temas">
+          <h2 id="temas">Tecnologias e temas abordados</h2>
+          <ul class="chips">
+            <li class="chip">MQTT</li>
+            <li class="chip">Sensores e atuadores</li>
+            <li class="chip">Middleware IoT</li>
+            <li class="chip">Sistemas embarcados</li>
+            <li class="chip">Web of Things</li>
+            <li class="chip">Cloud computing</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="subsection" aria-labelledby="onde-comprar">
+        <h2 id="onde-comprar">Onde comprar: Udemy ou Hotmart</h2>
+        <p class="u-measure u-muted">O conteúdo é o mesmo nas duas plataformas. A diferença está no que cada uma oferece em volta dele.</p>
+        <div class="table-wrap">
+          <table class="table">
+            <caption>Plataformas em que <em>Internet das Coisas (IoT)</em> está disponível</caption>
+            <thead>
+              <tr>
+                <th scope="col">Plataforma</th>
+                <th scope="col">Como funciona</th>
+                <th scope="col">Link</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">Udemy</th>
+              <td>Compra direta na Udemy, com app oficial e acompanhamento de progresso. Preço e promoções seguem a plataforma.</td>
+              <td><a class="btn btn--udemy btn--sm" href="https://www.udemy.com/course/internet-das-coisas-fundamentos/?referralCode=210B6283B33375D328C1" target="_blank" rel="noopener">Ver na Udemy</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Hotmart</th>
+              <td>Compra direta na Hotmart. É também a plataforma do programa de afiliados: dá para revender o curso e receber 40% por venda.</td>
+              <td><a class="btn btn--hotmart btn--sm" href="https://go.hotmart.com/Y101238939C" target="_blank" rel="noopener">Ver na Hotmart</a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="faq">
+        <h2 id="faq">Perguntas frequentes</h2>
+        <div class="faq">
+          <details class="faq__item">
+            <summary>Preciso comprar Arduino, ESP8266 ou algum kit para fazer o curso?</summary>
+            <div class="faq__answer"><p>Não para acompanhar o conteúdo: fundamentos, arquitetura, protocolos, middleware, segurança e WoT são tratados de forma que você entenda o projeto inteiro. Ter hardware em mãos naturalmente enriquece a experiência, mas não é condição para aprender.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Por que o MQTT recebe destaque entre os protocolos?</summary>
+            <div class="faq__answer"><p>Porque é o protocolo dominante em IoT: leve, baseado em publicação/assinatura e projetado para redes instáveis e dispositivos com pouca memória — exatamente o cenário de um sensor em campo.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>O que é Web of Things e como difere de IoT?</summary>
+            <div class="faq__answer"><p>A IoT conecta dispositivos; a Web of Things expõe esses dispositivos como recursos web, com URLs e APIs, para que sistemas conversem com eles usando os padrões da web. O curso tem um módulo dedicado a essa camada.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>O curso trata segurança em IoT?</summary>
+            <div class="faq__answer"><p>Sim, com módulo próprio de segurança e privacidade. É um tema central porque dispositivos conectados costumam ser o elo mais fraco de uma rede, e frequentemente ficam anos sem atualização.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Existe algum projeto real de IoT do instrutor para eu ver?</summary>
+            <div class="faq__answer"><p>Sim. A automação de cervejaria com ESP8266 e sensores de temperatura rendeu um artigo publicado no Brazilian Journal of Technology, e o código e os vídeos dos projetos de IoT estão no portfólio e no GitHub — todos linkados abaixo.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="instrutor">
+        <h2 id="instrutor">Quem ensina</h2>
+        <div class="author-card">
+          <img class="author-card__img" src="../../assets/img/perfil.webp" width="555" height="394" loading="lazy" decoding="async" alt="Jackson Felipe Magnabosco">
+          <div class="author-card__body">
+            <p><strong>Jackson Felipe Magnabosco</strong> — Engenheiro de Software Sênior e Professor de Ciência da Computação. Bacharel em Ciência da Computação pela URI-Erechim, com pós-graduação em Engenharia de Software e em Administração de Banco de Dados.</p>
+            <p>Trabalha com Node.js, TypeScript, Java e AWS em produtos usados no Brasil e no exterior, lecionou na graduação em Ciência da Computação e mantém um canal no YouTube com mais de 1.500 vídeos. Os cursos online somam mais de 400 alunos em 25 países.</p>
+            <ul class="inline-links">
+              <li><a href="../../#experience">Trajetória profissional</a></li>
+              <li><a href="../../#education">Formação e certificações</a></li>
+              <li><a href="https://www.udemy.com/user/jackson-felipe-magnabosco/" target="_blank" rel="noopener">Perfil na Udemy</a></li>
+              <li><a href="https://www.youtube.com/@JacksonMagnabosco" target="_blank" rel="noopener">Canal no YouTube</a></li>
+              <li><a href="https://github.com/jacksonn455" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="http://lattes.cnpq.br/4613856780210407" target="_blank" rel="noopener">Currículo Lattes</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="relacionados">
+        <h2 id="relacionados">Cursos relacionados</h2>
+        <ul class="mini-grid">
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/administracao-de-banco-de-dados/">Administração de Banco de Dados</a></h3>
+            <p>Curso de administração de banco de dados do básico ao avançado, voltado a quem quer atuar como DBA.</p>
+          </li>
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/desenvolvimento-web/">Desenvolvimento Web</a></h3>
+            <p>Formação completa de desenvolvimento web, do zero ao nível profissional.</p>
+          </li>
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/mineracao-de-dados/">Mineração de Dados</a></h3>
+            <p>Curso de mineração de dados centrado no processo de KDD (Knowledge Discovery in Databases).</p>
+          </li>
+        </ul>
+        <p><a href="../../cursos/">Ver o catálogo completo de cursos</a></p>
+      </section>
+
+      <section class="subsection" aria-labelledby="conteudo-extra">
+        <h2 id="conteudo-extra">Conteúdo relacionado no site</h2>
+        <ul class="link-list">
+          <li><a class="link-item" href="https://github.com/jacksonn455/automacao-cervejaria" target="_blank" rel="noopener">Automação de Cervejaria com ESP8266 — código no GitHub</a></li>
+          <li><a class="link-item" href="https://github.com/jacksonn455/armarios_inteligentes_biccateca" target="_blank" rel="noopener">Armários Inteligentes (Biccateca) — projeto de IoT no GitHub</a></li>
+          <li><a class="link-item" href="https://doi.org/10.38152/bjtv8n3-002" target="_blank" rel="noopener">Artigo publicado sobre automação com IoT (DOI)</a></li>
+        </ul>
+      </section>
+
+      <aside class="cta-band">
+        <div class="cta-band__text">
+          <h2>Ganhe 40% revendendo este curso</h2>
+          <p>Este curso participa do programa de afiliados da Hotmart: você divulga com um link exclusivo e recebe 40% de comissão por venda. O cadastro é gratuito.</p>
+        </div>
+        <p><a class="btn btn--ghost" href="https://app-vlc.hotmart.com/affiliate-recruiting/view/7676I101238960" target="_blank" rel="noopener">Quero me afiliar a este curso</a></p>
+      </aside>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav aria-label="Rodapé">
+      <ul class="inline-links">
+        <li><a href="../../">Início</a></li>
+        <li><a href="../../cursos/">Todos os cursos</a></li>
+        <li><a href="../../afiliados/">Programa de afiliados</a></li>
+        <li><a href="../../#experience">Experiência</a></li>
+        <li><a href="../../#education">Formação</a></li>
+        <li><a href="../../#contact">Contato</a></li>
+        <li><a href="https://www.youtube.com/@JacksonMagnabosco" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://github.com/jacksonn455" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__note">© 2026 Jackson Felipe Magnabosco</p>
+  </div>
+</footer>
+
+<button type="button" class="to-top" data-to-top data-visible="false" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+
+<script src="../../assets/js/app.js" defer></script>
+
+</body></html>

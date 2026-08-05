@@ -2,8 +2,13 @@
   "ci": {
     "collect": {
       "staticDistDir": ".",
-      "url": ["http://localhost/index.html"],
-      "numberOfRuns": 3,
+      "url": [
+        "http://localhost/index.html",
+        "http://localhost/cursos/index.html",
+        "http://localhost/cursos/logica-de-programacao/index.html",
+        "http://localhost/afiliados/index.html"
+      ],
+      "numberOfRuns": 2,
       "settings": {
         "preset": "desktop",
         "skipAudits": ["canonical", "is-crawlable"]

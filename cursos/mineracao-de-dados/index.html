@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Curso de Mineração de Dados: KDD, Python, R e WEKA</title>
+  <meta name="description" content="Curso de mineração de dados em português: processo KDD, seleção e pré-processamento, WEKA na prática, análises com Python, R e Google Colab e casos reais de mercado.">
+  <meta name="keywords" content="curso de mineração de dados, kdd, data mining em português, weka, python para dados, r, google colab, cientista de dados">
+  <meta name="author" content="Jackson Felipe Magnabosco">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://jacksonmagnabosco.dev/cursos/mineracao-de-dados/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jackson F. Magnabosco">
+  <meta property="og:title" content="Curso de Mineração de Dados: KDD, Python, R e WEKA">
+  <meta property="og:description" content="Curso de mineração de dados em português: processo KDD, seleção e pré-processamento, WEKA na prática, análises com Python, R e Google Colab e casos reais de mercado.">
+  <meta property="og:url" content="https://jacksonmagnabosco.dev/cursos/mineracao-de-dados/">
+  <meta property="og:image" content="https://jacksonmagnabosco.dev/assets/img/curso-mineracao-de-dados.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
+  <meta property="og:image:alt" content="Curso de Mineração de Dados com KDD, Python, R e Google Colab">
+  <meta property="og:locale" content="pt_BR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Curso de Mineração de Dados: KDD, Python, R e WEKA">
+  <meta name="twitter:description" content="Curso de mineração de dados em português: processo KDD, seleção e pré-processamento, WEKA na prática, análises com Python, R e Google Colab e casos reais de mercado.">
+  <meta name="twitter:image" content="https://jacksonmagnabosco.dev/assets/img/curso-mineracao-de-dados.webp">
+  <meta name="twitter:image:alt" content="Curso de Mineração de Dados com KDD, Python, R e Google Colab">
+
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="../../favicon.ico" sizes="32x32">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+
+  <!-- aplica o tema antes da primeira pintura para nao piscar -->
+  <script>
+    (() => {
+      try {
+        const t = localStorage.getItem('preferredTheme');
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://jacksonmagnabosco.dev/#person",
+      "name": "Jackson Felipe Magnabosco",
+      "alternateName": "Jackson Magnabosco",
+      "url": "https://jacksonmagnabosco.dev/",
+      "image": "https://jacksonmagnabosco.dev/assets/img/perfil.webp",
+      "jobTitle": "Engenheiro de Software Sênior e Professor de Ciência da Computação",
+      "description": "Engenheiro de Software Sênior e Professor de Ciência da Computação. Atua com Node.js, TypeScript, Java e AWS, leciona na graduação e produz cursos online de tecnologia em português.",
+      "knowsLanguage": [
+        "pt-BR",
+        "en"
+      ],
+      "sameAs": [
+        "https://github.com/jacksonn455",
+        "https://www.youtube.com/@JacksonMagnabosco",
+        "https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/",
+        "https://medium.com/@jacksonn455",
+        "https://www.udemy.com/user/jackson-felipe-magnabosco/",
+        "http://lattes.cnpq.br/4613856780210407"
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://jacksonmagnabosco.dev/cursos/mineracao-de-dados/#course",
+      "name": "Mineração de Dados com KDD, Python, R e Google Colab",
+      "alternateName": "Formação Cientista de Dados: Mineração, Big Data, Python",
+      "description": "Curso de mineração de dados centrado no processo de KDD (Knowledge Discovery in Databases). Cobre fundamentos de data mining, as etapas de seleção e pré-processamento de dados, uso prático do WEKA e análises com Python, R e Google Colab, aplicados a casos reais de mercado.",
+      "url": "https://jacksonmagnabosco.dev/cursos/mineracao-de-dados/",
+      "image": "https://jacksonmagnabosco.dev/assets/img/curso-mineracao-de-dados.webp",
+      "inLanguage": "pt-BR",
+      "educationalLevel": "Iniciante a intermediário",
+      "about": "Ciência de dados",
+      "teaches": [
+        "Entender os fundamentos de data mining e onde ele se encaixa em projetos de dados",
+        "Percorrer todas as etapas do processo de KDD",
+        "Selecionar e pré-processar dados — limpeza, transformação e preparação",
+        "Usar o WEKA para aplicar técnicas de mineração na prática",
+        "Fazer análises com Python, R e Google Colab",
+        "Interpretar resultados e ligá-los a decisões estratégicas, com casos reais de mercado"
+      ],
+      "coursePrerequisites": [
+        "Lógica de programação básica ajuda nas partes de Python e R",
+        "Nenhuma instalação complexa: o Google Colab roda no navegador",
+        "Noções de estatística descritiva são úteis, mas não obrigatórias"
+      ],
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      },
+      "keywords": "curso de mineração de dados, kdd, data mining em português, weka, python para dados, r, google colab, cientista de dados",
+      "provider": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "author": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "instructor": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "isAccessibleForFree": false,
+      "syllabusSections": [
+        {
+          "@type": "Syllabus",
+          "position": 1,
+          "name": "Fundamentos de data mining"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 2,
+          "name": "Processo de KDD (Knowledge Discovery in Databases)"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 3,
+          "name": "Seleção e pré-processamento de dados"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 4,
+          "name": "WEKA na prática"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 5,
+          "name": "Análises com Python, R e Google Colab"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 6,
+          "name": "Casos reais do mercado"
+        }
+      ],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "inLanguage": "pt-BR",
+        "instructor": {
+          "@id": "https://jacksonmagnabosco.dev/#person"
+        }
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "category": "Paid",
+          "url": "https://www.udemy.com/course/mineracao-de-dados-com-kdd-python-r-e-google-colab/?referralCode=4E0552A025380F1E4FCD",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Udemy",
+            "url": "https://www.udemy.com/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "category": "Paid",
+          "url": "https://go.hotmart.com/W101237143Q",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Hotmart",
+            "url": "https://www.hotmart.com/"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://jacksonmagnabosco.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cursos",
+          "item": "https://jacksonmagnabosco.dev/cursos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Mineração de Dados"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é KDD e qual a diferença em relação a data mining?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "KDD (Knowledge Discovery in Databases) é o processo completo de descoberta de conhecimento, com etapas de seleção, pré-processamento, transformação, mineração e interpretação. A mineração de dados é uma dessas etapas. O curso ensina o processo inteiro, e não apenas a etapa do algoritmo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso saber Python ou R para acompanhar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ajuda, mas não é pré-requisito. O curso começa pelos fundamentos e pelo WEKA, que permite aplicar técnicas de mineração sem programar. As análises em Python e R vêm depois, no Google Colab, que roda direto no navegador."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que o curso usa WEKA, Python e R em vez de uma ferramenta só?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque cada um mostra uma faceta. O WEKA deixa o conceito visível sem código; o Python é o padrão de mercado; o R é forte na parte estatística. Ver a mesma técnica nas três ferramentas fixa o conceito em vez da sintaxe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que tanto tempo em pré-processamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque é onde o projeto real se ganha ou se perde. Dado faltante, escala inconsistente e ruído derrubam qualquer modelo, por bom que seja. Seleção e pré-processamento têm módulo próprio por esse motivo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este curso combina com o de banco de dados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Combina diretamente. O curso de Administração de Banco de Dados termina em ETL, que é justamente a etapa que alimenta um projeto de mineração. Fazer os dois na sequência cobre o caminho do dado bruto até o conhecimento."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://jacksonmagnabosco.dev/cursos/mineracao-de-dados/",
+      "url": "https://jacksonmagnabosco.dev/cursos/mineracao-de-dados/",
+      "name": "Curso de Mineração de Dados: KDD, Python, R e WEKA",
+      "description": "Curso de mineração de dados em português: processo KDD, seleção e pré-processamento, WEKA na prática, análises com Python, R e Google Colab e casos reais de mercado.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://jacksonmagnabosco.dev/#website"
+      },
+      "primaryImageOfPage": "https://jacksonmagnabosco.dev/assets/img/curso-mineracao-de-dados.webp",
+      "about": {
+        "@id": "https://jacksonmagnabosco.dev/cursos/mineracao-de-dados/#course"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jacksonmagnabosco.dev/#website",
+      "url": "https://jacksonmagnabosco.dev/",
+      "name": "Jackson F. Magnabosco",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Ir para o conteúdo</a>
+<nav class="site-nav" aria-label="Principal">
+  <div class="container site-nav__inner">
+    <a class="site-nav__brand" href="../../">Jackson<span class="u-accent">.</span>M</a>
+
+    <button type="button" class="icon-btn nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></button>
+
+    <ul class="site-nav__list" id="nav-list" data-nav-list>
+      <li><a href="../../">Início</a></li>
+      <li><a href="../../cursos/" aria-current="page">Cursos</a></li>
+      <li><a href="../../afiliados/">Afiliados</a></li>
+      <li><a href="../../#projects">Projetos</a></li>
+      <li><a href="../../#portfolio">Portfólio</a></li>
+      <li><a href="../../#contact">Contato</a></li>
+    </ul>
+
+    <div class="site-nav__actions">
+      <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Alternar modo escuro">
+        <span data-theme-icon="light"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span>
+        <span data-theme-icon="dark" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<nav class="breadcrumb container" aria-label="Trilha de navegação">
+  <ol class="breadcrumb__list">
+    <li><a href="../../">Início</a></li>
+    <li><a href="../../cursos/">Cursos</a></li>
+    <li><span aria-current="page">Mineração de Dados</span></li>
+  </ol>
+</nav>
+
+<main id="main">
+  <article class="section">
+    <div class="container">
+      <header class="page-head">
+        <p class="eyebrow">Curso online · Ciência de dados</p>
+        <h1>Curso de Mineração de Dados com KDD, Python, R e Google Colab</h1>
+        <p class="lead">Curso de mineração de dados centrado no processo de KDD (Knowledge Discovery in Databases). Cobre fundamentos de data mining, as etapas de seleção e pré-processamento de dados, uso prático do WEKA e análises com Python, R e Google Colab, aplicados a casos reais de mercado.</p>
+        <ul class="chips">
+          <li class="chip"><strong>Nível:</strong> Iniciante a intermediário</li>
+          <li class="chip"><strong>Idioma:</strong> Português (pt-BR)</li>
+          <li class="chip"><strong>Formato:</strong> Vídeoaulas online, no seu ritmo</li>
+          <li class="chip"><strong>Instrutor:</strong> Jackson Magnabosco</li>
+          <li class="chip"><strong>Onde comprar:</strong> Udemy e Hotmart</li>
+        </ul>
+        <p class="course-card__actions">
+          <a class="btn btn--udemy" href="https://www.udemy.com/course/mineracao-de-dados-com-kdd-python-r-e-google-colab/?referralCode=4E0552A025380F1E4FCD" target="_blank" rel="noopener">Comprar na Udemy</a>
+          <a class="btn btn--hotmart" href="https://go.hotmart.com/W101237143Q" target="_blank" rel="noopener">Comprar na Hotmart</a>
+        </p>
+      </header>
+
+      <img class="course-hero__img" src="../../assets/img/curso-mineracao-de-dados.webp" width="1200" height="600" fetchpriority="high" decoding="async" alt="Curso de Mineração de Dados com KDD, Python, R e Google Colab">
+
+      <div class="prose">
+        <div class="tldr">
+          <h2>Em resumo</h2>
+          <p>Curso de mineração de dados centrado no processo de KDD (Knowledge Discovery in Databases). Cobre fundamentos de data mining, as etapas de seleção e pré-processamento de dados, uso prático do WEKA e análises com Python, R e Google Colab, aplicados a casos reais de mercado.</p>
+        </div>
+
+        <section aria-labelledby="sobre">
+          <h2 id="sobre">Sobre o curso</h2>
+          <p>Mineração de dados não é rodar um modelo: é um processo. O KDD — Knowledge Discovery in Databases — define as etapas que transformam dados brutos em conhecimento aproveitável, e a maior parte do esforço real acontece antes do algoritmo, na seleção e no pré-processamento dos dados.</p>
+          <p>É por aí que o curso trabalha. Você aprende os fundamentos de data mining e cada fase do KDD, coloca a mão no WEKA para experimentar técnicas sem escrever código, e depois parte para análises com Python, R e Google Colab — sem instalar nada pesado na máquina. O fechamento é com casos reais de mercado, para conectar técnica e decisão.</p>
+        </section>
+
+        <section aria-labelledby="aprender">
+          <h2 id="aprender">O que você vai aprender</h2>
+          <ul>
+          <li>Entender os fundamentos de data mining e onde ele se encaixa em projetos de dados</li>
+          <li>Percorrer todas as etapas do processo de KDD</li>
+          <li>Selecionar e pré-processar dados — limpeza, transformação e preparação</li>
+          <li>Usar o WEKA para aplicar técnicas de mineração na prática</li>
+          <li>Fazer análises com Python, R e Google Colab</li>
+          <li>Interpretar resultados e ligá-los a decisões estratégicas, com casos reais de mercado</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="conteudo">
+          <h2 id="conteudo">Conteúdo do curso</h2>
+          <ol>
+          <li>Fundamentos de data mining</li>
+          <li>Processo de KDD (Knowledge Discovery in Databases)</li>
+          <li>Seleção e pré-processamento de dados</li>
+          <li>WEKA na prática</li>
+          <li>Análises com Python, R e Google Colab</li>
+          <li>Casos reais do mercado</li>
+        </ol>
+        </section>
+
+        <section aria-labelledby="publico">
+          <h2 id="publico">Para quem é este curso</h2>
+          <ul>
+          <li>Quem quer entrar em ciência de dados pelo caminho do processo, não só das ferramentas</li>
+          <li>Estudantes de computação, estatística e engenharias</li>
+          <li>Analistas que já trabalham com dados e querem método</li>
+          <li>Profissionais que precisam extrair padrões de bases existentes</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="requisitos">
+          <h2 id="requisitos">Pré-requisitos</h2>
+          <ul>
+          <li>Lógica de programação básica ajuda nas partes de Python e R</li>
+          <li>Nenhuma instalação complexa: o Google Colab roda no navegador</li>
+          <li>Noções de estatística descritiva são úteis, mas não obrigatórias</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="temas">
+          <h2 id="temas">Tecnologias e temas abordados</h2>
+          <ul class="chips">
+            <li class="chip">Python</li>
+            <li class="chip">R</li>
+            <li class="chip">Google Colab</li>
+            <li class="chip">WEKA</li>
+            <li class="chip">KDD</li>
+            <li class="chip">Pré-processamento de dados</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="subsection" aria-labelledby="onde-comprar">
+        <h2 id="onde-comprar">Onde comprar: Udemy ou Hotmart</h2>
+        <p class="u-measure u-muted">O conteúdo é o mesmo nas duas plataformas. A diferença está no que cada uma oferece em volta dele.</p>
+        <div class="table-wrap">
+          <table class="table">
+            <caption>Plataformas em que <em>Mineração de Dados</em> está disponível</caption>
+            <thead>
+              <tr>
+                <th scope="col">Plataforma</th>
+                <th scope="col">Como funciona</th>
+                <th scope="col">Link</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">Udemy</th>
+              <td>Compra direta na Udemy, com app oficial e acompanhamento de progresso. Preço e promoções seguem a plataforma.</td>
+              <td><a class="btn btn--udemy btn--sm" href="https://www.udemy.com/course/mineracao-de-dados-com-kdd-python-r-e-google-colab/?referralCode=4E0552A025380F1E4FCD" target="_blank" rel="noopener">Ver na Udemy</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Hotmart</th>
+              <td>Compra direta na Hotmart. É também a plataforma do programa de afiliados: dá para revender o curso e receber 40% por venda.</td>
+              <td><a class="btn btn--hotmart btn--sm" href="https://go.hotmart.com/W101237143Q" target="_blank" rel="noopener">Ver na Hotmart</a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="faq">
+        <h2 id="faq">Perguntas frequentes</h2>
+        <div class="faq">
+          <details class="faq__item">
+            <summary>O que é KDD e qual a diferença em relação a data mining?</summary>
+            <div class="faq__answer"><p>KDD (Knowledge Discovery in Databases) é o processo completo de descoberta de conhecimento, com etapas de seleção, pré-processamento, transformação, mineração e interpretação. A mineração de dados é uma dessas etapas. O curso ensina o processo inteiro, e não apenas a etapa do algoritmo.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Preciso saber Python ou R para acompanhar?</summary>
+            <div class="faq__answer"><p>Ajuda, mas não é pré-requisito. O curso começa pelos fundamentos e pelo WEKA, que permite aplicar técnicas de mineração sem programar. As análises em Python e R vêm depois, no Google Colab, que roda direto no navegador.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Por que o curso usa WEKA, Python e R em vez de uma ferramenta só?</summary>
+            <div class="faq__answer"><p>Porque cada um mostra uma faceta. O WEKA deixa o conceito visível sem código; o Python é o padrão de mercado; o R é forte na parte estatística. Ver a mesma técnica nas três ferramentas fixa o conceito em vez da sintaxe.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Por que tanto tempo em pré-processamento?</summary>
+            <div class="faq__answer"><p>Porque é onde o projeto real se ganha ou se perde. Dado faltante, escala inconsistente e ruído derrubam qualquer modelo, por bom que seja. Seleção e pré-processamento têm módulo próprio por esse motivo.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Este curso combina com o de banco de dados?</summary>
+            <div class="faq__answer"><p>Combina diretamente. O curso de Administração de Banco de Dados termina em ETL, que é justamente a etapa que alimenta um projeto de mineração. Fazer os dois na sequência cobre o caminho do dado bruto até o conhecimento.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="instrutor">
+        <h2 id="instrutor">Quem ensina</h2>
+        <div class="author-card">
+          <img class="author-card__img" src="../../assets/img/perfil.webp" width="555" height="394" loading="lazy" decoding="async" alt="Jackson Felipe Magnabosco">
+          <div class="author-card__body">
+            <p><strong>Jackson Felipe Magnabosco</strong> — Engenheiro de Software Sênior e Professor de Ciência da Computação. Bacharel em Ciência da Computação pela URI-Erechim, com pós-graduação em Engenharia de Software e em Administração de Banco de Dados.</p>
+            <p>Trabalha com Node.js, TypeScript, Java e AWS em produtos usados no Brasil e no exterior, lecionou na graduação em Ciência da Computação e mantém um canal no YouTube com mais de 1.500 vídeos. Os cursos online somam mais de 400 alunos em 25 países.</p>
+            <ul class="inline-links">
+              <li><a href="../../#experience">Trajetória profissional</a></li>
+              <li><a href="../../#education">Formação e certificações</a></li>
+              <li><a href="https://www.udemy.com/user/jackson-felipe-magnabosco/" target="_blank" rel="noopener">Perfil na Udemy</a></li>
+              <li><a href="https://www.youtube.com/@JacksonMagnabosco" target="_blank" rel="noopener">Canal no YouTube</a></li>
+              <li><a href="https://github.com/jacksonn455" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="http://lattes.cnpq.br/4613856780210407" target="_blank" rel="noopener">Currículo Lattes</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="relacionados">
+        <h2 id="relacionados">Cursos relacionados</h2>
+        <ul class="mini-grid">
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/administracao-de-banco-de-dados/">Administração de Banco de Dados</a></h3>
+            <p>Curso de administração de banco de dados do básico ao avançado, voltado a quem quer atuar como DBA.</p>
+          </li>
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/engenharia-de-prompt/">Engenharia de Prompt</a></h3>
+            <p>Curso de engenharia de prompt focado em uso profissional de IA generativa.</p>
+          </li>
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/logica-de-programacao/">Lógica de Programação e Algoritmos</a></h3>
+            <p>Curso online de lógica de programação e algoritmos para quem está começando.</p>
+          </li>
+        </ul>
+        <p><a href="../../cursos/">Ver o catálogo completo de cursos</a></p>
+      </section>
+
+      <section class="subsection" aria-labelledby="conteudo-extra">
+        <h2 id="conteudo-extra">Conteúdo relacionado no site</h2>
+        <ul class="link-list">
+          <li><a class="link-item" href="https://doi.org/10.38152/bjtv8n3-002" target="_blank" rel="noopener">Artigo científico publicado no Brazilian Journal of Technology</a></li>
+          <li><a class="link-item" href="http://lattes.cnpq.br/4613856780210407" target="_blank" rel="noopener">Currículo Lattes com produção acadêmica</a></li>
+        </ul>
+      </section>
+
+      <aside class="cta-band">
+        <div class="cta-band__text">
+          <h2>Ganhe 40% revendendo este curso</h2>
+          <p>Este curso participa do programa de afiliados da Hotmart: você divulga com um link exclusivo e recebe 40% de comissão por venda. O cadastro é gratuito.</p>
+        </div>
+        <p><a class="btn btn--ghost" href="https://app-vlc.hotmart.com/affiliate-recruiting/view/6838F101237164" target="_blank" rel="noopener">Quero me afiliar a este curso</a></p>
+      </aside>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav aria-label="Rodapé">
+      <ul class="inline-links">
+        <li><a href="../../">Início</a></li>
+        <li><a href="../../cursos/">Todos os cursos</a></li>
+        <li><a href="../../afiliados/">Programa de afiliados</a></li>
+        <li><a href="../../#experience">Experiência</a></li>
+        <li><a href="../../#education">Formação</a></li>
+        <li><a href="../../#contact">Contato</a></li>
+        <li><a href="https://www.youtube.com/@JacksonMagnabosco" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://github.com/jacksonn455" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__note">© 2026 Jackson Felipe Magnabosco</p>
+  </div>
+</footer>
+
+<button type="button" class="to-top" data-to-top data-visible="false" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+
+<script src="../../assets/js/app.js" defer></script>
+
+</body></html>

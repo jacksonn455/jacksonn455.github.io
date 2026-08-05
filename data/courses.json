@@ -1,0 +1,1004 @@
+{
+  "_comment": "Fonte unica de verdade dos cursos. scripts/build-pages.js gera /cursos, /cursos/<slug>, /afiliados e o sitemap a partir daqui. Regras: nada de dado nao verificavel (preco, carga horaria, nota, numero de alunos) — o conteudo de 'syllabus' vem das paginas publicas dos produtos na Hotmart.",
+  "site": {
+    "origin": "https://jacksonmagnabosco.dev",
+    "author": "Jackson Felipe Magnabosco",
+    "authorShort": "Jackson Magnabosco",
+    "authorUrl": "https://jacksonmagnabosco.dev/",
+    "authorImage": "https://jacksonmagnabosco.dev/assets/img/perfil.webp",
+    "jobTitle": "Engenheiro de Software Sênior e Professor de Ciência da Computação",
+    "udemyProfile": "https://www.udemy.com/user/jackson-felipe-magnabosco/",
+    "youtube": "https://www.youtube.com/@JacksonMagnabosco",
+    "github": "https://github.com/jacksonn455",
+    "linkedin": "https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/",
+    "medium": "https://medium.com/@jacksonn455",
+    "lattes": "http://lattes.cnpq.br/4613856780210407",
+    "affiliateCommission": "40%",
+    "lastmod": "2026-08-05"
+  },
+  "courses": [
+    {
+      "slug": "logica-de-programacao",
+      "name": "Lógica de Programação e Algoritmos: Guia Completo",
+      "shortName": "Lógica de Programação e Algoritmos",
+      "alternateName": "Lógica de Programação e Algoritmos: Guia Completo",
+      "h1": "Curso de Lógica de Programação e Algoritmos",
+      "metaTitle": "Curso de Lógica de Programação e Algoritmos (do zero)",
+      "metaDescription": "Curso de lógica de programação e algoritmos do zero: variáveis, condicionais, laços de repetição, pseudocódigo no Visualg e modularização. Em português, sem pré-requisitos.",
+      "summary": "Curso online de lógica de programação e algoritmos para quem está começando. Você aprende a estruturar o raciocínio antes de escrever código: tipos de dados, comandos de entrada e saída, algoritmos sequenciais, pseudocódigo no Visualg, estruturas condicionais e de repetição, modularização e passagem de parâmetros.",
+      "intro": [
+        "Lógica de programação é a base de qualquer linguagem. Antes de decorar a sintaxe de JavaScript, Python ou Java, é o raciocínio lógico que define se você consegue quebrar um problema em passos executáveis — e é exatamente esse raciocínio que este curso constrói, do zero, sem pressupor nenhuma experiência anterior.",
+        "O caminho é o mesmo que uso em sala de aula na graduação em Ciência da Computação: primeiro os conceitos e tipos de dados, depois os comandos básicos, então algoritmos sequenciais escritos em pseudocódigo no Visualg, e só então as estruturas que dão poder de verdade ao código — condicionais simples e de múltipla escolha, laços `enquanto`, `repita...até` e, por fim, modularização com passagem de parâmetros."
+      ],
+      "level": "Iniciante",
+      "category": "Fundamentos de programação",
+      "technologies": [
+        "Pseudocódigo (Portugol)",
+        "Visualg",
+        "Algoritmos",
+        "Estruturas de controle"
+      ],
+      "objectives": [
+        "Entender o que é lógica de programação e por que ela vem antes da linguagem",
+        "Trabalhar com tipos de dados, variáveis, atribuição, entrada e saída",
+        "Construir algoritmos sequenciais e escrevê-los em pseudocódigo no Visualg",
+        "Usar comandos condicionais simples e de múltipla escolha para tomar decisões no código",
+        "Dominar estruturas de repetição (`enquanto` e `repita...até`) e saber quando usar cada uma",
+        "Modularizar algoritmos e entender passagem de parâmetros entre módulos"
+      ],
+      "syllabus": [
+        "Introdução à lógica de programação",
+        "Conceitos básicos e tipos de dados",
+        "Comandos básicos: entrada, saída, atribuição e declaração de variáveis",
+        "Desenvolvimento de algoritmos sequenciais",
+        "Pseudocódigo com Visualg",
+        "Comandos condicionais simples",
+        "Comandos condicionais de múltipla escolha",
+        "Estruturas de repetição: enquanto",
+        "Estrutura repita...até",
+        "Introdução à modularização",
+        "Passagem de parâmetros"
+      ],
+      "audience": [
+        "Quem quer programar e não sabe por onde começar",
+        "Estudantes de Ciência da Computação, Sistemas de Informação, Engenharia e cursos técnicos",
+        "Profissionais de outras áreas em transição para tecnologia",
+        "Quem já tentou aprender uma linguagem e travou na lógica"
+      ],
+      "prerequisites": [
+        "Nenhum conhecimento prévio de programação",
+        "Um computador com acesso à internet",
+        "Matemática do ensino médio é suficiente"
+      ],
+      "keywords": [
+        "curso de lógica de programação",
+        "algoritmos",
+        "pseudocódigo",
+        "visualg",
+        "estruturas de repetição",
+        "programação para iniciantes"
+      ],
+      "faq": [
+        {
+          "q": "Preciso saber programar para fazer este curso?",
+          "a": "Não. O curso começa do absoluto zero, pelos conceitos de lógica e tipos de dados, e assume apenas a matemática do ensino médio. É justamente o ponto de partida recomendado para quem nunca escreveu uma linha de código."
+        },
+        {
+          "q": "Qual linguagem de programação é usada no curso?",
+          "a": "O foco é o raciocínio, não a sintaxe de uma linguagem específica. Os algoritmos são escritos em pseudocódigo (Portugol) no Visualg, uma ferramenta gratuita feita para ensino. Com essa base, migrar para Python, JavaScript, Java ou C fica muito mais simples."
+        },
+        {
+          "q": "Preciso instalar algum programa?",
+          "a": "Sim, o Visualg — um interpretador de pseudocódigo gratuito e leve, usado para escrever e executar os algoritmos das aulas passo a passo."
+        },
+        {
+          "q": "O que são estruturas de repetição e por que elas aparecem tanto no curso?",
+          "a": "São os comandos que fazem um trecho de código rodar várias vezes, como `enquanto` e `repita...até`. Elas concentram a maior parte da dificuldade de quem está começando, então recebem módulos dedicados, com exercícios que comparam quando usar cada forma."
+        },
+        {
+          "q": "Depois deste curso, qual devo fazer?",
+          "a": "Com a lógica em pé, o caminho natural é escolher uma aplicação: desenvolvimento web para construir sistemas, banco de dados para trabalhar com SQL, ou mineração de dados para partir para Python e análise. Todos estão listados na página de cursos."
+        }
+      ],
+      "platforms": {
+        "udemy": "https://www.udemy.com/course/logica-de-programacao-e-algoritmos-guia-completo/?referralCode=162DC621A6ACA5A1E133",
+        "udemyCanonical": "https://www.udemy.com/course/logica-de-programacao-e-algoritmos-guia-completo/",
+        "hotmart": "https://go.hotmart.com/H101224552O"
+      },
+      "affiliate": "https://app-vlc.hotmart.com/affiliate-recruiting/view/0369L101224573",
+      "image": "assets/img/curso-logica-de-programacao.webp",
+      "imageWidth": 1200,
+      "imageHeight": 675,
+      "imageAlt": "Curso de Lógica de Programação e Algoritmos",
+      "related": ["desenvolvimento-web", "mineracao-de-dados", "administracao-de-banco-de-dados"],
+      "relatedContent": [
+        {
+          "label": "Jogo da Velha — projeto simples para treinar lógica (GitHub)",
+          "url": "https://github.com/jacksonn455/Jogo-da-Velha"
+        },
+        {
+          "label": "Escolha o seu Time — outro projeto introdutório (GitHub)",
+          "url": "https://github.com/jacksonn455/Escolha_o_seu_time"
+        },
+        {
+          "label": "Canal no YouTube: mais de 1.500 vídeos gratuitos de programação",
+          "url": "https://www.youtube.com/@JacksonMagnabosco"
+        }
+      ]
+    },
+    {
+      "slug": "desenvolvimento-web",
+      "name": "Desenvolvimento Web Eficiente",
+      "shortName": "Desenvolvimento Web",
+      "alternateName": "Formação Web: Do Zero a Profissional com HTML, CSS, JS e SQL",
+      "h1": "Curso de Desenvolvimento Web: HTML, CSS, JavaScript e SQL",
+      "metaTitle": "Curso de Desenvolvimento Web: HTML, CSS, JavaScript e SQL",
+      "metaDescription": "Curso completo de desenvolvimento web em português: análise de requisitos, layout, HTML, CSS, JavaScript, SQL com MySQL, APIs, hospedagem, integração e segurança.",
+      "summary": "Formação completa de desenvolvimento web, do zero ao nível profissional. Cobre o ciclo inteiro de um sistema web: estudo do sistema e análise de requisitos, criação de layout, HTML e CSS, JavaScript, SQL com MySQL e DBeaver, estrutura front-end/back-end com APIs e microsserviços, hospedagem e gerenciamento de servidor, integração entre sistemas e segurança com validação de dados.",
+      "intro": [
+        "A maioria dos cursos de web ensina a montar telas. Este parte de outro lugar: um sistema web nasce de um problema de negócio, e o profissional que entrega valor é quem sabe percorrer o caminho inteiro — entender o requisito, desenhar a interface, escrever o front-end, modelar o banco, expor uma API, publicar em um servidor e proteger os dados.",
+        "É esse percurso completo que a formação segue, na mesma ordem em que ele acontece no mercado. Você começa estudando o sistema e levantando requisitos, passa por layout, HTML, CSS e JavaScript, entra em SQL com MySQL e DBeaver, entende como front-end, back-end, APIs e microsserviços se encaixam, e termina em hospedagem, integração entre sistemas e segurança."
+      ],
+      "level": "Iniciante a avançado",
+      "category": "Desenvolvimento web",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "SQL",
+        "MySQL",
+        "DBeaver",
+        "APIs REST",
+        "Microsserviços"
+      ],
+      "objectives": [
+        "Estudar um sistema e transformar necessidades em requisitos claros",
+        "Criar o layout e implementá-lo com HTML e CSS",
+        "Programar comportamento e interatividade com JavaScript",
+        "Modelar e consultar bancos de dados com SQL, MySQL e DBeaver",
+        "Entender a estrutura da web: front-end, back-end, APIs e microsserviços",
+        "Hospedar a aplicação e gerenciar o servidor",
+        "Integrar sistemas diferentes e aplicar segurança e validação de dados"
+      ],
+      "syllabus": [
+        "Estudo do sistema",
+        "Criação de layout",
+        "Análise de requisitos",
+        "HTML e CSS",
+        "JavaScript",
+        "SQL com MySQL e DBeaver",
+        "Estrutura da web: front-end, back-end, APIs e microsserviços",
+        "Hospedagem e gerenciamento de servidor",
+        "Integração entre sistemas",
+        "Segurança e validação de dados"
+      ],
+      "audience": [
+        "Quem quer entrar na área de desenvolvimento web e busca um caminho do começo ao fim",
+        "Estudantes de tecnologia que sabem lógica e precisam construir aplicações reais",
+        "Desenvolvedores front-end que querem entender back-end, banco e infraestrutura",
+        "Profissionais que precisam manter ou evoluir sistemas web existentes"
+      ],
+      "prerequisites": [
+        "Noções de lógica de programação ajudam, mas o curso começa do zero",
+        "Um computador com acesso à internet",
+        "Nenhuma ferramenta paga é necessária"
+      ],
+      "keywords": [
+        "curso de desenvolvimento web",
+        "curso html css javascript",
+        "curso de programação web em português",
+        "sql mysql",
+        "api rest",
+        "full stack"
+      ],
+      "faq": [
+        {
+          "q": "O curso é front-end, back-end ou full stack?",
+          "a": "Os dois lados. Ele cobre a interface (layout, HTML, CSS, JavaScript) e também o que está por trás dela: SQL com MySQL, estrutura de back-end, APIs, microsserviços, hospedagem, integração entre sistemas e segurança."
+        },
+        {
+          "q": "Preciso saber lógica de programação antes?",
+          "a": "Ajuda bastante, mas não é obrigatório: a formação parte do zero. Se você nunca programou, fazer o curso de Lógica de Programação e Algoritmos primeiro deixa a curva bem mais suave."
+        },
+        {
+          "q": "Qual banco de dados é usado?",
+          "a": "MySQL, com o DBeaver como cliente para escrever e executar as consultas. São ferramentas gratuitas e amplamente usadas no mercado brasileiro."
+        },
+        {
+          "q": "O curso ensina a colocar o site no ar?",
+          "a": "Sim. Há um módulo dedicado a hospedagem e gerenciamento de servidor, além de integração entre sistemas e segurança — as etapas que normalmente ficam de fora dos cursos introdutórios."
+        },
+        {
+          "q": "Vale a pena comprar na Udemy ou na Hotmart?",
+          "a": "O conteúdo é o mesmo nas duas. A escolha é de conveniência: quem já usa a Udemy mantém tudo em uma biblioteca só; na Hotmart, além de comprar, é possível se afiliar e revender o curso ganhando 40% por venda."
+        }
+      ],
+      "platforms": {
+        "udemy": "https://www.udemy.com/course/desenvolvimento-web-eficiente/?referralCode=E1B5230363B9D8E17346",
+        "udemyCanonical": "https://www.udemy.com/course/desenvolvimento-web-eficiente/",
+        "hotmart": "https://go.hotmart.com/A96995623L"
+      },
+      "affiliate": "https://app-vlc.hotmart.com/affiliate-recruiting/view/4740F96995644",
+      "image": "assets/img/curso-desenvolvimento-web.webp",
+      "imageWidth": 1200,
+      "imageHeight": 675,
+      "imageAlt": "Curso de Desenvolvimento Web",
+      "related": [
+        "logica-de-programacao",
+        "administracao-de-banco-de-dados",
+        "design-de-interfaces"
+      ],
+      "relatedContent": [
+        {
+          "label": "TaskFlow — aplicação web no GitHub",
+          "url": "https://github.com/jacksonn455/taskflow-app"
+        },
+        {
+          "label": "DialogueHub — projeto de aplicação no GitHub",
+          "url": "https://github.com/jacksonn455/DialogueHub"
+        },
+        {
+          "label": "Portfólio de sites e sistemas publicados",
+          "url": "https://jacksonmagnabosco.dev/#portfolio"
+        }
+      ]
+    },
+    {
+      "slug": "administracao-de-banco-de-dados",
+      "name": "Administração de Banco de Dados: SQL, MySQL e DBA",
+      "shortName": "Administração de Banco de Dados",
+      "alternateName": "Administração de Banco de Dados: Do Básico ao Avançado",
+      "h1": "Curso de Administração de Banco de Dados: SQL, MySQL e DBA",
+      "metaTitle": "Curso de Administração de Banco de Dados (DBA): SQL e MySQL",
+      "metaDescription": "Curso de DBA em português: SGBDs, arquiteturas, dicionário de dados, usuários, segurança, backup e recuperação, performance, álgebra relacional, SQL avançado e ETL.",
+      "summary": "Curso de administração de banco de dados do básico ao avançado, voltado a quem quer atuar como DBA. Cobre conceitos e funções dos SGBDs, arquiteturas centralizadas e distribuídas, dicionário de dados, gerenciamento de usuários, segurança e controle de acesso, backup e recuperação, refinamento e diagnóstico de performance, álgebra relacional, consultas avançadas em SQL e ETL.",
+      "intro": [
+        "Escrever um SELECT é o começo. Administrar um banco de dados é outra profissão: envolve decidir arquitetura, controlar quem acessa o quê, garantir que exista backup testado, recuperar a base quando algo dá errado e descobrir por que aquela consulta que rodava em 200 ms agora leva 40 segundos.",
+        "Este curso percorre exatamente essa trilha, do básico ao avançado. Começa nos conceitos e funções de um SGBD e nas arquiteturas centralizadas e distribuídas, passa por dicionário de dados, gerenciamento de usuários, segurança e controle de acesso, backup e recuperação, refinamento e identificação de problemas de performance, e fecha com a parte analítica: álgebra relacional, consultas avançadas em SQL e processos de ETL."
+      ],
+      "level": "Básico ao avançado",
+      "category": "Banco de dados",
+      "technologies": [
+        "SQL",
+        "MySQL",
+        "SGBD",
+        "Álgebra relacional",
+        "ETL",
+        "Backup e recovery",
+        "Tuning"
+      ],
+      "objectives": [
+        "Entender os conceitos e as funções de um SGBD e suas arquiteturas",
+        "Consultar e usar o dicionário de dados",
+        "Gerenciar usuários, permissões, segurança e controle de acesso",
+        "Planejar e executar backup e recuperação de bancos de dados",
+        "Identificar problemas de performance e refinar o banco",
+        "Aplicar álgebra relacional e escrever consultas SQL avançadas",
+        "Montar processos de ETL (extração, transformação e carga)"
+      ],
+      "syllabus": [
+        "Conceitos e funções dos SGBDs",
+        "Arquiteturas centralizadas e distribuídas",
+        "Dicionário de dados",
+        "Gerenciamento de usuários",
+        "Segurança e controle de acesso",
+        "Backup de banco de dados",
+        "Recuperação de banco de dados",
+        "Refinamento de banco de dados",
+        "Identificação de problemas de performance",
+        "Álgebra relacional",
+        "Consultas avançadas em SQL",
+        "Práticas avançadas de consultas",
+        "ETL — Extract, Transform, Load"
+      ],
+      "audience": [
+        "Desenvolvedores que querem parar de depender de outra pessoa para mexer no banco",
+        "Quem pretende atuar como DBA ou analista de dados",
+        "Estudantes de tecnologia com disciplinas de banco de dados",
+        "Profissionais responsáveis por bases em produção"
+      ],
+      "prerequisites": [
+        "Noção básica de SQL ajuda, mas o curso começa pelos conceitos",
+        "Um computador com acesso à internet",
+        "Vontade de praticar consultas — a parte avançada é hands-on"
+      ],
+      "keywords": [
+        "curso de dba",
+        "administração de banco de dados",
+        "curso sql avançado",
+        "mysql",
+        "backup e recuperação",
+        "etl",
+        "tuning de banco de dados"
+      ],
+      "faq": [
+        {
+          "q": "O que faz um DBA e o curso prepara para isso?",
+          "a": "Um DBA (administrador de banco de dados) cuida de arquitetura, usuários, segurança, backup, recuperação e performance da base. Esses são exatamente os módulos centrais do curso, que vai do básico ao avançado nessas frentes."
+        },
+        {
+          "q": "Preciso saber SQL antes de começar?",
+          "a": "Não é obrigatório. O curso parte dos conceitos de SGBD e evolui até consultas avançadas e álgebra relacional. Quem já escreve SQL no dia a dia aproveita mais rápido a parte de performance e ETL."
+        },
+        {
+          "q": "Qual banco é usado nas aulas?",
+          "a": "MySQL como base prática, mas os fundamentos — arquiteturas, dicionário de dados, controle de acesso, backup, tuning, álgebra relacional — se aplicam a qualquer SGBD relacional, incluindo PostgreSQL, SQL Server e Oracle."
+        },
+        {
+          "q": "O curso cobre ETL e análise de dados?",
+          "a": "Sim. O módulo final trata de ETL (extração, transformação e carga), que é a ponte entre administração de banco e projetos de dados. Para seguir por esse caminho, o curso de Mineração de Dados é a continuação natural."
+        },
+        {
+          "q": "Serve para faculdade ou só para o mercado?",
+          "a": "Serve para os dois. O conteúdo acompanha a ementa de disciplinas de banco de dados e administração de dados da graduação, com o recorte prático de quem administra bases em produção."
+        }
+      ],
+      "platforms": {
+        "udemy": "https://www.udemy.com/course/administracao-de-banco-de-dados/?referralCode=5D4996FBA2F0F1548E37",
+        "udemyCanonical": "https://www.udemy.com/course/administracao-de-banco-de-dados/",
+        "hotmart": "https://go.hotmart.com/F101261137X"
+      },
+      "affiliate": "https://app-vlc.hotmart.com/affiliate-recruiting/view/8012A101261158",
+      "image": "assets/img/curso-administracao-de-banco-de-dados.webp",
+      "imageWidth": 1200,
+      "imageHeight": 675,
+      "imageAlt": "Curso de Administração de Banco de Dados",
+      "related": ["mineracao-de-dados", "desenvolvimento-web", "logica-de-programacao"],
+      "relatedContent": [
+        {
+          "label": "Scalable Product Import System — pipeline de importação de dados (GitHub)",
+          "url": "https://github.com/jacksonn455/Scalable-Product-Import-System"
+        },
+        {
+          "label": "Pós-graduação em Administração de Banco de Dados",
+          "url": "https://jacksonmagnabosco.dev/#education"
+        }
+      ]
+    },
+    {
+      "slug": "mineracao-de-dados",
+      "name": "Mineração de Dados com KDD, Python, R e Google Colab",
+      "shortName": "Mineração de Dados",
+      "alternateName": "Formação Cientista de Dados: Mineração, Big Data, Python",
+      "h1": "Curso de Mineração de Dados com KDD, Python, R e Google Colab",
+      "metaTitle": "Curso de Mineração de Dados: KDD, Python, R e WEKA",
+      "metaDescription": "Curso de mineração de dados em português: processo KDD, seleção e pré-processamento, WEKA na prática, análises com Python, R e Google Colab e casos reais de mercado.",
+      "summary": "Curso de mineração de dados centrado no processo de KDD (Knowledge Discovery in Databases). Cobre fundamentos de data mining, as etapas de seleção e pré-processamento de dados, uso prático do WEKA e análises com Python, R e Google Colab, aplicados a casos reais de mercado.",
+      "intro": [
+        "Mineração de dados não é rodar um modelo: é um processo. O KDD — Knowledge Discovery in Databases — define as etapas que transformam dados brutos em conhecimento aproveitável, e a maior parte do esforço real acontece antes do algoritmo, na seleção e no pré-processamento dos dados.",
+        "É por aí que o curso trabalha. Você aprende os fundamentos de data mining e cada fase do KDD, coloca a mão no WEKA para experimentar técnicas sem escrever código, e depois parte para análises com Python, R e Google Colab — sem instalar nada pesado na máquina. O fechamento é com casos reais de mercado, para conectar técnica e decisão."
+      ],
+      "level": "Iniciante a intermediário",
+      "category": "Ciência de dados",
+      "technologies": ["Python", "R", "Google Colab", "WEKA", "KDD", "Pré-processamento de dados"],
+      "objectives": [
+        "Entender os fundamentos de data mining e onde ele se encaixa em projetos de dados",
+        "Percorrer todas as etapas do processo de KDD",
+        "Selecionar e pré-processar dados — limpeza, transformação e preparação",
+        "Usar o WEKA para aplicar técnicas de mineração na prática",
+        "Fazer análises com Python, R e Google Colab",
+        "Interpretar resultados e ligá-los a decisões estratégicas, com casos reais de mercado"
+      ],
+      "syllabus": [
+        "Fundamentos de data mining",
+        "Processo de KDD (Knowledge Discovery in Databases)",
+        "Seleção e pré-processamento de dados",
+        "WEKA na prática",
+        "Análises com Python, R e Google Colab",
+        "Casos reais do mercado"
+      ],
+      "audience": [
+        "Quem quer entrar em ciência de dados pelo caminho do processo, não só das ferramentas",
+        "Estudantes de computação, estatística e engenharias",
+        "Analistas que já trabalham com dados e querem método",
+        "Profissionais que precisam extrair padrões de bases existentes"
+      ],
+      "prerequisites": [
+        "Lógica de programação básica ajuda nas partes de Python e R",
+        "Nenhuma instalação complexa: o Google Colab roda no navegador",
+        "Noções de estatística descritiva são úteis, mas não obrigatórias"
+      ],
+      "keywords": [
+        "curso de mineração de dados",
+        "kdd",
+        "data mining em português",
+        "weka",
+        "python para dados",
+        "r",
+        "google colab",
+        "cientista de dados"
+      ],
+      "faq": [
+        {
+          "q": "O que é KDD e qual a diferença em relação a data mining?",
+          "a": "KDD (Knowledge Discovery in Databases) é o processo completo de descoberta de conhecimento, com etapas de seleção, pré-processamento, transformação, mineração e interpretação. A mineração de dados é uma dessas etapas. O curso ensina o processo inteiro, e não apenas a etapa do algoritmo."
+        },
+        {
+          "q": "Preciso saber Python ou R para acompanhar?",
+          "a": "Ajuda, mas não é pré-requisito. O curso começa pelos fundamentos e pelo WEKA, que permite aplicar técnicas de mineração sem programar. As análises em Python e R vêm depois, no Google Colab, que roda direto no navegador."
+        },
+        {
+          "q": "Por que o curso usa WEKA, Python e R em vez de uma ferramenta só?",
+          "a": "Porque cada um mostra uma faceta. O WEKA deixa o conceito visível sem código; o Python é o padrão de mercado; o R é forte na parte estatística. Ver a mesma técnica nas três ferramentas fixa o conceito em vez da sintaxe."
+        },
+        {
+          "q": "Por que tanto tempo em pré-processamento?",
+          "a": "Porque é onde o projeto real se ganha ou se perde. Dado faltante, escala inconsistente e ruído derrubam qualquer modelo, por bom que seja. Seleção e pré-processamento têm módulo próprio por esse motivo."
+        },
+        {
+          "q": "Este curso combina com o de banco de dados?",
+          "a": "Combina diretamente. O curso de Administração de Banco de Dados termina em ETL, que é justamente a etapa que alimenta um projeto de mineração. Fazer os dois na sequência cobre o caminho do dado bruto até o conhecimento."
+        }
+      ],
+      "platforms": {
+        "udemy": "https://www.udemy.com/course/mineracao-de-dados-com-kdd-python-r-e-google-colab/?referralCode=4E0552A025380F1E4FCD",
+        "udemyCanonical": "https://www.udemy.com/course/mineracao-de-dados-com-kdd-python-r-e-google-colab/",
+        "hotmart": "https://go.hotmart.com/W101237143Q"
+      },
+      "affiliate": "https://app-vlc.hotmart.com/affiliate-recruiting/view/6838F101237164",
+      "image": "assets/img/curso-mineracao-de-dados.webp",
+      "imageWidth": 1200,
+      "imageHeight": 600,
+      "imageAlt": "Curso de Mineração de Dados com KDD, Python, R e Google Colab",
+      "related": [
+        "administracao-de-banco-de-dados",
+        "engenharia-de-prompt",
+        "logica-de-programacao"
+      ],
+      "relatedContent": [
+        {
+          "label": "Artigo científico publicado no Brazilian Journal of Technology",
+          "url": "https://doi.org/10.38152/bjtv8n3-002"
+        },
+        {
+          "label": "Currículo Lattes com produção acadêmica",
+          "url": "http://lattes.cnpq.br/4613856780210407"
+        }
+      ]
+    },
+    {
+      "slug": "design-de-interfaces",
+      "name": "Design de Interfaces, Usabilidade e Experiência do Usuário",
+      "shortName": "Design de Interfaces",
+      "alternateName": "Design de Interfaces: Usabilidade e Experiência do Usuário",
+      "h1": "Curso de Design de Interfaces, Usabilidade e Experiência do Usuário",
+      "metaTitle": "Curso de Design de Interfaces, Usabilidade e UX (IHC)",
+      "metaDescription": "Curso de IHC em português: paradigmas de interação, affordance, acessibilidade, comunicabilidade, prototipação, modelagem, usabilidade, UX e avaliação de interfaces.",
+      "summary": "Curso de Interação Humano-Computador (IHC) que percorre dos fundamentos às técnicas avançadas de design de interfaces. Cobre estilos e paradigmas de interação, interface, interação e affordance, acessibilidade e comunicabilidade, levantamento de requisitos e coleta de dados, prototipação, modelagem de interfaces, design com usuários, usabilidade, experiência do usuário, avaliação em IHC e processos de design.",
+      "intro": [
+        "Interface bonita e interface boa não são a mesma coisa. O que separa as duas é IHC — Interação Humano-Computador — a disciplina que estuda como as pessoas realmente usam sistemas, e que dá o vocabulário e os métodos para projetar com base em evidência em vez de gosto pessoal.",
+        "O curso faz essa jornada completa: começa nos fundamentos e nos paradigmas de interação, trata de affordance, acessibilidade e comunicabilidade, passa por levantamento de requisitos e coleta de dados com usuários, avança para prototipação e modelagem de interfaces, e chega a usabilidade, experiência do usuário, métodos de avaliação e processos de design de IHC."
+      ],
+      "level": "Iniciante a intermediário",
+      "category": "UX e Interação Humano-Computador",
+      "technologies": [
+        "IHC",
+        "Usabilidade",
+        "UX",
+        "Acessibilidade",
+        "Prototipação",
+        "Avaliação heurística"
+      ],
+      "objectives": [
+        "Dominar os fundamentos de IHC e os estilos e paradigmas de interação",
+        "Diferenciar interface, interação e affordance no projeto de um sistema",
+        "Projetar com acessibilidade e comunicabilidade desde o início",
+        "Levantar requisitos e coletar dados junto dos usuários",
+        "Prototipar e modelar interfaces antes de escrever código",
+        "Avaliar usabilidade e experiência do usuário com métodos de IHC",
+        "Conduzir um processo de design centrado no usuário de ponta a ponta"
+      ],
+      "syllabus": [
+        "Introdução à IHC",
+        "Estilos e paradigmas de interação",
+        "Interface, interação e affordance",
+        "Acessibilidade e comunicabilidade",
+        "Requisitos e coleta de dados",
+        "Prototipação e concepção",
+        "Modelagem de interfaces",
+        "Design de interfaces com usuários",
+        "Usabilidade e experiência do usuário",
+        "Avaliação em IHC",
+        "Processos de design de IHC I e II"
+      ],
+      "audience": [
+        "Desenvolvedores que querem entregar telas que as pessoas conseguem usar",
+        "Designers que precisam da base teórica de IHC e de métodos de avaliação",
+        "Estudantes de computação e design com disciplina de IHC",
+        "Product owners e analistas que decidem sobre interfaces"
+      ],
+      "prerequisites": [
+        "Nenhum pré-requisito técnico",
+        "Não é necessário saber programar nem dominar ferramentas de design",
+        "Um computador com acesso à internet"
+      ],
+      "keywords": [
+        "curso de ihc",
+        "design de interfaces",
+        "usabilidade",
+        "experiência do usuário",
+        "ux em português",
+        "acessibilidade",
+        "prototipação"
+      ],
+      "faq": [
+        {
+          "q": "Este curso é de UX ou de IHC?",
+          "a": "De IHC, que é a base científica de onde o UX vem. Usabilidade e experiência do usuário são módulos do curso, tratados com os métodos e o vocabulário de Interação Humano-Computador — inclusive avaliação, que é o que falta na maioria dos cursos de UX."
+        },
+        {
+          "q": "Preciso saber usar Figma ou outra ferramenta de design?",
+          "a": "Não. O foco é o raciocínio de projeto: paradigmas de interação, affordance, requisitos, prototipação, modelagem e avaliação. Esses conceitos valem em qualquer ferramenta, do papel ao Figma."
+        },
+        {
+          "q": "O que é affordance e por que isso importa?",
+          "a": "Affordance é a propriedade de um elemento que sugere como ele deve ser usado — um botão que parece clicável, uma alça que pede para ser puxada. É um dos conceitos centrais do curso porque explica por que interfaces falham mesmo quando estão visualmente bonitas."
+        },
+        {
+          "q": "Acessibilidade é tratada de verdade ou só citada?",
+          "a": "Tem módulo próprio, junto de comunicabilidade. Acessibilidade entra como requisito de projeto desde a concepção, e não como correção depois que o sistema já está pronto."
+        },
+        {
+          "q": "Serve para quem programa?",
+          "a": "Serve, e bastante. Quem desenvolve toma dezenas de decisões de interface por semana. Ter os critérios de usabilidade e os métodos de avaliação muda a qualidade dessas decisões — e combina diretamente com o curso de Desenvolvimento Web."
+        }
+      ],
+      "platforms": {
+        "udemy": "https://www.udemy.com/course/design-de-interfaces-usabilidade-e-experiencia-do-usuario/?referralCode=008977C1440E40D2B09F",
+        "udemyCanonical": "https://www.udemy.com/course/design-de-interfaces-usabilidade-e-experiencia-do-usuario/",
+        "hotmart": "https://go.hotmart.com/U101226734S"
+      },
+      "affiliate": "https://app-vlc.hotmart.com/affiliate-recruiting/view/0968D101226755",
+      "image": "assets/img/curso-design-de-interfaces.webp",
+      "imageWidth": 1200,
+      "imageHeight": 675,
+      "imageAlt": "Curso de Design de Interfaces, Usabilidade e Experiência do Usuário",
+      "related": [
+        "desenvolvimento-web",
+        "logica-de-programacao",
+        "posicionamento-profissional-global"
+      ],
+      "relatedContent": [
+        {
+          "label": "Portfólio de interfaces, sites e sistemas",
+          "url": "https://jacksonmagnabosco.dev/#portfolio"
+        },
+        {
+          "label": "Certificações de acessibilidade e usabilidade",
+          "url": "https://jacksonmagnabosco.dev/#education"
+        }
+      ]
+    },
+    {
+      "slug": "internet-das-coisas",
+      "name": "Internet das Coisas: Fundamentos e Aplicações",
+      "shortName": "Internet das Coisas (IoT)",
+      "alternateName": "Internet das Coisas: Fundamentos e Aplicações",
+      "h1": "Curso de Internet das Coisas (IoT): Fundamentos e Aplicações",
+      "metaTitle": "Curso de Internet das Coisas (IoT): MQTT, Sensores e WoT",
+      "metaDescription": "Curso de IoT em português: sensores e atuadores, modelos arquiteturais, protocolo MQTT, middleware, objetos inteligentes, sistemas embarcados, segurança, WoT e nuvem.",
+      "summary": "Curso de Internet das Coisas que vai da história e evolução da IoT às aplicações reais. Cobre fundamentos técnicos com sensores, atuadores e modelos arquiteturais, protocolos de comunicação como MQTT, middleware de IoT, objetos inteligentes, sistemas operacionais embarcados, aplicações em cidades inteligentes, automação industrial e saúde, segurança e privacidade, Web of Things e integração com computação em nuvem.",
+      "intro": [
+        "IoT é frequentemente reduzida a \"conectar um sensor à internet\". O trabalho de verdade está nas camadas entre o sensor e a decisão: qual modelo arquitetural usar, qual protocolo aguenta milhares de dispositivos com pouca banda, onde entra o middleware, como o objeto se torna inteligente, e como nada disso vira uma porta de entrada para invasão.",
+        "O curso trata dessas camadas na ordem. Começa pela história e evolução da IoT e pelos fundamentos técnicos — sensores, atuadores e modelos arquiteturais —, passa por protocolos de comunicação com foco em MQTT, middleware, objetos inteligentes e sistemas operacionais embarcados, e chega a aplicações reais em cidades inteligentes, automação industrial e saúde, além de segurança e privacidade, Web of Things e integração com nuvem e web services."
+      ],
+      "level": "Iniciante a intermediário",
+      "category": "Internet das Coisas e sistemas embarcados",
+      "technologies": [
+        "MQTT",
+        "Sensores e atuadores",
+        "Middleware IoT",
+        "Sistemas embarcados",
+        "Web of Things",
+        "Cloud computing"
+      ],
+      "objectives": [
+        "Entender a história, a evolução e os modelos arquiteturais da IoT",
+        "Trabalhar com sensores, atuadores e os fundamentos técnicos de aquisição de dados",
+        "Aplicar protocolos de comunicação de IoT, com foco em MQTT",
+        "Entender o papel do middleware e dos objetos inteligentes",
+        "Conhecer sistemas operacionais embarcados",
+        "Analisar aplicações reais: cidades inteligentes, automação industrial e saúde",
+        "Tratar segurança e privacidade em dispositivos conectados",
+        "Integrar IoT com Web of Things, computação em nuvem e web services"
+      ],
+      "syllabus": [
+        "História e evolução da IoT",
+        "Fundamentos técnicos: sensores, atuadores e modelos arquiteturais",
+        "Protocolos de comunicação e MQTT",
+        "Middleware de IoT",
+        "Objetos inteligentes",
+        "Sistemas operacionais embarcados",
+        "Aplicações reais: cidades inteligentes, automação industrial e saúde",
+        "Segurança e privacidade",
+        "Web of Things (WoT)",
+        "Computação em nuvem e web services"
+      ],
+      "audience": [
+        "Desenvolvedores que querem entrar em projetos de hardware conectado",
+        "Estudantes de computação, engenharia elétrica, eletrônica e mecatrônica",
+        "Profissionais de automação industrial buscando a camada de software",
+        "Quem quer entender IoT antes de escolher plataforma e hardware"
+      ],
+      "prerequisites": [
+        "Noções de lógica de programação e de redes ajudam",
+        "Não é obrigatório ter hardware para acompanhar o conteúdo conceitual",
+        "Um computador com acesso à internet"
+      ],
+      "keywords": [
+        "curso de internet das coisas",
+        "curso iot em português",
+        "mqtt",
+        "sensores e atuadores",
+        "sistemas embarcados",
+        "web of things",
+        "cidades inteligentes"
+      ],
+      "faq": [
+        {
+          "q": "Preciso comprar Arduino, ESP8266 ou algum kit para fazer o curso?",
+          "a": "Não para acompanhar o conteúdo: fundamentos, arquitetura, protocolos, middleware, segurança e WoT são tratados de forma que você entenda o projeto inteiro. Ter hardware em mãos naturalmente enriquece a experiência, mas não é condição para aprender."
+        },
+        {
+          "q": "Por que o MQTT recebe destaque entre os protocolos?",
+          "a": "Porque é o protocolo dominante em IoT: leve, baseado em publicação/assinatura e projetado para redes instáveis e dispositivos com pouca memória — exatamente o cenário de um sensor em campo."
+        },
+        {
+          "q": "O que é Web of Things e como difere de IoT?",
+          "a": "A IoT conecta dispositivos; a Web of Things expõe esses dispositivos como recursos web, com URLs e APIs, para que sistemas conversem com eles usando os padrões da web. O curso tem um módulo dedicado a essa camada."
+        },
+        {
+          "q": "O curso trata segurança em IoT?",
+          "a": "Sim, com módulo próprio de segurança e privacidade. É um tema central porque dispositivos conectados costumam ser o elo mais fraco de uma rede, e frequentemente ficam anos sem atualização."
+        },
+        {
+          "q": "Existe algum projeto real de IoT do instrutor para eu ver?",
+          "a": "Sim. A automação de cervejaria com ESP8266 e sensores de temperatura rendeu um artigo publicado no Brazilian Journal of Technology, e o código e os vídeos dos projetos de IoT estão no portfólio e no GitHub — todos linkados abaixo."
+        }
+      ],
+      "platforms": {
+        "udemy": "https://www.udemy.com/course/internet-das-coisas-fundamentos/?referralCode=210B6283B33375D328C1",
+        "udemyCanonical": "https://www.udemy.com/course/internet-das-coisas-fundamentos/",
+        "hotmart": "https://go.hotmart.com/Y101238939C"
+      },
+      "affiliate": "https://app-vlc.hotmart.com/affiliate-recruiting/view/7676I101238960",
+      "image": "assets/img/curso-internet-das-coisas.webp",
+      "imageWidth": 1200,
+      "imageHeight": 675,
+      "imageAlt": "Curso de Internet das Coisas: Fundamentos e Aplicações",
+      "related": ["administracao-de-banco-de-dados", "desenvolvimento-web", "mineracao-de-dados"],
+      "relatedContent": [
+        {
+          "label": "Automação de Cervejaria com ESP8266 — código no GitHub",
+          "url": "https://github.com/jacksonn455/automacao-cervejaria"
+        },
+        {
+          "label": "Armários Inteligentes (Biccateca) — projeto de IoT no GitHub",
+          "url": "https://github.com/jacksonn455/armarios_inteligentes_biccateca"
+        },
+        {
+          "label": "Artigo publicado sobre automação com IoT (DOI)",
+          "url": "https://doi.org/10.38152/bjtv8n3-002"
+        }
+      ]
+    },
+    {
+      "slug": "etica-e-legislacao-profissional",
+      "name": "Ética e Legislação Profissional",
+      "shortName": "Ética e Legislação Profissional",
+      "alternateName": "Ética Profissional em Tecnologia da Informação",
+      "h1": "Curso de Ética e Legislação Profissional em Tecnologia da Informação",
+      "metaTitle": "Curso de Ética e Legislação Profissional em TI (LGPD)",
+      "metaDescription": "Curso de ética profissional em TI: direitos e deveres, LGPD, Marco Civil da Internet, propriedade intelectual, crimes digitais, segurança, privacidade e dilemas éticos.",
+      "summary": "Curso de ética e legislação profissional voltado à área de tecnologia da informação. Cobre os fundamentos da ética profissional em TI, direitos e deveres dos profissionais, Lei Geral de Proteção de Dados (LGPD), Marco Civil da Internet, propriedade intelectual e crimes digitais, segurança cibernética e privacidade, dilemas éticos na computação e análise de casos e jurisprudências.",
+      "intro": [
+        "Quem trabalha com tecnologia toma decisões com consequências legais quase todo dia: que dado guardar, por quanto tempo, quem pode acessar, o que fazer diante de um vazamento, se aquele trecho de código pode ser reaproveitado. Errar nessas escolhas custa caro — para a empresa e para a carreira de quem assinou embaixo.",
+        "O curso organiza esse terreno. Começa pelos fundamentos da ética profissional em TI e pelos direitos e deveres do profissional, entra na legislação brasileira que mais afeta o setor — LGPD e Marco Civil da Internet —, trata de propriedade intelectual e crimes digitais, segurança cibernética e privacidade, e fecha com dilemas éticos da computação analisados sobre casos concretos e jurisprudências."
+      ],
+      "level": "Todos os níveis",
+      "category": "Ética, direito digital e conformidade",
+      "technologies": [
+        "LGPD",
+        "Marco Civil da Internet",
+        "Propriedade intelectual",
+        "Privacidade",
+        "Segurança cibernética",
+        "Compliance"
+      ],
+      "objectives": [
+        "Entender os fundamentos da ética profissional aplicada à TI",
+        "Conhecer os direitos e deveres do profissional de tecnologia",
+        "Aplicar a LGPD no dia a dia de projetos que tratam dados pessoais",
+        "Entender o Marco Civil da Internet e seus efeitos práticos",
+        "Lidar com propriedade intelectual, licenças e crimes digitais",
+        "Relacionar segurança cibernética, privacidade e responsabilidade profissional",
+        "Analisar dilemas éticos da computação com base em casos reais e jurisprudências"
+      ],
+      "syllabus": [
+        "Fundamentos da ética profissional em TI",
+        "Direitos e deveres dos profissionais de TI",
+        "Lei Geral de Proteção de Dados (LGPD)",
+        "Marco Civil da Internet",
+        "Propriedade intelectual e crimes digitais",
+        "Segurança cibernética e privacidade",
+        "Dilemas éticos na computação",
+        "Análise de casos e jurisprudências"
+      ],
+      "audience": [
+        "Profissionais de TI que lidam com dados pessoais e precisam entender a LGPD",
+        "Estudantes de computação com disciplina de ética e legislação",
+        "Líderes técnicos e gestores responsáveis por decisões de conformidade",
+        "Quem presta serviço como PJ e precisa entender direitos, deveres e licenças"
+      ],
+      "prerequisites": [
+        "Nenhum pré-requisito técnico ou jurídico",
+        "Não é necessário saber programar",
+        "Um computador com acesso à internet"
+      ],
+      "keywords": [
+        "curso de ética profissional em ti",
+        "legislação profissional",
+        "curso lgpd",
+        "marco civil da internet",
+        "crimes digitais",
+        "propriedade intelectual",
+        "privacidade de dados"
+      ],
+      "faq": [
+        {
+          "q": "O curso é jurídico ou voltado a quem trabalha com tecnologia?",
+          "a": "É voltado a quem trabalha com tecnologia. A legislação aparece pelo ângulo prático de quem desenvolve, administra bases de dados e toma decisões técnicas — não pelo ângulo da formação em Direito."
+        },
+        {
+          "q": "A LGPD é tratada com profundidade?",
+          "a": "Sim, com módulo próprio, e conectada aos temas vizinhos: Marco Civil da Internet, segurança cibernética e privacidade. A ideia é que você saiba o que a lei exige de um sistema real, não apenas o que ela diz no texto."
+        },
+        {
+          "q": "Preciso saber programar para acompanhar?",
+          "a": "Não. O conteúdo é acessível para qualquer pessoa que atue ou pretenda atuar em tecnologia, incluindo perfis de gestão, produto, dados e suporte."
+        },
+        {
+          "q": "O curso serve para disciplina de faculdade?",
+          "a": "Serve. O conteúdo acompanha ementas de Ética e Legislação Profissional dos cursos de computação, com o acréscimo da análise de casos e jurisprudências."
+        },
+        {
+          "q": "Por que um engenheiro de software dá um curso de ética e legislação?",
+          "a": "Porque é quem sente o efeito prático da lei. Além da atuação como engenheiro de software sênior, sou professor de Ciência da Computação e ministrei essa disciplina na graduação — o curso nasceu desse material de sala de aula."
+        }
+      ],
+      "platforms": {
+        "udemy": "https://www.udemy.com/course/etica-e-legislacao-profissional/?referralCode=46488AD7D5714AB19E0C",
+        "udemyCanonical": "https://www.udemy.com/course/etica-e-legislacao-profissional/",
+        "hotmart": "https://go.hotmart.com/W101223357W"
+      },
+      "affiliate": "https://app-vlc.hotmart.com/affiliate-recruiting/view/9996%C3%89101223378",
+      "image": "assets/img/curso-etica-e-legislacao-profissional.webp",
+      "imageWidth": 1200,
+      "imageHeight": 675,
+      "imageAlt": "Curso de Ética e Legislação Profissional em Tecnologia",
+      "related": [
+        "administracao-de-banco-de-dados",
+        "posicionamento-profissional-global",
+        "internet-das-coisas"
+      ],
+      "relatedContent": [
+        {
+          "label": "Experiência docente em Ciência da Computação (URI Erechim)",
+          "url": "https://jacksonmagnabosco.dev/#experience"
+        },
+        {
+          "label": "Formação e certificações, incluindo Veracode (segurança)",
+          "url": "https://jacksonmagnabosco.dev/#education"
+        }
+      ]
+    },
+    {
+      "slug": "engenharia-de-prompt",
+      "name": "Inteligência Artificial na Prática: Engenharia de Prompt",
+      "shortName": "Engenharia de Prompt",
+      "alternateName": "Inteligência Artificial na Prática: Engenharia de Prompt",
+      "h1": "Curso de Engenharia de Prompt: Inteligência Artificial na Prática",
+      "metaTitle": "Curso de Engenharia de Prompt e IA Generativa na Prática",
+      "metaDescription": "Curso de engenharia de prompt em português: como a IA generativa funciona e como escrever prompts com contexto, papel e critérios que geram resultado no trabalho.",
+      "summary": "Curso de engenharia de prompt focado em uso profissional de IA generativa. Você entende como esses modelos funcionam por dentro e aprende a projetar prompts com contexto, papel, formato e critérios de qualidade para resolver problemas reais de trabalho, em vez de improvisar pedido por pedido.",
+      "intro": [
+        "A diferença entre alguém que \"usa o ChatGPT\" e alguém que extrai trabalho de verdade de um modelo de linguagem quase nunca é a ferramenta — é o pedido. Prompt bem construído carrega contexto, define papel, delimita formato e diz explicitamente o que conta como boa resposta.",
+        "O curso ataca os dois lados disso. Primeiro o funcionamento da IA generativa, porque entender como o modelo produz texto explica por que certos prompts falham de forma previsível. Depois a prática: montar prompts para aplicações reais do dia a dia profissional, iterar sobre resultados ruins e reconhecer os limites do que essas ferramentas conseguem fazer com confiabilidade."
+      ],
+      "level": "Iniciante",
+      "category": "Inteligência artificial",
+      "technologies": [
+        "IA generativa",
+        "Modelos de linguagem (LLMs)",
+        "Engenharia de prompt",
+        "Produtividade com IA"
+      ],
+      "objectives": [
+        "Entender como a IA generativa funciona e por que ela erra do jeito que erra",
+        "Estruturar prompts com contexto, papel, formato e critérios de qualidade",
+        "Projetar prompts para aplicações reais do trabalho, não exemplos de brincadeira",
+        "Iterar sobre respostas insatisfatórias com método, e não por tentativa e erro",
+        "Reconhecer os limites e os riscos de confiar em modelos de linguagem"
+      ],
+      "syllabus": [
+        "Como funciona a IA generativa",
+        "Anatomia de um prompt eficaz: contexto, papel, formato e critérios",
+        "Prompts aplicados a problemas reais de trabalho",
+        "Refinamento e iteração de prompts",
+        "Limites, riscos e uso responsável de IA generativa"
+      ],
+      "audience": [
+        "Profissionais de qualquer área que querem usar IA com método no trabalho",
+        "Desenvolvedores que usam assistentes de código e querem melhores resultados",
+        "Estudantes que precisam usar IA sem terceirizar o próprio raciocínio",
+        "Quem já testou ferramentas de IA e achou os resultados genéricos"
+      ],
+      "prerequisites": [
+        "Nenhum conhecimento técnico prévio",
+        "Não é necessário saber programar",
+        "Acesso a uma ferramenta de IA generativa para praticar"
+      ],
+      "keywords": [
+        "curso de engenharia de prompt",
+        "prompt engineering em português",
+        "inteligência artificial na prática",
+        "ia generativa",
+        "chatgpt para profissionais",
+        "produtividade com ia"
+      ],
+      "faq": [
+        {
+          "q": "Preciso saber programar para fazer o curso?",
+          "a": "Não. Engenharia de prompt é uma habilidade de comunicação e estruturação de problema. O curso é feito para funcionar tanto para quem programa quanto para quem nunca escreveu código."
+        },
+        {
+          "q": "Por que estudar como a IA funciona, se eu só quero usar melhor?",
+          "a": "Porque as falhas dos modelos são previsíveis quando você entende o mecanismo. Saber por que um modelo inventa uma referência ou perde o fio em um texto longo é o que permite escrever o prompt que evita o problema, em vez de tentar de novo até dar certo."
+        },
+        {
+          "q": "O curso é preso a uma ferramenta específica?",
+          "a": "Não. Os princípios — contexto, papel, formato, critérios de qualidade, iteração — se aplicam a qualquer assistente de IA generativa, o que também protege o conteúdo da troca constante de ferramentas do mercado."
+        },
+        {
+          "q": "Este curso está disponível na Hotmart?",
+          "a": "Ainda não: no momento ele é vendido apenas na Udemy. Sete dos cursos do catálogo já estão nas duas plataformas e são os que fazem parte do programa de afiliados com 40% de comissão."
+        },
+        {
+          "q": "Qual é a experiência do instrutor com IA?",
+          "a": "Atuo como engenheiro de software sênior com experiência em treinamento e avaliação de agentes de codificação, além de lecionar Ciência da Computação. A experiência com aplicação profissional de IA vem desse trabalho, não apenas de uso pessoal de ferramentas."
+        }
+      ],
+      "platforms": {
+        "udemy": "https://www.udemy.com/course/inteligencia-artificial-na-pratica-engenharia-de-prompt/?referralCode=55301FF4742C770BD1D2",
+        "udemyCanonical": "https://www.udemy.com/course/inteligencia-artificial-na-pratica-engenharia-de-prompt/",
+        "hotmart": null
+      },
+      "affiliate": null,
+      "image": "assets/img/curso-engenharia-de-prompt.webp",
+      "imageWidth": 1200,
+      "imageHeight": 675,
+      "imageAlt": "Curso de Engenharia de Prompt e Inteligência Artificial na Prática",
+      "related": [
+        "mineracao-de-dados",
+        "posicionamento-profissional-global",
+        "desenvolvimento-web"
+      ],
+      "relatedContent": [
+        {
+          "label": "Experiência com treinamento de agentes de codificação",
+          "url": "https://jacksonmagnabosco.dev/#experience"
+        },
+        {
+          "label": "Artigos técnicos no Medium",
+          "url": "https://medium.com/@jacksonn455"
+        }
+      ]
+    },
+    {
+      "slug": "posicionamento-profissional-global",
+      "name": "Construa Seu Perfil Profissional Global",
+      "shortName": "Posicionamento Profissional Global",
+      "alternateName": "Posicionamento Profissional Global",
+      "h1": "Curso de Posicionamento Profissional Global: Currículo e LinkedIn",
+      "metaTitle": "Curso de Posicionamento Profissional Global: CV e LinkedIn",
+      "metaDescription": "Curso para posicionar currículo e LinkedIn em processos remotos e internacionais: como se apresentar, o que priorizar no perfil e como se destacar em vagas globais.",
+      "summary": "Curso sobre como posicionar currículo e LinkedIn para processos seletivos remotos e internacionais. O foco é a diferença entre o perfil que funciona no mercado local e o que é avaliado por empresas de fora: como descrever experiência, o que priorizar e como se destacar em uma seleção global.",
+      "intro": [
+        "Currículo bom para vaga local e currículo bom para vaga internacional não são o mesmo documento. Muda o que se destaca, muda o vocabulário, muda a forma de descrever resultado — e muda o que o recrutador do outro lado do mundo procura nos primeiros segundos de leitura.",
+        "O curso trata dessa tradução. Como estruturar currículo e LinkedIn para processos remotos e internacionais, como descrever experiência em termos de impacto, o que priorizar em um perfil que competirá com candidatos de vários países, e como se posicionar para ser encontrado por quem contrata fora do Brasil."
+      ],
+      "level": "Todos os níveis",
+      "category": "Carreira em tecnologia",
+      "technologies": [
+        "LinkedIn",
+        "Currículo internacional",
+        "Personal branding",
+        "Processos seletivos remotos"
+      ],
+      "objectives": [
+        "Estruturar um currículo voltado a processos internacionais e remotos",
+        "Posicionar o perfil do LinkedIn para ser encontrado por quem contrata fora do país",
+        "Descrever experiência em termos de impacto e resultado",
+        "Priorizar o que realmente pesa em uma avaliação global",
+        "Preparar-se para competir em seleções com candidatos de vários países"
+      ],
+      "syllabus": [
+        "O que muda entre o mercado local e o internacional",
+        "Estrutura de um currículo para processos globais",
+        "Otimização do perfil no LinkedIn",
+        "Como descrever experiência por impacto",
+        "Posicionamento e visibilidade para recrutadores internacionais"
+      ],
+      "audience": [
+        "Profissionais de tecnologia que buscam vagas remotas internacionais",
+        "Quem envia muitas candidaturas e não recebe resposta",
+        "Pessoas em transição de carreira que precisam recontar a própria trajetória",
+        "Estudantes e recém-formados montando o primeiro perfil profissional"
+      ],
+      "prerequisites": [
+        "Nenhum pré-requisito",
+        "Ter alguma experiência ou formação para organizar no perfil ajuda",
+        "Um computador com acesso à internet"
+      ],
+      "keywords": [
+        "curso de currículo internacional",
+        "posicionamento profissional",
+        "linkedin para vagas internacionais",
+        "trabalho remoto internacional",
+        "carreira em tecnologia",
+        "vaga no exterior"
+      ],
+      "faq": [
+        {
+          "q": "O curso é só para quem trabalha com tecnologia?",
+          "a": "O recorte principal é tecnologia, área em que atuo e contrato remoto internacional é mais comum. Mas a estrutura — descrever impacto, priorizar informação, posicionar perfil — funciona para qualquer profissional que dispute vagas remotas."
+        },
+        {
+          "q": "Preciso falar inglês fluente?",
+          "a": "O curso é em português e trata do posicionamento do perfil, não de ensinar idioma. Inglês é um requisito real da maioria dessas vagas, e o curso ajuda a apresentar seu nível de forma honesta e vantajosa."
+        },
+        {
+          "q": "O que muda de fato em um currículo internacional?",
+          "a": "Muda o que ganha destaque: resultado mensurável na frente, contexto de escala, tecnologias com o nome usado no mercado global e uma descrição de experiência que faz sentido para quem não conhece as empresas brasileiras do seu histórico."
+        },
+        {
+          "q": "Este curso está na Hotmart?",
+          "a": "Ainda não, apenas na Udemy. Os sete cursos que estão nas duas plataformas são os que participam do programa de afiliados com 40% de comissão por venda."
+        },
+        {
+          "q": "Que experiência sustenta este curso?",
+          "a": "Atuação em empresas e projetos internacionais como engenheiro de software sênior, incluindo trabalho remoto para fora do Brasil, além da experiência docente. O currículo completo está publicado no site."
+        }
+      ],
+      "platforms": {
+        "udemy": "https://www.udemy.com/course/posicionamento-profissional-global/?referralCode=3D853B90EB0CDEA52C81",
+        "udemyCanonical": "https://www.udemy.com/course/posicionamento-profissional-global/",
+        "hotmart": null
+      },
+      "affiliate": null,
+      "image": "assets/img/curso-posicionamento-profissional-global.webp",
+      "imageWidth": 1200,
+      "imageHeight": 675,
+      "imageAlt": "Curso Construa Seu Perfil Profissional Global",
+      "related": [
+        "engenharia-de-prompt",
+        "etica-e-legislacao-profissional",
+        "design-de-interfaces"
+      ],
+      "relatedContent": [
+        {
+          "label": "Currículo completo em PDF",
+          "url": "https://jacksonmagnabosco.dev/assets/files/jackson-magnabosco-cv.pdf"
+        },
+        {
+          "label": "Perfil no LinkedIn",
+          "url": "https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/"
+        },
+        {
+          "label": "Trajetória profissional detalhada",
+          "url": "https://jacksonmagnabosco.dev/#experience"
+        }
+      ]
+    }
+  ]
+}

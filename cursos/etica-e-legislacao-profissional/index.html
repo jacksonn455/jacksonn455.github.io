@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Curso de Ética e Legislação Profissional em TI (LGPD)</title>
+  <meta name="description" content="Curso de ética profissional em TI: direitos e deveres, LGPD, Marco Civil da Internet, propriedade intelectual, crimes digitais, segurança, privacidade e dilemas éticos.">
+  <meta name="keywords" content="curso de ética profissional em ti, legislação profissional, curso lgpd, marco civil da internet, crimes digitais, propriedade intelectual, privacidade de dados">
+  <meta name="author" content="Jackson Felipe Magnabosco">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://jacksonmagnabosco.dev/cursos/etica-e-legislacao-profissional/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jackson F. Magnabosco">
+  <meta property="og:title" content="Curso de Ética e Legislação Profissional em TI (LGPD)">
+  <meta property="og:description" content="Curso de ética profissional em TI: direitos e deveres, LGPD, Marco Civil da Internet, propriedade intelectual, crimes digitais, segurança, privacidade e dilemas éticos.">
+  <meta property="og:url" content="https://jacksonmagnabosco.dev/cursos/etica-e-legislacao-profissional/">
+  <meta property="og:image" content="https://jacksonmagnabosco.dev/assets/img/curso-etica-e-legislacao-profissional.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="Curso de Ética e Legislação Profissional em Tecnologia">
+  <meta property="og:locale" content="pt_BR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Curso de Ética e Legislação Profissional em TI (LGPD)">
+  <meta name="twitter:description" content="Curso de ética profissional em TI: direitos e deveres, LGPD, Marco Civil da Internet, propriedade intelectual, crimes digitais, segurança, privacidade e dilemas éticos.">
+  <meta name="twitter:image" content="https://jacksonmagnabosco.dev/assets/img/curso-etica-e-legislacao-profissional.webp">
+  <meta name="twitter:image:alt" content="Curso de Ética e Legislação Profissional em Tecnologia">
+
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="../../favicon.ico" sizes="32x32">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+
+  <!-- aplica o tema antes da primeira pintura para nao piscar -->
+  <script>
+    (() => {
+      try {
+        const t = localStorage.getItem('preferredTheme');
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://jacksonmagnabosco.dev/#person",
+      "name": "Jackson Felipe Magnabosco",
+      "alternateName": "Jackson Magnabosco",
+      "url": "https://jacksonmagnabosco.dev/",
+      "image": "https://jacksonmagnabosco.dev/assets/img/perfil.webp",
+      "jobTitle": "Engenheiro de Software Sênior e Professor de Ciência da Computação",
+      "description": "Engenheiro de Software Sênior e Professor de Ciência da Computação. Atua com Node.js, TypeScript, Java e AWS, leciona na graduação e produz cursos online de tecnologia em português.",
+      "knowsLanguage": [
+        "pt-BR",
+        "en"
+      ],
+      "sameAs": [
+        "https://github.com/jacksonn455",
+        "https://www.youtube.com/@JacksonMagnabosco",
+        "https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/",
+        "https://medium.com/@jacksonn455",
+        "https://www.udemy.com/user/jackson-felipe-magnabosco/",
+        "http://lattes.cnpq.br/4613856780210407"
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://jacksonmagnabosco.dev/cursos/etica-e-legislacao-profissional/#course",
+      "name": "Ética e Legislação Profissional",
+      "alternateName": "Ética Profissional em Tecnologia da Informação",
+      "description": "Curso de ética e legislação profissional voltado à área de tecnologia da informação. Cobre os fundamentos da ética profissional em TI, direitos e deveres dos profissionais, Lei Geral de Proteção de Dados (LGPD), Marco Civil da Internet, propriedade intelectual e crimes digitais, segurança cibernética e privacidade, dilemas éticos na computação e análise de casos e jurisprudências.",
+      "url": "https://jacksonmagnabosco.dev/cursos/etica-e-legislacao-profissional/",
+      "image": "https://jacksonmagnabosco.dev/assets/img/curso-etica-e-legislacao-profissional.webp",
+      "inLanguage": "pt-BR",
+      "educationalLevel": "Todos os níveis",
+      "about": "Ética, direito digital e conformidade",
+      "teaches": [
+        "Entender os fundamentos da ética profissional aplicada à TI",
+        "Conhecer os direitos e deveres do profissional de tecnologia",
+        "Aplicar a LGPD no dia a dia de projetos que tratam dados pessoais",
+        "Entender o Marco Civil da Internet e seus efeitos práticos",
+        "Lidar com propriedade intelectual, licenças e crimes digitais",
+        "Relacionar segurança cibernética, privacidade e responsabilidade profissional",
+        "Analisar dilemas éticos da computação com base em casos reais e jurisprudências"
+      ],
+      "coursePrerequisites": [
+        "Nenhum pré-requisito técnico ou jurídico",
+        "Não é necessário saber programar",
+        "Um computador com acesso à internet"
+      ],
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      },
+      "keywords": "curso de ética profissional em ti, legislação profissional, curso lgpd, marco civil da internet, crimes digitais, propriedade intelectual, privacidade de dados",
+      "provider": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "author": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "instructor": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      },
+      "isAccessibleForFree": false,
+      "syllabusSections": [
+        {
+          "@type": "Syllabus",
+          "position": 1,
+          "name": "Fundamentos da ética profissional em TI"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 2,
+          "name": "Direitos e deveres dos profissionais de TI"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 3,
+          "name": "Lei Geral de Proteção de Dados (LGPD)"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 4,
+          "name": "Marco Civil da Internet"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 5,
+          "name": "Propriedade intelectual e crimes digitais"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 6,
+          "name": "Segurança cibernética e privacidade"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 7,
+          "name": "Dilemas éticos na computação"
+        },
+        {
+          "@type": "Syllabus",
+          "position": 8,
+          "name": "Análise de casos e jurisprudências"
+        }
+      ],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "inLanguage": "pt-BR",
+        "instructor": {
+          "@id": "https://jacksonmagnabosco.dev/#person"
+        }
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "category": "Paid",
+          "url": "https://www.udemy.com/course/etica-e-legislacao-profissional/?referralCode=46488AD7D5714AB19E0C",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Udemy",
+            "url": "https://www.udemy.com/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "category": "Paid",
+          "url": "https://go.hotmart.com/W101223357W",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Hotmart",
+            "url": "https://www.hotmart.com/"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://jacksonmagnabosco.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cursos",
+          "item": "https://jacksonmagnabosco.dev/cursos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ética e Legislação Profissional"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O curso é jurídico ou voltado a quem trabalha com tecnologia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É voltado a quem trabalha com tecnologia. A legislação aparece pelo ângulo prático de quem desenvolve, administra bases de dados e toma decisões técnicas — não pelo ângulo da formação em Direito."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A LGPD é tratada com profundidade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, com módulo próprio, e conectada aos temas vizinhos: Marco Civil da Internet, segurança cibernética e privacidade. A ideia é que você saiba o que a lei exige de um sistema real, não apenas o que ela diz no texto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso saber programar para acompanhar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O conteúdo é acessível para qualquer pessoa que atue ou pretenda atuar em tecnologia, incluindo perfis de gestão, produto, dados e suporte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O curso serve para disciplina de faculdade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Serve. O conteúdo acompanha ementas de Ética e Legislação Profissional dos cursos de computação, com o acréscimo da análise de casos e jurisprudências."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que um engenheiro de software dá um curso de ética e legislação?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque é quem sente o efeito prático da lei. Além da atuação como engenheiro de software sênior, sou professor de Ciência da Computação e ministrei essa disciplina na graduação — o curso nasceu desse material de sala de aula."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://jacksonmagnabosco.dev/cursos/etica-e-legislacao-profissional/",
+      "url": "https://jacksonmagnabosco.dev/cursos/etica-e-legislacao-profissional/",
+      "name": "Curso de Ética e Legislação Profissional em TI (LGPD)",
+      "description": "Curso de ética profissional em TI: direitos e deveres, LGPD, Marco Civil da Internet, propriedade intelectual, crimes digitais, segurança, privacidade e dilemas éticos.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://jacksonmagnabosco.dev/#website"
+      },
+      "primaryImageOfPage": "https://jacksonmagnabosco.dev/assets/img/curso-etica-e-legislacao-profissional.webp",
+      "about": {
+        "@id": "https://jacksonmagnabosco.dev/cursos/etica-e-legislacao-profissional/#course"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jacksonmagnabosco.dev/#website",
+      "url": "https://jacksonmagnabosco.dev/",
+      "name": "Jackson F. Magnabosco",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://jacksonmagnabosco.dev/#person"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Ir para o conteúdo</a>
+<nav class="site-nav" aria-label="Principal">
+  <div class="container site-nav__inner">
+    <a class="site-nav__brand" href="../../">Jackson<span class="u-accent">.</span>M</a>
+
+    <button type="button" class="icon-btn nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></button>
+
+    <ul class="site-nav__list" id="nav-list" data-nav-list>
+      <li><a href="../../">Início</a></li>
+      <li><a href="../../cursos/" aria-current="page">Cursos</a></li>
+      <li><a href="../../afiliados/">Afiliados</a></li>
+      <li><a href="../../#projects">Projetos</a></li>
+      <li><a href="../../#portfolio">Portfólio</a></li>
+      <li><a href="../../#contact">Contato</a></li>
+    </ul>
+
+    <div class="site-nav__actions">
+      <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Alternar modo escuro">
+        <span data-theme-icon="light"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span>
+        <span data-theme-icon="dark" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<nav class="breadcrumb container" aria-label="Trilha de navegação">
+  <ol class="breadcrumb__list">
+    <li><a href="../../">Início</a></li>
+    <li><a href="../../cursos/">Cursos</a></li>
+    <li><span aria-current="page">Ética e Legislação Profissional</span></li>
+  </ol>
+</nav>
+
+<main id="main">
+  <article class="section">
+    <div class="container">
+      <header class="page-head">
+        <p class="eyebrow">Curso online · Ética, direito digital e conformidade</p>
+        <h1>Curso de Ética e Legislação Profissional em Tecnologia da Informação</h1>
+        <p class="lead">Curso de ética e legislação profissional voltado à área de tecnologia da informação. Cobre os fundamentos da ética profissional em TI, direitos e deveres dos profissionais, Lei Geral de Proteção de Dados (LGPD), Marco Civil da Internet, propriedade intelectual e crimes digitais, segurança cibernética e privacidade, dilemas éticos na computação e análise de casos e jurisprudências.</p>
+        <ul class="chips">
+          <li class="chip"><strong>Nível:</strong> Todos os níveis</li>
+          <li class="chip"><strong>Idioma:</strong> Português (pt-BR)</li>
+          <li class="chip"><strong>Formato:</strong> Vídeoaulas online, no seu ritmo</li>
+          <li class="chip"><strong>Instrutor:</strong> Jackson Magnabosco</li>
+          <li class="chip"><strong>Onde comprar:</strong> Udemy e Hotmart</li>
+        </ul>
+        <p class="course-card__actions">
+          <a class="btn btn--udemy" href="https://www.udemy.com/course/etica-e-legislacao-profissional/?referralCode=46488AD7D5714AB19E0C" target="_blank" rel="noopener">Comprar na Udemy</a>
+          <a class="btn btn--hotmart" href="https://go.hotmart.com/W101223357W" target="_blank" rel="noopener">Comprar na Hotmart</a>
+        </p>
+      </header>
+
+      <img class="course-hero__img" src="../../assets/img/curso-etica-e-legislacao-profissional.webp" width="1200" height="675" fetchpriority="high" decoding="async" alt="Curso de Ética e Legislação Profissional em Tecnologia">
+
+      <div class="prose">
+        <div class="tldr">
+          <h2>Em resumo</h2>
+          <p>Curso de ética e legislação profissional voltado à área de tecnologia da informação. Cobre os fundamentos da ética profissional em TI, direitos e deveres dos profissionais, Lei Geral de Proteção de Dados (LGPD), Marco Civil da Internet, propriedade intelectual e crimes digitais, segurança cibernética e privacidade, dilemas éticos na computação e análise de casos e jurisprudências.</p>
+        </div>
+
+        <section aria-labelledby="sobre">
+          <h2 id="sobre">Sobre o curso</h2>
+          <p>Quem trabalha com tecnologia toma decisões com consequências legais quase todo dia: que dado guardar, por quanto tempo, quem pode acessar, o que fazer diante de um vazamento, se aquele trecho de código pode ser reaproveitado. Errar nessas escolhas custa caro — para a empresa e para a carreira de quem assinou embaixo.</p>
+          <p>O curso organiza esse terreno. Começa pelos fundamentos da ética profissional em TI e pelos direitos e deveres do profissional, entra na legislação brasileira que mais afeta o setor — LGPD e Marco Civil da Internet —, trata de propriedade intelectual e crimes digitais, segurança cibernética e privacidade, e fecha com dilemas éticos da computação analisados sobre casos concretos e jurisprudências.</p>
+        </section>
+
+        <section aria-labelledby="aprender">
+          <h2 id="aprender">O que você vai aprender</h2>
+          <ul>
+          <li>Entender os fundamentos da ética profissional aplicada à TI</li>
+          <li>Conhecer os direitos e deveres do profissional de tecnologia</li>
+          <li>Aplicar a LGPD no dia a dia de projetos que tratam dados pessoais</li>
+          <li>Entender o Marco Civil da Internet e seus efeitos práticos</li>
+          <li>Lidar com propriedade intelectual, licenças e crimes digitais</li>
+          <li>Relacionar segurança cibernética, privacidade e responsabilidade profissional</li>
+          <li>Analisar dilemas éticos da computação com base em casos reais e jurisprudências</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="conteudo">
+          <h2 id="conteudo">Conteúdo do curso</h2>
+          <ol>
+          <li>Fundamentos da ética profissional em TI</li>
+          <li>Direitos e deveres dos profissionais de TI</li>
+          <li>Lei Geral de Proteção de Dados (LGPD)</li>
+          <li>Marco Civil da Internet</li>
+          <li>Propriedade intelectual e crimes digitais</li>
+          <li>Segurança cibernética e privacidade</li>
+          <li>Dilemas éticos na computação</li>
+          <li>Análise de casos e jurisprudências</li>
+        </ol>
+        </section>
+
+        <section aria-labelledby="publico">
+          <h2 id="publico">Para quem é este curso</h2>
+          <ul>
+          <li>Profissionais de TI que lidam com dados pessoais e precisam entender a LGPD</li>
+          <li>Estudantes de computação com disciplina de ética e legislação</li>
+          <li>Líderes técnicos e gestores responsáveis por decisões de conformidade</li>
+          <li>Quem presta serviço como PJ e precisa entender direitos, deveres e licenças</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="requisitos">
+          <h2 id="requisitos">Pré-requisitos</h2>
+          <ul>
+          <li>Nenhum pré-requisito técnico ou jurídico</li>
+          <li>Não é necessário saber programar</li>
+          <li>Um computador com acesso à internet</li>
+        </ul>
+        </section>
+
+        <section aria-labelledby="temas">
+          <h2 id="temas">Tecnologias e temas abordados</h2>
+          <ul class="chips">
+            <li class="chip">LGPD</li>
+            <li class="chip">Marco Civil da Internet</li>
+            <li class="chip">Propriedade intelectual</li>
+            <li class="chip">Privacidade</li>
+            <li class="chip">Segurança cibernética</li>
+            <li class="chip">Compliance</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="subsection" aria-labelledby="onde-comprar">
+        <h2 id="onde-comprar">Onde comprar: Udemy ou Hotmart</h2>
+        <p class="u-measure u-muted">O conteúdo é o mesmo nas duas plataformas. A diferença está no que cada uma oferece em volta dele.</p>
+        <div class="table-wrap">
+          <table class="table">
+            <caption>Plataformas em que <em>Ética e Legislação Profissional</em> está disponível</caption>
+            <thead>
+              <tr>
+                <th scope="col">Plataforma</th>
+                <th scope="col">Como funciona</th>
+                <th scope="col">Link</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">Udemy</th>
+              <td>Compra direta na Udemy, com app oficial e acompanhamento de progresso. Preço e promoções seguem a plataforma.</td>
+              <td><a class="btn btn--udemy btn--sm" href="https://www.udemy.com/course/etica-e-legislacao-profissional/?referralCode=46488AD7D5714AB19E0C" target="_blank" rel="noopener">Ver na Udemy</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Hotmart</th>
+              <td>Compra direta na Hotmart. É também a plataforma do programa de afiliados: dá para revender o curso e receber 40% por venda.</td>
+              <td><a class="btn btn--hotmart btn--sm" href="https://go.hotmart.com/W101223357W" target="_blank" rel="noopener">Ver na Hotmart</a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="faq">
+        <h2 id="faq">Perguntas frequentes</h2>
+        <div class="faq">
+          <details class="faq__item">
+            <summary>O curso é jurídico ou voltado a quem trabalha com tecnologia?</summary>
+            <div class="faq__answer"><p>É voltado a quem trabalha com tecnologia. A legislação aparece pelo ângulo prático de quem desenvolve, administra bases de dados e toma decisões técnicas — não pelo ângulo da formação em Direito.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>A LGPD é tratada com profundidade?</summary>
+            <div class="faq__answer"><p>Sim, com módulo próprio, e conectada aos temas vizinhos: Marco Civil da Internet, segurança cibernética e privacidade. A ideia é que você saiba o que a lei exige de um sistema real, não apenas o que ela diz no texto.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Preciso saber programar para acompanhar?</summary>
+            <div class="faq__answer"><p>Não. O conteúdo é acessível para qualquer pessoa que atue ou pretenda atuar em tecnologia, incluindo perfis de gestão, produto, dados e suporte.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>O curso serve para disciplina de faculdade?</summary>
+            <div class="faq__answer"><p>Serve. O conteúdo acompanha ementas de Ética e Legislação Profissional dos cursos de computação, com o acréscimo da análise de casos e jurisprudências.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Por que um engenheiro de software dá um curso de ética e legislação?</summary>
+            <div class="faq__answer"><p>Porque é quem sente o efeito prático da lei. Além da atuação como engenheiro de software sênior, sou professor de Ciência da Computação e ministrei essa disciplina na graduação — o curso nasceu desse material de sala de aula.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="instrutor">
+        <h2 id="instrutor">Quem ensina</h2>
+        <div class="author-card">
+          <img class="author-card__img" src="../../assets/img/perfil.webp" width="555" height="394" loading="lazy" decoding="async" alt="Jackson Felipe Magnabosco">
+          <div class="author-card__body">
+            <p><strong>Jackson Felipe Magnabosco</strong> — Engenheiro de Software Sênior e Professor de Ciência da Computação. Bacharel em Ciência da Computação pela URI-Erechim, com pós-graduação em Engenharia de Software e em Administração de Banco de Dados.</p>
+            <p>Trabalha com Node.js, TypeScript, Java e AWS em produtos usados no Brasil e no exterior, lecionou na graduação em Ciência da Computação e mantém um canal no YouTube com mais de 1.500 vídeos. Os cursos online somam mais de 400 alunos em 25 países.</p>
+            <ul class="inline-links">
+              <li><a href="../../#experience">Trajetória profissional</a></li>
+              <li><a href="../../#education">Formação e certificações</a></li>
+              <li><a href="https://www.udemy.com/user/jackson-felipe-magnabosco/" target="_blank" rel="noopener">Perfil na Udemy</a></li>
+              <li><a href="https://www.youtube.com/@JacksonMagnabosco" target="_blank" rel="noopener">Canal no YouTube</a></li>
+              <li><a href="https://github.com/jacksonn455" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="http://lattes.cnpq.br/4613856780210407" target="_blank" rel="noopener">Currículo Lattes</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="subsection" aria-labelledby="relacionados">
+        <h2 id="relacionados">Cursos relacionados</h2>
+        <ul class="mini-grid">
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/administracao-de-banco-de-dados/">Administração de Banco de Dados</a></h3>
+            <p>Curso de administração de banco de dados do básico ao avançado, voltado a quem quer atuar como DBA.</p>
+          </li>
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/posicionamento-profissional-global/">Posicionamento Profissional Global</a></h3>
+            <p>Curso sobre como posicionar currículo e LinkedIn para processos seletivos remotos e internacionais.</p>
+          </li>
+          <li class="mini-card">
+            <h3 class="mini-card__title"><a href="../../cursos/internet-das-coisas/">Internet das Coisas (IoT)</a></h3>
+            <p>Curso de Internet das Coisas que vai da história e evolução da IoT às aplicações reais.</p>
+          </li>
+        </ul>
+        <p><a href="../../cursos/">Ver o catálogo completo de cursos</a></p>
+      </section>
+
+      <section class="subsection" aria-labelledby="conteudo-extra">
+        <h2 id="conteudo-extra">Conteúdo relacionado no site</h2>
+        <ul class="link-list">
+          <li><a class="link-item" href="https://jacksonmagnabosco.dev/#experience">Experiência docente em Ciência da Computação (URI Erechim)</a></li>
+          <li><a class="link-item" href="https://jacksonmagnabosco.dev/#education">Formação e certificações, incluindo Veracode (segurança)</a></li>
+        </ul>
+      </section>
+
+      <aside class="cta-band">
+        <div class="cta-band__text">
+          <h2>Ganhe 40% revendendo este curso</h2>
+          <p>Este curso participa do programa de afiliados da Hotmart: você divulga com um link exclusivo e recebe 40% de comissão por venda. O cadastro é gratuito.</p>
+        </div>
+        <p><a class="btn btn--ghost" href="https://app-vlc.hotmart.com/affiliate-recruiting/view/9996%C3%89101223378" target="_blank" rel="noopener">Quero me afiliar a este curso</a></p>
+      </aside>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav aria-label="Rodapé">
+      <ul class="inline-links">
+        <li><a href="../../">Início</a></li>
+        <li><a href="../../cursos/">Todos os cursos</a></li>
+        <li><a href="../../afiliados/">Programa de afiliados</a></li>
+        <li><a href="../../#experience">Experiência</a></li>
+        <li><a href="../../#education">Formação</a></li>
+        <li><a href="../../#contact">Contato</a></li>
+        <li><a href="https://www.youtube.com/@JacksonMagnabosco" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://github.com/jacksonn455" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__note">© 2026 Jackson Felipe Magnabosco</p>
+  </div>
+</footer>
+
+<button type="button" class="to-top" data-to-top data-visible="false" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+
+<script src="../../assets/js/app.js" defer></script>
+
+</body></html>

@@ -12,7 +12,7 @@ I'm a dedicated Software Engineer and University Professor with postgraduate stu
 
 - **Senior Software Engineer** - Coding Agent Experience
 - **Professor of Computer Science** - Integrated Regional University of Alto Uruguai and Missions
-- **Course Creator** - Udemy Platform
+- **Course Creator** - Udemy and Hotmart Platforms
 - **Specialist** - Web Development, Data Mining, UX/UI Design, and Artificial Intelligence
 
 ## 🚀 Core Skills & Technologies
@@ -144,40 +144,97 @@ dependencies, zero third-party requests.** Every asset is self-hosted.
 - YouTube embeds behind click-to-load facades — no tracking until requested
 - Language detected from `navigator.language`; **no IP geolocation, no cookies,
   no analytics, no data leaves the browser**
+- **12 indexable pages generated from one JSON file** (plus a noindex 404), each with unique title,
+  description, canonical and JSON-LD (`Course`, `FAQPage`, `BreadcrumbList`,
+  `ItemList`, `ProfilePage`, `WebSite`)
+- `llms.txt` and an explicit `robots.txt` for AI search engines (GPTBot,
+  ClaudeBot, PerplexityBot, Google-Extended and friends)
 
 ### Project structure
 
 ```
-index.html                 the whole page, self-contained
+index.html                 the home page, self-contained and trilingual
+cursos/index.html          course catalogue (generated)
+cursos/<slug>/index.html   one page per course (generated)
+afiliados/index.html       Hotmart affiliate program (generated)
+404.html                   custom error page (generated, noindex)
+sitemap.xml  llms.txt      generated
+robots.txt                 crawl policy, incl. AI crawlers
+data/
+  courses.json             SINGLE SOURCE OF TRUTH for every course
 assets/
   css/main.css             design system: tokens, components, light+dark
   js/app.js                i18n, theme, nav, accordion, lightbox, facades
   i18n/{en,pt,es}.json     translation sources — edit these, then npm run build
   img/                     WebP images
+  social/                  1200x630 Open Graph cards (npm run og)
   files/                   CV and certificates (PDF)
 scripts/
-  build-i18n.js            writes EN into the HTML, inlines PT/ES  (npm run build)
-  serve.js                 local dev server (gzip, mirrors GitHub Pages)
+  build-i18n.js            writes EN into the HTML, inlines PT/ES
+  build-pages.js           renders /cursos, /afiliados, 404, sitemap, llms.txt
+                           and the home JSON-LD graph, all from courses.json
+  build-og-image.js        renders the social cards with sharp  (npm run og)
+  serve.js                 local dev server (gzip, 404, mirrors GitHub Pages)
   optimize-images.js       resize + WebP conversion for new images
-  check-links.js           JS syntax, assets, i18n keys and a11y hygiene
+  check-links.js           JS syntax, links, anchors, metadata, JSON-LD,
+                           sitemap coverage, i18n keys and a11y hygiene
 ```
 
-> Editing a translation? Change `assets/i18n/*.json`, then run `npm run build`
-> to propagate it into `index.html`. The build is idempotent.
+> Editing a translation? Change `assets/i18n/*.json`, then run `npm run build`.
+> Adding or changing a course? Change `data/courses.json`, then `npm run build`.
+> The build is idempotent and CI fails if a generated file is out of sync.
+
+**Content rule for `data/courses.json`:** never put a fact there that cannot be
+verified — price, workload, star rating and student counts change per platform
+and per promotion, and inventing them in structured data is how a site earns a
+manual action. The `syllabus` entries come from the public product pages.
+
+### URL strategy (read before touching a link)
+
+Every internal link and asset path is **relative**, never `/absolute`. The
+templates in `build-pages.js` are written with `/cursos/...` because it reads
+better, and `layout()` rewrites them to `../` depth on output. This keeps the
+site working when it is not at a domain root — `file://`, a preview in a
+subfolder, a GitHub Pages _project_ site — and it still works at the root.
+
+`404.html` is the single exception and keeps absolute paths: GitHub Pages serves
+it for a missing path at _any_ depth (`/a/b/c` too) while the address bar stays
+on the requested path, so a relative link there would point at nothing.
+`npm run check` enforces both halves of this rule.
+
+Absolute URLs stay absolute where they must be: `canonical`, `og:url`,
+`og:image`, sitemap `<loc>` and JSON-LD `@id`.
+
+One consequence of pretty URLs: over `file://` a link to `cursos/x/` opens a
+directory listing, because only a server maps a directory to its `index.html`.
+Use `npm run dev` to browse locally.
+
+### Language split
+
+The home page is trilingual (EN in the HTML, PT/ES swapped client-side). The
+generated pages are **pt-BR only, on purpose**: the courses are taught in
+Portuguese and the searches that bring a buyer (`curso de lógica de
+programação`, `como ser afiliado hotmart`) are typed in Portuguese. Serving them
+as static Portuguese HTML beats a client-side translation that a crawler only
+sees after running JavaScript.
 
 ### Development
 
 ```bash
 npm install
 npm run dev        # http://localhost:4173
-npm run check      # HTML validation + links + i18n keys + a11y hygiene
+npm run build      # i18n + generated pages, sitemap and llms.txt
+npm run check      # HTML validation + links + metadata + JSON-LD + a11y
 npm run images     # optimize any newly added image
+npm run og         # regenerate the 1200x630 social cards
 npm run format     # prettier
-npm run lighthouse # Lighthouse CI with score thresholds
+npm run lighthouse # Lighthouse CI over 4 page templates, with thresholds
 ```
 
-CI runs validation, link/i18n checks, formatting and Lighthouse on every push,
-then deploys to GitHub Pages.
+CI verifies that every generated file matches its source, validates the HTML of
+all pages, runs the link/metadata/i18n checks, checks formatting and runs
+Lighthouse on every push. Publishing is a push to `master` (GitHub Pages serves
+the branch root).
 
 ## 🤝 Let's Connect
 
@@ -187,6 +244,7 @@ I'm always open to discussing new opportunities, collaborations, or just talking
 - 💼 **LinkedIn:** [Connect with me](https://www.linkedin.com/in/jackson-felipe-magnabosco-b0a48798/)
 - 📧 **Email:** [jacksonmagnabosco@hotmail.com](mailto:jacksonmagnabosco@hotmail.com)
 - 🎓 **Udemy:** [View my courses](https://www.udemy.com/user/jackson-felipe-magnabosco/)
+- 💰 **Affiliate program:** [Earn 40% per sale reselling my courses on Hotmart](https://jacksonmagnabosco.dev/#affiliates)
 
 ---
 
