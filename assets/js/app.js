@@ -469,15 +469,25 @@
         const facade = $('.video__facade', wrapper);
         if (!facade) return;
 
-        /* Nem todo video tem maxresdefault - cai para a miniatura garantida */
+        /* Nem todo video tem maxresdefault. Quando falta, o ytimg responde 404
+           com um JPEG cinza valido de 120x90 - o browser desenha essa imagem e
+           o evento `error` nunca dispara, entao tambem olhamos a largura real. */
         const thumb = $('img[data-thumb-fallback]', facade);
         if (thumb) {
           const useFallback = () => {
-            thumb.src = thumb.dataset.thumbFallback;
+            const next = thumb.dataset.thumbFallback;
+            if (!next) return;
             delete thumb.dataset.thumbFallback;
+            thumb.src = next;
           };
-          if (thumb.complete && thumb.naturalWidth === 0) useFallback();
-          else thumb.addEventListener('error', useFallback, { once: true });
+          const check = () => {
+            if (thumb.naturalWidth === 0 || thumb.naturalWidth <= 120) useFallback();
+          };
+          if (thumb.complete) check();
+          else {
+            thumb.addEventListener('load', check, { once: true });
+            thumb.addEventListener('error', useFallback, { once: true });
+          }
         }
 
         facade.addEventListener(
