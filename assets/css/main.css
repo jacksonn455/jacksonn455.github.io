@@ -1561,8 +1561,11 @@ a.link-item:hover::after {
 
 .course-card__img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  /* use same aspect ratio as card images (1200x628) to avoid awkward crops */
+  aspect-ratio: 1200 / 628;
   object-fit: cover;
+  /* bring the face more to the top-center of the crop */
+  object-position: 50% 30%;
   border-bottom: 1px solid var(--border);
 }
 
