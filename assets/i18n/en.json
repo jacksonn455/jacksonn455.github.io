@@ -299,24 +299,24 @@
   },
   "rec5": {
     "name": "Ezequiel Menegas",
-    "role": "Developer Sr at AGROTIS | CSPO | AI Agents LangChain | Agro | Spec Driven Development",
+    "role": "Developer Sr at @AGROTIS | CSPO | AI Agents LangChain | Agro | Spec Driven Development",
     "date": "March 17, 2025",
     "relationship": "Studied together",
-    "text": "Estudei tecnologia com ele na faculdade, e sempre admirei sua dedicação e respeito por todos ao seu redor.\n\nDurante os nossos anos juntos, ele se destacou não apenas por seu conhecimento técnico, mas também pela sua capacidade de colaborar e ajudar os outros a entender conceitos.\n\nSua habilidade de transmitir conhecimento de forma clara e envolvente é inspiradora."
+    "text": "I studied technology with him at university, and I always admired his dedication and his respect for everyone around him.\n\nThroughout our years together, he stood out not only for his technical knowledge but also for his ability to collaborate and help others understand concepts.\n\nHis skill in conveying knowledge clearly and engagingly is inspiring."
   },
   "rec6": {
     "name": "Lucas Gulart da Silveira",
     "role": "Co-founder of Rancho | Software Engineer | NestJS · TypeScript · Node.js · Expo",
     "date": "December 11, 2023",
     "relationship": "Worked with Jackson on the same team",
-    "text": "Jackson destaca-se no desenvolvimento com suas habilidades notáveis.\n\nEle enfrenta desafios técnicos com eficácia, demonstrando um domínio consistente nessa área.\n\nSua abordagem colaborativa e disposição para compartilhar conhecimento contribuem positivamente para o ambiente de trabalho."
+    "text": "Jackson stands out in development with his remarkable skills.\n\nHe tackles technical challenges effectively, demonstrating consistent mastery in this area.\n\nHis collaborative approach and willingness to share knowledge contribute positively to the work environment."
   },
   "rec7": {
     "name": "Levi Santos Rocha",
     "role": "Senior Fullstack Engineer | React | Next | React Native | NodeJs | Python | AWS",
     "date": "September 19, 2023",
     "relationship": "Worked with Jackson on the same team",
-    "text": "Jackson é um profissional de excelência e um membro valioso em nossa equipe.\n\nEm todo o período em que trabalhamos juntos, pude ver sua enorme dedicação e paixão pela programação.\n\nDestaco também sua ética de trabalho e atitude positiva, tornando-o uma contribuição importante para os projetos."
+    "text": "Jackson is an outstanding professional and a valuable member of our team.\n\nThroughout the entire time we worked together, I could see his enormous dedication and passion for programming.\n\nI also want to highlight his work ethic and positive attitude, which make him an important contributor to the projects."
   },
   "rec8": {
     "name": "Patrick Berlatto Piccini",
@@ -324,6 +324,13 @@
     "date": "September 10, 2023",
     "relationship": "Worked with Jackson on the same team",
     "text": "Jackson is a professional with exceptional skills in software development.\n\nHis relentless pursuit of excellence leads to continuous improvements in code quality.\n\nHe values collaboration, working harmoniously with colleagues and sharing knowledge through code reviews.\n\nHis dedication and commitment to improvement make him a key asset to software development teams."
+  },
+  "rec9": {
+    "name": "Nagila Zortea",
+    "role": "Esteticista e Cosmetóloga no Salão de beleza Vazzatta Hair e Docente no Centro Universitário UNIDEAU/ Getúlio Vargas no curso de Estética e Cosmética",
+    "date": "September 11, 2026",
+    "relationship": "Nagila was Jackson's client",
+    "text": "I had the pleasure of working with Jackson on two projects that were essential for my business: my personal portfolio website and a complete management system for my aesthetic clinic.\n\nHe built the portfolio from the ground up and went even further on the clinic system: appointment scheduling, patient anamnesis records, and product management, integrated with Google Calendar and responsive on every device, using React, Node.js, and MongoDB.\n\nWhat stood out to me most was his attention to my real needs as a client. He understood my daily routine, delivered practical solutions, and always on time. I highly recommend him."
   },
   "recommendationsLead": "What colleagues and managers say about working with me. All taken from LinkedIn.",
   "recommendationsTitle": "RECOMMENDATIONS",

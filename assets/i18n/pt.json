@@ -320,10 +320,17 @@
   },
   "rec8": {
     "name": "Patrick Berlatto Piccini",
-    "role": "Solutions Architect | Back-End Developer | DevOps | Python | Django | DRF | Automation | Cloud",
+    "role": "Solutions Architect | Back-End Developer | DevOps | Python | Django | DRF | Automation | Cloud | Git | Docker",
     "date": "10 de setembro de 2023",
     "relationship": "Trabalhou com Jackson na mesma equipe",
     "text": "Jackson é um profissional com habilidades excepcionais no desenvolvimento de software. Sua busca incansável pela excelência resulta em melhorias contínuas no código. Ele valoriza a colaboração, trabalhando harmoniosamente com os colegas e compartilhando conhecimento por meio de code reviews. Jackson desempenha um papel crucial no sucesso do projeto."
+  },
+  "rec9": {
+    "name": "Nagila Zortea",
+    "role": "Esteticista e Cosmetóloga no Salão de beleza Vazzatta Hair e Docente no Centro Universitário UNIDEAU/ Getúlio Vargas no curso de Estética e Cosmética",
+    "date": "11 de setembro de 2026",
+    "relationship": "Nagila foi cliente de Jackson",
+    "text": "Tive o prazer de trabalhar com o Jackson em dois projetos essenciais para o meu negócio: o meu site de portfólio pessoal e um sistema completo de gestão para a minha clínica de estética.\n\nEle construiu o portfólio do zero e foi ainda além no sistema da clínica: agendamento de consultas, fichas de anamnese das pacientes e gestão de produtos, integrado ao Google Calendar e responsivo em qualquer dispositivo, com React, Node.js e MongoDB.\n\nO que mais me chamou a atenção foi o cuidado dele com as minhas reais necessidades como cliente. Entendeu a minha rotina, entregou soluções práticas e sempre no prazo. Recomendo muito."
   },
   "recommendationsLead": "O que colegas e gestores dizem sobre trabalhar comigo. Todas retiradas do LinkedIn.",
   "recommendationsTitle": "RECOMENDAÇÕES",
