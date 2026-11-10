@@ -367,7 +367,7 @@ const authorCard = () => `<section class="subsection" aria-labelledby="instrutor
           <img class="author-card__img" src="/assets/img/perfil.webp" width="555" height="394" loading="lazy" decoding="async" alt="Jackson Felipe Magnabosco">
           <div class="author-card__body">
             <p><strong>${esc(site.author)}</strong> — Engenheiro de Software Sênior e Professor de Ciência da Computação. Bacharel em Ciência da Computação pela URI-Erechim, com pós-graduação em Engenharia de Software e em Administração de Banco de Dados.</p>
-            <p>Trabalha com Node.js, TypeScript, Java e AWS em produtos usados no Brasil e no exterior, lecionou na graduação em Ciência da Computação e mantém um canal no YouTube com mais de 1.500 vídeos. Os cursos online somam mais de 400 alunos em 25 países.</p>
+            <p>Trabalha com Node.js, TypeScript, Java e AWS em produtos usados no Brasil e no exterior, lecionou na graduação em Ciência da Computação e mantém um canal no YouTube com mais de 1.500 vídeos. Os cursos online somam mais de 410 alunos em 25 países.</p>
             <ul class="inline-links">
               <li><a href="/#experience">Trajetória profissional</a></li>
               <li><a href="/#education">Formação e certificações</a></li>
@@ -673,7 +673,7 @@ ${t.steps.map((s) => `            <li><a href="${courseUrl(s)}">${esc(byslug.get
     },
     {
       q: 'Quem é o instrutor?',
-      a: 'Jackson Felipe Magnabosco, engenheiro de software sênior e professor de Ciência da Computação, com pós-graduação em Engenharia de Software e em Administração de Banco de Dados. Mais de 400 alunos em 25 países e um canal no YouTube com mais de 1.500 vídeos.',
+      a: 'Jackson Felipe Magnabosco, engenheiro de software sênior e professor de Ciência da Computação, com pós-graduação em Engenharia de Software e em Administração de Banco de Dados. Mais de 410 alunos em 25 países e um canal no YouTube com mais de 1.500 vídeos.',
     },
     {
       q: 'É possível ganhar dinheiro divulgando estes cursos?',
@@ -689,7 +689,7 @@ ${t.steps.map((s) => `            <li><a href="${courseUrl(s)}">${esc(byslug.get
       <header class="page-head">
         <p class="eyebrow">Catálogo completo</p>
         <h1>Cursos de programação e tecnologia em português</h1>
-        <p class="lead">Nove cursos online de software, dados, interfaces, IoT, IA e carreira, criados e gravados por Jackson Felipe Magnabosco — engenheiro de software sênior e professor de Ciência da Computação. Mais de 400 alunos em 25 países.</p>
+        <p class="lead">Nove cursos online de software, dados, interfaces, IoT, IA e carreira, criados e gravados por Jackson Felipe Magnabosco — engenheiro de software sênior e professor de Ciência da Computação. Mais de 410 alunos em 25 países.</p>
         <ul class="chips">
           <li class="chip"><strong>9</strong> cursos</li>
           <li class="chip"><strong>Idioma:</strong> Português (pt-BR)</li>
@@ -898,7 +898,7 @@ const renderAffiliates = () => {
         <section aria-labelledby="por-que">
           <h2 id="por-que">Por que estes cursos vendem</h2>
           <p>São cursos de entrada em tecnologia, a faixa de maior demanda do mercado brasileiro de educação online: lógica de programação, desenvolvimento web e banco de dados atendem quem está tentando entrar na área, e ética profissional e IHC atendem estudantes de graduação com essas disciplinas na grade.</p>
-          <p>O catálogo tem autoridade para sustentar a divulgação: os cursos são produzidos por um engenheiro de software sênior que também é professor de Ciência da Computação, com mais de 400 alunos em 25 países, artigo científico publicado e um canal no YouTube com mais de 1.500 vídeos. Cada curso tem uma página completa neste site, com ementa e público-alvo, que você pode usar como material de apoio na divulgação.</p>
+          <p>O catálogo tem autoridade para sustentar a divulgação: os cursos são produzidos por um engenheiro de software sênior que também é professor de Ciência da Computação, com mais de 410 alunos em 25 países, artigo científico publicado e um canal no YouTube com mais de 1.500 vídeos. Cada curso tem uma página completa neste site, com ementa e público-alvo, que você pode usar como material de apoio na divulgação.</p>
         </section>
       </div>
 
@@ -1097,7 +1097,7 @@ ${urls.join('\n')}
    limpo do site em markdown, sem navegacao nem script no meio do texto. */
 const llmsTxt = () => `# Jackson F. Magnabosco
 
-> Engenheiro de Software Sênior e Professor de Ciência da Computação (Erechim, RS, Brasil). Desenvolve backends e produtos digitais com Node.js, TypeScript, Java e AWS, e produz cursos online de tecnologia em português com mais de 400 alunos em 25 países.
+> Engenheiro de Software Sênior e Professor de Ciência da Computação (Erechim, RS, Brasil). Desenvolve backends e produtos digitais com Node.js, TypeScript, Java e AWS, e produz cursos online de tecnologia em português com mais de 410 alunos em 25 países.
 
 Site pessoal e catálogo de cursos. Conteúdo em português (cursos) e em inglês, português e espanhol (página inicial).
 

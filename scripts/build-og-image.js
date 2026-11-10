@@ -42,7 +42,7 @@ const CARDS = [
     subtitleLines: ['Senior Software Engineer', '&amp; Professor'],
     techLines: ['Node.js  ·  TypeScript', 'Java  ·  AWS  ·  Microservices'],
     footerStrong: '9 online technology courses',
-    footerMutedLines: ['400+ students in 25 countries', 'Udemy and Hotmart'],
+    footerMutedLines: ['410+ students in 25 countries', 'Udemy and Hotmart'],
   },
   {
     file: 'og-cursos.png',

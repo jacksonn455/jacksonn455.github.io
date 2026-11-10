@@ -1,6 +1,6 @@
 # Jackson F. Magnabosco
 
-> Engenheiro de Software Sênior e Professor de Ciência da Computação (Erechim, RS, Brasil). Desenvolve backends e produtos digitais com Node.js, TypeScript, Java e AWS, e produz cursos online de tecnologia em português com mais de 400 alunos em 25 países.
+> Engenheiro de Software Sênior e Professor de Ciência da Computação (Erechim, RS, Brasil). Desenvolve backends e produtos digitais com Node.js, TypeScript, Java e AWS, e produz cursos online de tecnologia em português com mais de 410 alunos em 25 países.
 
 Site pessoal e catálogo de cursos. Conteúdo em português (cursos) e em inglês, português e espanhol (página inicial).
 

@@ -73,7 +73,7 @@
   "contact": "CONTACT",
   "contactLead": "Open to conversations about backend engineering, architecture and teaching.",
   "contactTitle": "GET IN TOUCH",
-  "courseAuthorityText": "Mentoring 400+ students across 25 countries in Latin America and worldwide through online courses on Udemy and Hotmart. Specialized in professional development in software engineering, data science, artificial intelligence, and web technologies with an average rating of 4.5/5 stars.",
+  "courseAuthorityText": "Mentoring 410+ students across 25 countries in Latin America and worldwide through online courses on Udemy and Hotmart. Specialized in professional development in software engineering, data science, artificial intelligence, and web technologies with an average rating of 4.5/5 stars.",
   "courseCatalog": "Course Catalog:",
   "courseCatalogCta": "See all 9 courses with full syllabus, level and prerequisites",
   "courseInstructor": "Course Instructor",
@@ -130,7 +130,7 @@
   "globalProfileCourseDescription": "Position your resume and LinkedIn to stand out in remote and international hiring processes.",
   "globalProfileCourseTitle": "Build Your Global Professional Profile",
   "globalsysDeveloper": "Back-End Developer.",
-  "heroBio": "I build scalable backends and digital products with Node.js, TypeScript and Java for companies in Brazil and abroad. I also teach Computer Science, create courses for 400+ students in 25 countries and run a YouTube channel with 1,165+ subscribers.",
+  "heroBio": "I build scalable backends and digital products with Node.js, TypeScript and Java for companies in Brazil and abroad. I also teach Computer Science, create courses for 410+ students in 25 countries and run a YouTube channel with 1,180+ subscribers.",
   "heroPhotoAlt": "Jackson Felipe Magnabosco, Senior Software Engineer",
   "heroRoles": "Senior Software Engineer | Solutions Architect | Backend & Architecture | Full Stack Developer | JavaScript & TypeScript | Node.js & NestJS | React & Next.js | Java & Spring Boot | AWS Cloud | Scalable Systems | Microservices | Artificial Intelligence | Prompt Engineering | University Professor | Course Creator",
   "hours": "hours",
@@ -382,7 +382,7 @@
   "toggleTheme": "Toggle dark mode",
   "udemyCatalog": "10 published courses covering SQL and database administration, programming logic, IoT, prompt engineering, interface design and professional ethics",
   "udemyProduction": "Recorded video lessons, hands-on projects and practical exercises for a global audience",
-  "udemyReach": "400+ students across 25 countries, with an average course rating of 4.5/5",
+  "udemyReach": "410+ students across 25 countries, with an average course rating of 4.5/5",
   "udemyTeachingAreas": "Software engineering, artificial intelligence, web development, databases, data science, IoT and user experience",
   "underConstruction": "🚧 Under Construction 🚧",
   "unitTestingJava": "Unit Testing in Java: Master JUnit, Mockito, and TDD (Duration: 8 hours) Udemy.",
@@ -422,5 +422,5 @@
   "workshops": "WORKSHOPS",
   "year": "Year:",
   "youtubeChannel": "YOUTUBE CHANNEL",
-  "youtubeDescription": "A free channel with over 1,500 videos covering software engineering, programming logic, databases, web development and career growth in technology. Short, practical lessons that complement the paid courses, with an audience of 1,165+ subscribers in Brazil and abroad."
+  "youtubeDescription": "A free channel with over 1,500 videos covering software engineering, programming logic, databases, web development and career growth in technology. Short, practical lessons that complement the paid courses, with an audience of 1,180+ subscribers in Brazil and abroad."
 }
